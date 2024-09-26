@@ -1,0 +1,192 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./node_modules/slick-carousel/slick/slick.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/Carousel.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+.Carousel_carouselWrapper__yi8O3 {
+  perspective: 1000px;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(237, 237, 237); */
+  background-image: url("/_next/static/media/Family Values - Abstract.8f1906d9.png");
+}
+
+.Carousel_carousel__lZR7I {
+  width: 400px; /* Slightly wider than your card */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.Carousel_card__R_SEJ {
+  width: 300px; /* Increased width */
+  height: 200px;
+  background-color: red;
+  margin: 0;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+/* Updated translateZ to the calculated value of 482px to prevent overlap */
+.Carousel_card__R_SEJ:nth-child(1) {
+  transform: rotateY(0deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(2) {
+  transform: rotateY(36deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(3) {
+  transform: rotateY(72deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(4) {
+  transform: rotateY(108deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(5) {
+  transform: rotateY(144deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(6) {
+  transform: rotateY(180deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(7) {
+  transform: rotateY(216deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(8) {
+  transform: rotateY(252deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(9) {
+  transform: rotateY(288deg) translateZ(482px);
+}
+.Carousel_card__R_SEJ:nth-child(10) {
+  transform: rotateY(324deg) translateZ(482px);
+}
+
