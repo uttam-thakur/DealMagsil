@@ -1,0 +1,70 @@
+.carouselWrapper {
+  perspective: 1000px;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: rgb(237, 237, 237); */
+  background-image: url('../images/Family\ Values\ -\ Abstract.png');
+}
+
+.carousel {
+  width: 400px; /* Slightly wider than your card */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  width: 300px; /* Increased width */
+  height: 200px;
+  background-color: red;
+  margin: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+/* Updated translateZ to the calculated value of 482px to prevent overlap */
+.card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(482px);
+}
+.card:nth-child(2) {
+  transform: rotateY(36deg) translateZ(482px);
+}
+.card:nth-child(3) {
+  transform: rotateY(72deg) translateZ(482px);
+}
+.card:nth-child(4) {
+  transform: rotateY(108deg) translateZ(482px);
+}
+.card:nth-child(5) {
+  transform: rotateY(144deg) translateZ(482px);
+}
+.card:nth-child(6) {
+  transform: rotateY(180deg) translateZ(482px);
+}
+.card:nth-child(7) {
+  transform: rotateY(216deg) translateZ(482px);
+}
+.card:nth-child(8) {
+  transform: rotateY(252deg) translateZ(482px);
+}
+.card:nth-child(9) {
+  transform: rotateY(288deg) translateZ(482px);
+}
+.card:nth-child(10) {
+  transform: rotateY(324deg) translateZ(482px);
+}
