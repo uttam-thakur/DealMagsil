@@ -1,9 +1,83 @@
-h4{
-    color:red
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9; /* Light background for a clean layout */
+  color: #333; /* Standard dark gray for text */
 }
-.mainDiv{
-    margin-top: -50px;
+
+h4 {
+  font-size: 2rem;
+  color: #444; /* Muted dark color for headings */
+  text-align: center;
+  margin: 50px 0 30px 0;
+  font-weight: 600;
 }
-.heading{
-    font-size: 40px;
+
+.mainDiv {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the main container */
+  padding: 0 20px; /* Add padding for better readability */
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555; /* Slightly muted text color */
+  line-height: 1.6;
+  text-align: center; /* Center-align the intro text */
+  margin-bottom: 40px;
+}
+
+.project-heading {
+  font-size: 1.8rem;
+  color: #e53935; /* Highlighted project heading */
+  margin-top: 60px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.carouselWrapper {
+  margin: 40px 0;
+}
+
+/* Carousel Container - More grid-based layout for better spacing */
+.carousel-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px; /* Space between the images */
+  justify-items: center; /* Align items in the center */
+}
+
+/* Carousel Images */
+.carousel-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-container img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.caption {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Section Separator */
+.section-separator {
+  border-top: 1px solid #ddd;
+  margin: 50px 0;
 }

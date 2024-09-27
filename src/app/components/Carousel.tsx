@@ -38,10 +38,10 @@ const Carousel = () => {
   // Auto-rotate carousel
   useEffect(() => {
     const autoRotate = setInterval(() => {
-      setAngle((prev) => prev + 1); // Slow auto rotation (increase angle by 1 degree)
-    }, 100); // Adjust the speed of rotation (100ms interval for smoother rotation)
+      setAngle((prev) => prev + 1);
+    }, 100);
 
-    return () => clearInterval(autoRotate); // Cleanup on component unmount
+    return () => clearInterval(autoRotate);
   }, []);
 
   return (
