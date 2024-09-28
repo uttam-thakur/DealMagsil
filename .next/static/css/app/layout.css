@@ -83,8 +83,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-
+  overflow-x: hidden;
 }
 
 main {
@@ -103,6 +102,7 @@ footer {
   background-color: rgb(234, 203, 203);
 }
 
-li a{
+li a {
   text-decoration: none;
 }
+

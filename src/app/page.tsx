@@ -8,16 +8,17 @@ import "slick-carousel/slick/slick.css";
 
 const Home = () => {
   return (
-    <div>
+    <div style={{ overflowX: "hidden" }}>
       <Carousel />
+      <br />
       <WelcomeCard />
       <br />
       <Carouselinfra />
       <RegistrationSection />
 
       {/* Fab  */}
-      {/* <FABLocation/>
-      <FABWhatsApp/> */}
+      {/* <FABLocation />
+      <FABWhatsApp /> */}
     </div>
   );
 };

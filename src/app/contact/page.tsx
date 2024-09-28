@@ -16,7 +16,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 export default function Contact() {
   return (
     <>
-      <Container maxWidth="md" style={{ marginTop: "-50px" }}>
+      <Container maxWidth="md" style={{ marginTop: "30px" }}>
         {/* Header Section */}
         <Box textAlign="center" mb={4}>
           <Typography
