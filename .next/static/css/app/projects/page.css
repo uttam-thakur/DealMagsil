@@ -1,0 +1,224 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./src/app/projects/page.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************/
+body,
+html {
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9; /* Light background for a clean layout */
+  color: #333; /* Standard dark gray for text */
+}
+
+h4 {
+  font-size: 2rem;
+  color: #444; /* Muted dark color for headings */
+  text-align: center;
+  margin: 50px 0 30px 0;
+  font-weight: 600;
+}
+
+.mainDiv {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the main container */
+  padding: 0 20px; /* Add padding for better readability */
+}
+
+p {
+  font-size: 1.1rem;
+  color: #555; /* Slightly muted text color */
+  line-height: 1.6;
+  text-align: center; /* Center-align the intro text */
+  margin-bottom: 40px;
+}
+
+.project-heading {
+  font-size: 1.8rem;
+  color: #e53935; /* Highlighted project heading */
+  margin-top: 60px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.carouselWrapper {
+  margin: 40px 0;
+}
+
+/* Carousel Container - More grid-based layout for better spacing */
+.carousel-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Responsive grid */
+  grid-gap: 30px;
+  gap: 30px; /* Space between the images */
+  justify-items: center; /* Align items in the center */
+}
+
+/* Carousel Images */
+.carousel-container img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-container img:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.caption {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+/* Section Separator */
+.section-separator {
+  border-top: 1px solid #ddd;
+  margin: 50px 0;
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/Client.module.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************/
+/* .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 1360px;
+  }
+  
+  .slideTrack {
+    display: flex;
+    width: calc(250px * 14);
+    animation: scroll 40s linear infinite;
+  }
+  
+  .slide {
+    height: 100px;
+    width: 250px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+  
+  .slider::before,
+  .slider::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+   */
+
+
+   .Client_slider__qDv9Q {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%; /* Make width 100% for responsiveness */
+    max-width: 90%; /* Set a max width */
+  }
+  
+  .Client_slideTrack__ZlKus {
+    display: flex;
+    width: calc(250px * 14); /* Width based on number of slides (7 original + 7 duplicates) */
+    animation: Client_scroll__OJRBm 40s linear infinite;
+  }
+  
+  .Client_slide__qB41m {
+    height: 100px;
+    width: 250px; /* Fixed width for desktop */
+    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+  }
+  
+  .Client_img__REXCE {
+    height: 100%;
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .Client_slide__qB41m {
+      width: 200px; /* Adjust width for smaller screens */
+    }
+  
+    .Client_slider__qDv9Q {
+      height: 80px; /* Reduce height */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .Client_slide__qB41m {
+      width: 150px; /* Further adjust for mobile */
+    }
+  
+    .Client_slider__qDv9Q {
+      height: 90px; /* Further reduce height */
+    }
+  }
+  
+  @keyframes Client_scroll__OJRBm {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-250px * 7)); /* Move by the width of 7 original slides */
+    }
+  }
+  
+  .Client_slider__qDv9Q::before,
+  .Client_slider__qDv9Q::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .Client_slider__qDv9Q::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+  
+  .Client_slider__qDv9Q::before {
+    left: 0;
+    top: 0;
+  }
+  

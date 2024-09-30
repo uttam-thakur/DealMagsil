@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Card, Typography } from "@mui/material";
 import Image from "next/image"; // Importing the Next.js Image component
-import Welcome from "../../images/Fresh Folk - Teamwork.png"; // Importing from src folder
-import AboutUs from "../../images/Olá - Relaxing.png"; // Importing from src folder
-import QualityAss from "../../images/Tutto Ricco - Close Up.png"; // Importing from src folder
+import Welcome from "../../images/welcome.jpg"; // Importing from src folder
+import AboutUs from "../../images/aboutus.png"; // Importing from src folder
+import QualityAss from "../../images/quality1.png"; // Importing from src folder
 
 const WelcomeCard = ({ title, image, description }: any) => {
   return (
@@ -22,9 +22,12 @@ const WelcomeCard = ({ title, image, description }: any) => {
         <Image
           src={image} // Pass the imported image as the src
           alt={`${title} image`}
-          width={400}
-          height={300} // Set the desired width and height
-          style={{ objectFit: "fill", margin: "0 auto" }}
+          style={{
+            objectFit: "fill",
+            margin: "0 auto",
+            width: "100%",
+            height: "auto",
+          }}
         />
       </Card>
 
@@ -63,7 +66,7 @@ export default function App() {
   return (
     <>
       <WelcomeCard
-        title="Welcome"
+        // title="Welcome"
         image={Welcome} // Using imported image
         description="Precast concrete consists of concrete (a mixture of cement, water,
           aggregates, and admixtures) that is cast into a specific shape at a
@@ -74,7 +77,7 @@ export default function App() {
       />
       {/* Second Card */}
       <WelcomeCard
-        title="About Us"
+        // title="About Us"
         image={AboutUs}
         description="Established in 1991, DEAL MAGSIL is a prominent company committed towards manufacturing and supplying precast concrete products and Interlocking paver block. Being an experienced company we excel in upholding our quality standards, reliability and efficiency. With time DEAL MAGSIL has emerged as a chief turnkey service manufacturer and provider in National Highway – 2 Panagarh to Barwa Adda Stretch, BAPL Andal Airport, Asansol, Durgapur , Kulti Municipal Corporations and DVC RTPP Raghunathpur Underground Cable Covers Suppliers and many other prestigious projects all over. 
  DEAL MAGSIL is registered under Government of West Bengal S.S.I Unit certified Manufacturer and Supplier of a wide range of Concrete and allied products including Registered Vendor of SAIL - IISCO, DVC, L&T, AMC, DMC and many other Public and Private Authorities.
@@ -82,7 +85,7 @@ export default function App() {
       />
       {/* Third Card */}
       <WelcomeCard
-        title="Quality Assurance"
+        // title="Quality Assurance"
         image={QualityAss}
         description="We being Quality conscious always endeavor to excel in quality standards. We use high grade 100% clear virgin raw material. Each of our products is confirming to all Quality Standards and meeting all the parameters for ultimate performance. We believe in high business ethical values and commitment.
  Company established in 1991 with perception of development and to create a benchmark in construction activities Industry by maintaining QUALITY, SPEED and SERVICES with most advanced Hi-tech Technology with super mechanized system and Innovative concepts to lead the market.

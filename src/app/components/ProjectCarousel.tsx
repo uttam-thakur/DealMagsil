@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type ImageData = {
   src: string;
@@ -12,31 +12,43 @@ type ImageCarouselProps = {
 
 const ProjectCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const imagesPerGroup = 5;
-  const numberOfButtons = Math.ceil(images.length / imagesPerGroup);
+  const numberOfGroups = Math.ceil(images.length / imagesPerGroup);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const carousel = document.getElementById("carousel")!;
+    const scrollPosition =
+      (carousel.scrollWidth / numberOfGroups) * currentSlide;
+    carousel.scrollTo({
+      left: scrollPosition,
+      behavior: "smooth", // Smooth scrolling on image change
+    });
+  }, [currentSlide, numberOfGroups]);
 
   const handleRadioChange = (index: number) => {
     setCurrentSlide(index);
-    const carousel = document.getElementById("carousel")!;
-    const scrollPosition = (carousel.scrollWidth / numberOfButtons) * index;
-    carousel.scrollTo({ left: scrollPosition, behavior: "smooth" });
   };
 
   return (
     <>
       <CarouselContainer id="carousel">
-        {images.map((image, index) => (
-          <CarouselItem key={index}>
-            <img src={image.src} alt={`Project ${index + 1}`} />
-            <Caption>{image.caption}</Caption>
-          </CarouselItem>
-        ))}
+        {images
+          .slice(
+            currentSlide * imagesPerGroup,
+            (currentSlide + 1) * imagesPerGroup
+          )
+          .map((image, index) => (
+            <CarouselItem key={index}>
+              <img src={image.src} alt={`Project ${index + 1}`} />
+              <Caption>{image.caption}</Caption>
+            </CarouselItem>
+          ))}
       </CarouselContainer>
 
       <RadioButtons>
-        {Array.from({ length: numberOfButtons }).map((_, index) => (
+        {Array.from({ length: numberOfGroups }).map((_, index) => (
           <RadioInput
-            key={index}
+            key={`radio-${index}`}
             type="radio"
             name="carousel"
             checked={currentSlide === index}
@@ -51,7 +63,6 @@ const ProjectCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
 export default ProjectCarousel;
 
 // Styled Components
-
 const CarouselContainer = styled.div`
   display: flex;
   overflow-x: scroll;
@@ -60,6 +71,7 @@ const CarouselContainer = styled.div`
   margin: 20px 0;
   padding: 10px;
   gap: 20px; /* Padding between images */
+  scroll-behavior: smooth; /* Enables smooth scrolling */
 
   &::-webkit-scrollbar {
     display: none; /* Hide scrollbar */
@@ -70,7 +82,7 @@ const CarouselItem = styled.div`
   flex: 0 0 auto;
   width: calc(20% - 20px); /* 5 images per row by default */
   scroll-snap-align: start;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
   position: relative;
 
   img {
@@ -78,12 +90,12 @@ const CarouselItem = styled.div`
     height: 200px; /* Fixed height to make all images the same size */
     object-fit: cover; /* Ensures uniform image size while maintaining aspect ratio */
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Smooth transition for hover and shadow */
     cursor: pointer; /* Makes image clickable */
 
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05); /* Smoothly scale on hover */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow smoothly on hover */
     }
   }
 
@@ -111,9 +123,14 @@ const Caption = styled.div`
   background-color: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
+  transition: opacity 0.3s ease; /* Smooth caption appearance */
+
+  ${CarouselItem}:hover & {
+    opacity: 1; /* Show the caption on hover */
+  }
 `;
 
-// Modal Styles
+// Radio Button Styles
 
 const RadioButtons = styled.div`
   display: flex;
@@ -127,7 +144,17 @@ const RadioButtons = styled.div`
 
 const RadioInput = styled.input`
   margin: 0 5px;
-  accent-color: red; /* Styling for radio buttons */
+  accent-color: red; /* Default accent color for unchecked radio */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for color change */
+
+  &:checked {
+    accent-color: red; /* Turn the radio button red when checked */
+    background-color: red; /* Ensure the radio button stays red when clicked */
+  }
+
+  &:not(:checked) {
+    accent-color: grey; /* Default color when not checked */
+  }
 
   @media (max-width: 480px) {
     display: none;
