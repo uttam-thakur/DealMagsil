@@ -8,31 +8,84 @@ import styled from "styled-components";
 const ProjectsPage = () => {
   const projectImages = [
     {
-      src: "https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?w=400&auto=format&fit=crop&q=60",
+      src: "http://nebula.wsimg.com/771ab2bfa3b9e09ea31fdceba426a468?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption One",
     },
     {
-      src: "https://images.unsplash.com/photo-1439436556258-1f7fab1bfd4f?w=400&auto=format&fit=crop&q=60",
+      src: "http://nebula.wsimg.com/f6015bbd9f5324e34f51967bd44ecb2b?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption One",
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1682308336208-7f3c19e6a96b?w=1000&auto=format&fit=crop&q=60",
+      src: "http://nebula.wsimg.com/9f5ffb7e03cdfc03c1b0ff6badbc0dc8?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption Two",
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1682308336208-7f3c19e6a96b?w=1000&auto=format&fit=crop&q=60",
+      src: "http://nebula.wsimg.com/209e8de253675b6fbe561e29c7f0f6f7?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption Two",
     },
     {
-      src: "https://plus.unsplash.com/premium_photo-1682308336208-7f3c19e6a96b?w=1000&auto=format&fit=crop&q=60",
+      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption Two",
     },
     {
-      src: "https://images.unsplash.com/photo-1684262667998-ca8c750cad71?w=1000&auto=format&fit=crop&q=60",
+      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption Three",
     },
   ];
 
+  const projectImages1 = [
+    {
+      src: "http://nebula.wsimg.com/771ab2bfa3b9e09ea31fdceba426a468?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption ten",
+    },
+    {
+      src: "http://nebula.wsimg.com/f6015bbd9f5324e34f51967bd44ecb2b?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption nine",
+    },
+    {
+      src: "http://nebula.wsimg.com/9f5ffb7e03cdfc03c1b0ff6badbc0dc8?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption eight",
+    },
+    {
+      src: "http://nebula.wsimg.com/209e8de253675b6fbe561e29c7f0f6f7?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption seven",
+    },
+    {
+      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption six",
+    },
+    {
+      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption five",
+    },
+  ];
+
+  const projectImages2 = [
+    {
+      src: "http://nebula.wsimg.com/771ab2bfa3b9e09ea31fdceba426a468?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption five",
+    },
+    {
+      src: "http://nebula.wsimg.com/f6015bbd9f5324e34f51967bd44ecb2b?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption six",
+    },
+    {
+      src: "http://nebula.wsimg.com/9f5ffb7e03cdfc03c1b0ff6badbc0dc8?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption seven",
+    },
+    {
+      src: "http://nebula.wsimg.com/209e8de253675b6fbe561e29c7f0f6f7?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption eight",
+    },
+    {
+      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption nine",
+    },
+    {
+      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      caption: "Caption ten",
+    },
+  ];
   const imageCarouselRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
@@ -89,7 +142,7 @@ const ProjectsPage = () => {
         PAVER BLOCKS EXECUTION AT PINNACLE HONDA Showroom (Asansol)
       </h4>
       <CarouselWrapper ref={(el: any) => (imageCarouselRefs.current[1] = el)}>
-        <ImageCarousel images={projectImages} />
+        <ImageCarousel images={projectImages1} />
       </CarouselWrapper>
 
       <div className="section-separator"></div>
@@ -99,7 +152,7 @@ const ProjectsPage = () => {
         BARBADDA STRETCH
       </h4>
       <CarouselWrapper ref={(el: any) => (imageCarouselRefs.current[2] = el)}>
-        <ImageCarousel images={projectImages} />
+        <ImageCarousel images={projectImages2} />
       </CarouselWrapper>
 
       <div className="section-separator"></div>

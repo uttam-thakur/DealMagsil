@@ -26,8 +26,8 @@ body {
     position: relative;
 } */
 .image-wrapper {
-  max-width: 600px; /* Set max width for image wrapper */
-  margin: 0 auto; /* Center the wrapper */
+  max-width: 600px;
+  margin: 0 auto;
 }
 .carousel-item img {
   max-width: 100%; /* Ensure carousel images are responsive */

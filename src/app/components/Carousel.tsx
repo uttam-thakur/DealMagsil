@@ -52,63 +52,121 @@ const Carousel = () => {
         style={{ transform: `rotateY(${angle}deg)` }}
       >
         {/* 10 Cards */}
-        <div
+        {/* <div
           className={styles.card}
           style={{ background: "linear-gradient(45deg, #f9a, #f06)" }}
         >
           Card 1
-        </div>
+        </div> */}
+
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #69f, #38a)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/1207318986/photo/colorful-cobblestone-road-pavement-and-lawn-divided-by-a-concrete-curb-backlight.jpg?s=612x612&w=0&k=20&c=Q-bB3JU5LtRTgzh1iOcCaxJt4NMTw9sXNUSbuJsZjkg=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
+        >
+          Card 1
+        </div>
+
+        <div
+          className={styles.card}
+          style={{
+            backgroundImage:
+              "url('https://4.imimg.com/data4/NM/LJ/MY-773089/cement-fencing-poles-500x500.jpg')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 2
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #6f6, #3a8)" }}
+          style={{
+            backgroundImage:
+              "url('https://4.imimg.com/data4/NM/LJ/MY-773089/cement-fencing-poles-500x500.jpg')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 3
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #fa6, #f38)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/1435155757/photo/pallet-of-concrete-cinder-blocks-grey-uniformed-brick-shapes-building-material-new-for-use-on.jpg?s=612x612&w=0&k=20&c=KbVZUrd3_WzwdWlfaglOAoqCp7enBGsvwJjQrbQnXYA=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 4
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #fea, #fa8)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/540406066/photo/reinforced-concrete-items.jpg?s=612x612&w=0&k=20&c=OzkqJ7ECpG0_53TAPjS2K3ONqfMSdTkIXPeno5LJxeo=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 5
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #9f6, #38a)" }}
+          style={{
+            backgroundImage:
+              "url('https://4.imimg.com/data4/NM/LJ/MY-773089/cement-fencing-poles-500x500.jpg')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 6
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #f69, #83f)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/1437054408/photo/new-checkered-concrete-cinder-tiles-of-a-garden-sidewalk-lawn-in-palette-in-store.jpg?s=612x612&w=0&k=20&c=Wo7n7zVoSybvTmJcyc1wrXNAHKeNpu0BOtJYf2AWgko=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 7
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #66f, #6af)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/1435155757/photo/pallet-of-concrete-cinder-blocks-grey-uniformed-brick-shapes-building-material-new-for-use-on.jpg?s=612x612&w=0&k=20&c=KbVZUrd3_WzwdWlfaglOAoqCp7enBGsvwJjQrbQnXYA=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 8
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #ff8, #fa9)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/540406066/photo/reinforced-concrete-items.jpg?s=612x612&w=0&k=20&c=OzkqJ7ECpG0_53TAPjS2K3ONqfMSdTkIXPeno5LJxeo=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 9
         </div>
         <div
           className={styles.card}
-          style={{ background: "linear-gradient(45deg, #0f6, #5a3)" }}
+          style={{
+            backgroundImage:
+              "url('https://media.istockphoto.com/id/1410452186/photo/foamed-lightweight-concrete-isolated-on-white.jpg?s=612x612&w=0&k=20&c=XCtmJhurwiNjjFAuFtvkfB62JEgfk0sv9B32Eq4xywI=')",
+            backgroundSize: "cover", // Ensures the image covers the entire card
+            backgroundPosition: "center", // Centers the image
+          }}
         >
           Card 10
         </div>
