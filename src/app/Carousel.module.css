@@ -37,6 +37,16 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease;
 }
+.bottomRightText {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: grey;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
 
 .card:nth-child(1) {
   transform: rotateY(0deg) translateZ(482px);

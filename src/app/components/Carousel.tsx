@@ -51,14 +51,6 @@ const Carousel = () => {
         onMouseDown={handleMouseDown}
         style={{ transform: `rotateY(${angle}deg)` }}
       >
-        {/* 10 Cards */}
-        {/* <div
-          className={styles.card}
-          style={{ background: "linear-gradient(45deg, #f9a, #f06)" }}
-        >
-          Card 1
-        </div> */}
-
         <div
           className={styles.card}
           style={{
@@ -68,7 +60,9 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 1
+          <h3 className={styles.bottomRightText}>
+            colorful cobblestone road pavement
+          </h3>
         </div>
 
         <div
@@ -80,7 +74,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 2
+          <h3 className={styles.bottomRightText}>cement fencing poles</h3>
         </div>
         <div
           className={styles.card}
@@ -91,7 +85,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 3
+          <h3 className={styles.bottomRightText}>cement fencing poles</h3>
         </div>
         <div
           className={styles.card}
@@ -102,7 +96,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 4
+          <h3 className={styles.bottomRightText}>pallet of concrete cinder</h3>
         </div>
         <div
           className={styles.card}
@@ -113,7 +107,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 5
+          <h3 className={styles.bottomRightText}>reinforced concrete</h3>
         </div>
         <div
           className={styles.card}
@@ -124,7 +118,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 6
+          <h3 className={styles.bottomRightText}>cement fencing poles</h3>
         </div>
         <div
           className={styles.card}
@@ -135,7 +129,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 7
+          <h3 className={styles.bottomRightText}>checkered concrete cinder</h3>
         </div>
         <div
           className={styles.card}
@@ -146,7 +140,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 8
+          <h3 className={styles.bottomRightText}>pallet of concrete cinder</h3>
         </div>
         <div
           className={styles.card}
@@ -157,7 +151,7 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 9
+          <h3 className={styles.bottomRightText}>reinforced concrete</h3>
         </div>
         <div
           className={styles.card}
@@ -168,7 +162,9 @@ const Carousel = () => {
             backgroundPosition: "center", // Centers the image
           }}
         >
-          Card 10
+          <h3 className={styles.bottomRightText}>
+            foamed lightweight concrete
+          </h3>
         </div>
       </div>
     </div>
