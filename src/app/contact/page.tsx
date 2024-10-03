@@ -154,10 +154,10 @@ export default function Contact() {
         {/* Footer Section */}
         <Box textAlign="center" mt={6}>
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-            Ready to level up your business?
+            Ready to level up your dream project?
           </Typography>
           <Typography variant="body1" mb={3}>
-            Start your 30-day free trial. Cancel anytime.
+            {/* Start your 30-day free trial. Cancel anytime. */}
           </Typography>
           {/* <Button
             variant="contained"

@@ -1,132 +1,109 @@
-/* .slider {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-    height: 100px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: 1360px;
-  }
-  
-  .slideTrack {
-    display: flex;
-    width: calc(250px * 14);
-    animation: scroll 40s linear infinite;
-  }
-  
-  .slide {
-    height: 100px;
-    width: 250px;
-  }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 7));
-    }
-  }
-  
-  .slider::before,
-  .slider::after {
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  }
-  
-  .slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-  
-  .slider::before {
-    left: 0;
-    top: 0;
-  }
-   */
+.slider {
+  background: #f0f0f0;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%; /* Make width 100% for responsiveness */
+  max-width: 90%; /* Set a max width */
+}
 
+.slideTrack {
+  display: flex;
+  width: calc(
+    250px * 14
+  ); /* Width based on number of slides (7 original + 7 duplicates) */
+  animation: scroll 40s linear infinite;
+}
 
-   .slider {
-    background: white;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-    height: 100px;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-    width: 100%; /* Make width 100% for responsiveness */
-    max-width: 90%; /* Set a max width */
-  }
-  
-  .slideTrack {
-    display: flex;
-    width: calc(250px * 14); /* Width based on number of slides (7 original + 7 duplicates) */
-    animation: scroll 40s linear infinite;
-  }
-  
+.slide {
+  height: 100px;
+  width: 250px; /* Fixed width for desktop */
+  flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+}
+
+.img {
+  height: 100%;
+  width: auto; /* Maintain aspect ratio */
+}
+
+.logo {
+  width: 150px; /* Adjust the size as needed */
+  height: auto;
+  mix-blend-mode: multiply; /* Change blend mode as desired */
+}
+
+/* Optional additional modes you can try */
+.logo.overlay {
+  mix-blend-mode: overlay;
+}
+
+.logo.screen {
+  mix-blend-mode: screen;
+}
+
+.logo.darken {
+  mix-blend-mode: darken;
+}
+
+.logo.lighten {
+  mix-blend-mode: lighten;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .slide {
-    height: 100px;
-    width: 250px; /* Fixed width for desktop */
-    flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+    width: 200px; /* Adjust width for smaller screens */
   }
-  
-  .img {
-    height: 100%;
-    width: auto; /* Maintain aspect ratio */
+
+  .slider {
+    height: 80px; /* Reduce height */
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .slide {
-      width: 200px; /* Adjust width for smaller screens */
-    }
-  
-    .slider {
-      height: 80px; /* Reduce height */
-    }
+}
+
+@media (max-width: 480px) {
+  .slide {
+    width: 150px; /* Further adjust for mobile */
   }
-  
-  @media (max-width: 480px) {
-    .slide {
-      width: 150px; /* Further adjust for mobile */
-    }
-  
-    .slider {
-      height: 90px; /* Further reduce height */
-    }
+
+  .slider {
+    height: 90px; /* Further reduce height */
   }
-  
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(calc(-250px * 7)); /* Move by the width of 7 original slides */
-    }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
-  
-  .slider::before,
-  .slider::after {
-    content: "";
-    height: 100px;
-    position: absolute;
-    width: 200px;
-    z-index: 2;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  100% {
+    transform: translateX(
+      calc(-250px * 7)
+    ); /* Move by the width of 7 original slides */
   }
-  
-  .slider::after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-  
-  .slider::before {
-    left: 0;
-    top: 0;
-  }
-  
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+
+.slider::before {
+  left: 0;
+  top: 0;
+}
