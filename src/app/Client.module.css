@@ -70,6 +70,11 @@
   .slider {
     height: 90px; /* Further reduce height */
   }
+  .img {
+    padding: 10px;
+    height: 100px;
+    width: 300px;
+  }
 }
 
 @keyframes scroll {
