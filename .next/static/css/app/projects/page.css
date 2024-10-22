@@ -87,10 +87,10 @@ p {
   margin: 50px 0;
 }
 
-/*!*********************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/Client.module.css ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************/
-.Client_slider__qDv9Q {
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/styles/Client.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.Client_slider__DHTwf {
   background: #f0f0f0;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
@@ -101,75 +101,75 @@ p {
   max-width: 90%; /* Set a max width */
 }
 
-.Client_slideTrack__ZlKus {
+.Client_slideTrack__XEvja {
   display: flex;
   width: calc(
     250px * 14
   ); /* Width based on number of slides (7 original + 7 duplicates) */
-  animation: Client_scroll__OJRBm 40s linear infinite;
+  animation: Client_scroll__pZJgq 40s linear infinite;
 }
 
-.Client_slide__qB41m {
+.Client_slide__uWAOq {
   height: 100px;
   width: 250px; /* Fixed width for desktop */
   flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
 }
 
-.Client_img__REXCE {
+.Client_img__57awQ {
   height: 100%;
   width: auto; /* Maintain aspect ratio */
 }
 
-.Client_logo__DF0WO {
+.Client_logo__gP4XT {
   width: 150px; /* Adjust the size as needed */
   height: auto;
   mix-blend-mode: multiply; /* Change blend mode as desired */
 }
 
 /* Optional additional modes you can try */
-.Client_logo__DF0WO.Client_overlay__Xpdas {
+.Client_logo__gP4XT.Client_overlay__BiKSW {
   mix-blend-mode: overlay;
 }
 
-.Client_logo__DF0WO.Client_screen__XneCJ {
+.Client_logo__gP4XT.Client_screen__E3RBT {
   mix-blend-mode: screen;
 }
 
-.Client_logo__DF0WO.Client_darken__mkJh2 {
+.Client_logo__gP4XT.Client_darken__kXZtV {
   mix-blend-mode: darken;
 }
 
-.Client_logo__DF0WO.Client_lighten__vkPn_ {
+.Client_logo__gP4XT.Client_lighten__HF2Ri {
   mix-blend-mode: lighten;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  .Client_slide__qB41m {
+  .Client_slide__uWAOq {
     width: 200px; /* Adjust width for smaller screens */
   }
 
-  .Client_slider__qDv9Q {
+  .Client_slider__DHTwf {
     height: 80px; /* Reduce height */
   }
 }
 
 @media (max-width: 480px) {
-  .Client_slide__qB41m {
+  .Client_slide__uWAOq {
     width: 150px; /* Further adjust for mobile */
   }
 
-  .Client_slider__qDv9Q {
+  .Client_slider__DHTwf {
     height: 90px; /* Further reduce height */
   }
-  .Client_img__REXCE {
+  .Client_img__57awQ {
     padding: 10px;
     height: 100px;
     width: 300px;
   }
 }
 
-@keyframes Client_scroll__OJRBm {
+@keyframes Client_scroll__pZJgq {
   0% {
     transform: translateX(0);
   }
@@ -180,8 +180,8 @@ p {
   }
 }
 
-.Client_slider__qDv9Q::before,
-.Client_slider__qDv9Q::after {
+.Client_slider__DHTwf::before,
+.Client_slider__DHTwf::after {
   content: "";
   height: 100px;
   position: absolute;
@@ -194,13 +194,13 @@ p {
   );
 }
 
-.Client_slider__qDv9Q::after {
+.Client_slider__DHTwf::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
 
-.Client_slider__qDv9Q::before {
+.Client_slider__DHTwf::before {
   left: 0;
   top: 0;
 }

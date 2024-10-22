@@ -156,19 +156,7 @@ export default function Contact() {
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
             Ready to level up your dream project?
           </Typography>
-          <Typography variant="body1" mb={3}>
-            {/* Start your 30-day free trial. Cancel anytime. */}
-          </Typography>
-          {/* <Button
-            variant="contained"
-            color="primary"
-            sx={{ mr: 2, borderRadius: "20px" }} // Rounded button
-          >
-            View Demo
-          </Button>
-          <Button variant="outlined" sx={{ borderRadius: "20px" }}>
-            Get Started
-          </Button> */}
+          <Typography variant="body1" mb={3}></Typography>
         </Box>
         <Typography
           variant="h4"

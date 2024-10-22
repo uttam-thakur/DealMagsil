@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import styles from "../Carousel.module.css";
+import styles from "../../app/components/styles/Carousel.module.css";
 
 const Carousel = () => {
   const [angle, setAngle] = useState(0);

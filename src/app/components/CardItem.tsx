@@ -1,9 +1,9 @@
 import * as React from "react";
 import { Card, Typography } from "@mui/material";
 import Image from "next/image"; // Importing the Next.js Image component
-import Welcome from "../../images/welcome.jpg"; // Importing from src folder
-import AboutUs from "../../images/aboutus.png"; // Importing from src folder
-import QualityAss from "../../images/quality1.png"; // Importing from src folder
+import Welcome from "../../../public/images/welcome.jpg"; // Importing from src folder
+import AboutUs from "../../../public/images/aboutus.png"; // Importing from src folder
+import QualityAss from "../../../public/images/quality1.png"; // Importing from src folder
 
 const WelcomeCard = ({ title, image, description }: any) => {
   return (

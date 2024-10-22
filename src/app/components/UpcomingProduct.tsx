@@ -12,7 +12,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import "./UpcomingProducts.css"; // Make sure to create this CSS file
+import "../components/styles/UpcomingProducts.css"; // Make sure to create this CSS file
 
 const items1 = [
   {

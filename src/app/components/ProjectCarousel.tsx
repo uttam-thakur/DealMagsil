@@ -144,12 +144,11 @@ const RadioButtons = styled.div`
 
 const RadioInput = styled.input`
   margin: 0 5px;
-  accent-color: red; /* Default accent color for unchecked radio */
+  accent-color: transparent; /* Remove color from radio buttons */
   transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition for color change */
 
   &:checked {
-    accent-color: red; /* Turn the radio button red when checked */
-    background-color: red; /* Ensure the radio button stays red when clicked */
+    accent-color: transparent; /* Keep the checked state transparent */
   }
 
   &:not(:checked) {
