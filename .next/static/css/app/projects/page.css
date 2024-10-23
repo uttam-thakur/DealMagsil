@@ -94,6 +94,8 @@ p {
   background: #f0f0f0;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
+  white-space: nowrap;
+
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -110,6 +112,8 @@ p {
 }
 
 .Client_slide__uWAOq {
+  display: inline-block;
+  margin-right: 20px;
   height: 100px;
   width: 250px; /* Fixed width for desktop */
   flex: 0 0 auto; /* Prevent flex items from growing or shrinking */

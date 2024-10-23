@@ -69,23 +69,23 @@ const Carousel = () => {
           className={styles.card}
           style={{
             backgroundImage:
-              "url('https://4.imimg.com/data4/NM/LJ/MY-773089/cement-fencing-poles-500x500.jpg')",
+              "url('/images/products/precastboundarywalls/4.jpg')",
             backgroundSize: "cover", // Ensures the image covers the entire card
             backgroundPosition: "center", // Centers the image
           }}
         >
-          <h3 className={styles.bottomRightText}>cement fencing poles</h3>
+          <h3 className={styles.bottomRightText}>precast boundary wall</h3>
         </div>
         <div
           className={styles.card}
           style={{
             backgroundImage:
-              "url('https://4.imimg.com/data4/NM/LJ/MY-773089/cement-fencing-poles-500x500.jpg')",
+              "url('/images/products/Interlocking Paver Blocks/hardscape3.jpg')",
             backgroundSize: "cover", // Ensures the image covers the entire card
             backgroundPosition: "center", // Centers the image
           }}
         >
-          <h3 className={styles.bottomRightText}>cement fencing poles</h3>
+          <h3 className={styles.bottomRightText}>colorful brick work</h3>
         </div>
         <div
           className={styles.card}

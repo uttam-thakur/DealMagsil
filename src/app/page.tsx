@@ -4,6 +4,7 @@ import Carouselinfra from "./components/Carouselinfra";
 import RegistrationSection from "./components/RegistrationSection";
 import "slick-carousel/slick/slick.css";
 import SEO from "./components/SEO";
+import FeedbackSlider from "./components/FeedbackSlider";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
         <WelcomeCard />
         {/* <br /> */}
         <Carouselinfra />
+        <FeedbackSlider />
         <RegistrationSection />
       </div>
     </>
