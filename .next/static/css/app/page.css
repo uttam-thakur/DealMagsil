@@ -355,29 +355,45 @@
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/styles/FeedbackSlider.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
+.FeedbackSlider_mainContainer__rOy7_ {
+  padding: 20px;
+}
+
+.FeedbackSlider_heading__0_S9p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .FeedbackSlider_sliderContainer__Y8t8f {
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* background-color: #f9f9f9; */
+  justify-content: space-between;
   border-radius: 10px;
-  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
-  padding: 40px;
+  padding: 20px;
   max-width: 800px;
   margin: 0 auto;
   position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .FeedbackSlider_slide__cFbfy {
   text-align: center;
   padding: 20px;
   width: 100%;
-  max-width: 600px;
+}
+
+.FeedbackSlider_avatar__nJu4C {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
 }
 
 .FeedbackSlider_feedbackText__JGCV_ {
   font-style: italic;
   color: #555;
+  margin: 10px 0;
+  font-size: 1rem;
 }
 
 .FeedbackSlider_name__s_3pz {
@@ -387,9 +403,56 @@
 
 .FeedbackSlider_designation__I7Eax {
   color: #777;
+  font-size: 0.9rem;
 }
 
 .FeedbackSlider_navButton__vvPRR {
   color: #555;
+}
+
+@media (max-width: 600px) {
+  .FeedbackSlider_sliderContainer__Y8t8f {
+    flex-direction: column;
+    padding: 15px;
+    height: 320px;
+  }
+
+  .FeedbackSlider_slide__cFbfy {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .FeedbackSlider_avatar__nJu4C {
+    width: 80px;
+    height: 80px;
+  }
+
+  .FeedbackSlider_feedbackText__JGCV_ {
+    font-size: 0.9rem;
+  }
+
+  .FeedbackSlider_name__s_3pz {
+    font-size: 1rem;
+  }
+
+  .FeedbackSlider_designation__I7Eax {
+    font-size: 0.8rem;
+  }
+
+  .FeedbackSlider_navButton__vvPRR {
+    position: absolute;
+    bottom: -1px;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .FeedbackSlider_navButton__vvPRR:first-of-type {
+    left: 35%;
+  }
+
+  .FeedbackSlider_navButton__vvPRR:last-of-type {
+    right: 35%;
+  }
 }
 

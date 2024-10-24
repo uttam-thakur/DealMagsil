@@ -54,10 +54,6 @@ const ProjectsPage = () => {
       src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
       caption: "Caption six",
     },
-    {
-      src: "http://nebula.wsimg.com/63efeadc42b8d9f889f915dcbea58452?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
-      caption: "Caption five",
-    },
   ];
 
   const projectImages2 = [
@@ -88,33 +84,8 @@ const ProjectsPage = () => {
   ];
   const imageCarouselRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
-          }
-        });
-      },
-      { threshold: 0.2 } // 20% of the div should be visible before the animation triggers
-    );
-
-    imageCarouselRefs.current.forEach((carousel) => {
-      if (carousel) {
-        observer.observe(carousel);
-      }
-    });
-
-    return () => {
-      observer.disconnect(); // Clean up observer on unmount
-    };
-  }, []);
-
   return (
-    <MainDiv>
+    <>
       <div>
         <p>
           Here are a few of the hundreds of projects we’ve completed over the
@@ -128,58 +99,37 @@ const ProjectsPage = () => {
         </p>
       </div>
 
-      <h4 className="project-heading">
-        PAVER BLOCKS, GRASS PAVERS SUPPLYING & EXECUTION AT GENEXX EXOTICA -
-        Asansol (PAHARPUR COOLING TOWERS)
-      </h4>
-      <CarouselWrapper ref={(el: any) => (imageCarouselRefs.current[0] = el)}>
-        <ImageCarousel images={projectImages} />
-      </CarouselWrapper>
-
-      <div className="section-separator"></div>
-
-      <h4 className="project-heading">
-        PAVER BLOCKS EXECUTION AT PINNACLE HONDA Showroom (Asansol)
-      </h4>
-      <CarouselWrapper ref={(el: any) => (imageCarouselRefs.current[1] = el)}>
-        <ImageCarousel images={projectImages1} />
-      </CarouselWrapper>
-
-      <div className="section-separator"></div>
-
-      <h4 className="project-heading">
-        SUPPLYING OF FENCING PILLARS OVER NATIONAL HIGHWAY (NH-2) PANAGARH to
-        BARBADDA STRETCH
-      </h4>
-      <CarouselWrapper ref={(el: any) => (imageCarouselRefs.current[2] = el)}>
-        <ImageCarousel images={projectImages2} />
-      </CarouselWrapper>
-
-      <div className="section-separator"></div>
+      <div>
+        <div>
+          <ImageCarousel images={projectImages} />
+          <h2>Asansol (PAHARPUR COOLING TOWERS)</h2>
+        </div>
+        <div>
+          <ImageCarousel images={projectImages1} />
+          <h2> PINNACLE HONDA Showroom (Asansol)</h2>
+        </div>
+        <div>
+          <ImageCarousel images={projectImages2} />
+          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
+        </div>
+        <div>
+          <ImageCarousel images={projectImages2} />
+          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
+        </div>
+        <div>
+          <ImageCarousel images={projectImages2} />
+          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
+        </div>
+        <div>
+          <ImageCarousel images={projectImages2} />
+          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
+        </div>
+      </div>
 
       <h4 className="project-heading">Our Clients Are</h4>
       <Client />
-    </MainDiv>
+    </>
   );
 };
 
 export default ProjectsPage;
-
-// Styled Components
-const MainDiv = styled.div`
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 1200px;
-
-  .visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
-const CarouselWrapper = styled.div`
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease, transform 1s ease;
-  margin-bottom: 50px;
-`;

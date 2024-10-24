@@ -10,6 +10,7 @@ import {
 } from "reactstrap";
 import "./page.css";
 import UpcomingProduct from "../components/UpcomingProduct";
+import FeatureGrid from "../components/FeatureGrid";
 
 const items = [
   {
@@ -155,6 +156,7 @@ const ProductInfo = () => {
       </div>
 
       <UpcomingProduct />
+      <FeatureGrid />
     </>
   );
 };

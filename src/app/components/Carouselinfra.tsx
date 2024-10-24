@@ -147,6 +147,28 @@ const Carouselinfra = () => {
         have facilities for carrying out various tests at laboratories that
         further assures the desired strength and longevity of the products .
       </Typography>
+      <div
+        style={{
+          position: "relative",
+          width: "90%",
+          margin: "30px auto",
+          height: "0.5px",
+          backgroundColor: "gray",
+        }}
+      >
+        <div
+          style={{
+            width: "10px",
+            height: "10px",
+            backgroundColor: "gray",
+            borderRadius: "50%",
+            position: "absolute",
+            top: "-5px",
+            left: "50%",
+            transform: "translateX(-50%)",
+          }}
+        />
+      </div>
     </>
   );
 };
