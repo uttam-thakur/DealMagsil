@@ -21,18 +21,14 @@ body {
   flex-direction: row-reverse;
 }
 
-/* .image-wrapper {
-    flex: 1;
-    position: relative;
-} */
 .image-wrapper {
   max-width: 600px;
   margin: 0 auto;
 }
 .carousel-item img {
-  max-width: 100%; /* Ensure carousel images are responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px; /* Optional: add border radius */
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .product-image {
@@ -94,5 +90,36 @@ body {
 
   .product-details {
     text-align: center;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    padding: 10px;
+  }
+
+  .product-details {
+    padding: 10px;
+  }
+
+  /* Adjusting the image size for smaller screens */
+  .image-wrapper img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust text size */
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
   }
 }

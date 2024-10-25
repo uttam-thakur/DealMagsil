@@ -16,22 +16,19 @@ import "../components/styles/UpcomingProducts.css"; // Make sure to create this 
 
 const items1 = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    // src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Newly Launch Product/1.jfif",
     altText: "Foam Concrete",
     caption: "Foam Concrete",
   },
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Newly Launch Product/2.jfif",
     altText: "CLC Brick",
     caption: "CLC Brick",
   },
+
   {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks ",
-    caption: "CLC Blocks",
-  },
-  {
-    src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Newly Launch Product/3.jfif",
     altText: "Eco-Friendly Brick ",
     caption: "Eco-Friendly Brick",
   },
@@ -39,17 +36,17 @@ const items1 = [
 
 const items2 = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Newly Launch Product/precast Door Frame.webp",
     altText: "Precast Door Window",
     caption: "Precast Door Window",
   },
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Newly Launch Product/precast-door-frame.avif",
     altText: "Precast Door Frame",
     caption: "Precast Door Frame",
   },
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Newly Launch Product/images.jfif",
     altText: "Precast Window Frame",
     caption: "Precast Window Frame",
   },
@@ -57,37 +54,43 @@ const items2 = [
 
 const items3 = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks Manufacturing",
-    caption: "Precast Door Window",
+    src: "/images/products/Newly Launch Product/cement bench.avif",
+    altText: "single color cement bench",
+    caption: "Single Color Cement Bench",
+  },
+
+  {
+    src: "/images/products/Newly Launch Product/cement bench1.jfif",
+    altText: "single color cement bench",
+    caption: "Single Color Cement Bench",
   },
   {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks Manufacturing",
-    caption: "Precast Door Frame",
-  },
-  {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks Manufacturing",
-    caption: "Precast Window Frame",
+    src: "/images/products/Newly Launch Product/cement bench2.jpg",
+    altText: "single color cement bench",
+    caption: "Single Color Cement Bench",
   },
 ];
 
 const items4 = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks Manufacturing",
-    caption: "Precast Door Window",
+    src: "/images/products/Newly Launch Product/precast beam and coloumn.jfif",
+    altText: "Precast Beam & Column",
+    caption: "Precast Beam & Column",
   },
   {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks Manufacturing",
-    caption: "Precast Door Frame",
+    src: "/images/products/Newly Launch Product/precast wall pannels.jfif",
+    altText: "Precast Wall Panels",
+    caption: "Precast Wall Panels",
   },
   {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "CLC Blocks Manufacturing",
-    caption: "Precast Window Frame",
+    src: "/images/products/Newly Launch Product/stairs.jfif",
+    altText: "Stairs & Enclosures",
+    caption: "Stairs & Enclosures",
+  },
+  {
+    src: "/images/products/Newly Launch Product/precast housing unit.jpg",
+    altText: "Precast Housing Unit",
+    caption: "Precast Housing Unit",
   },
 ];
 
@@ -145,7 +148,7 @@ const UpcomingProducts = () => {
         <img src={item.src} alt={item.altText} className="carousel-image" />
         <CarouselCaption
           captionText={item.caption}
-          captionHeader={item.altText}
+          // captionHeader={item.altText}
         />
       </CarouselItem>
     ));
@@ -153,7 +156,7 @@ const UpcomingProducts = () => {
   return (
     <div className="upcoming-products-section">
       <h2 className="text-center" style={{ color: "red", fontSize: "35px" }}>
-        PRODUCTS LAUNCHING SOON:
+        NEWLY LAUNCH PRODUCTS
       </h2>
       <Row>
         {/* First Card */}
@@ -283,11 +286,9 @@ const UpcomingProducts = () => {
           <Card className="custom-card">
             <CardBody>
               <CardTitle tag="h5" className="text-center">
-                CEMENT DOOR WINDOW FRAME
+                CEMENT Bench For OutDoor
               </CardTitle>
-              <CardText className="text-center">
-                Door Frame / Window Frame
-              </CardText>
+              <CardText className="text-center">Bench</CardText>
               <Carousel
                 activeIndex={activeIndex3}
                 next={() =>
@@ -343,10 +344,10 @@ const UpcomingProducts = () => {
           <Card className="custom-card">
             <CardBody>
               <CardTitle tag="h5" className="text-center">
-                CEMENT DOOR WINDOW FRAME
+                Precast Housing Solution
               </CardTitle>
               <CardText className="text-center">
-                Door Frame / Window Frame
+                Beam & columns / Wall Pannels / Stairs / Structural Slab
               </CardText>
               <Carousel
                 activeIndex={activeIndex4}
@@ -364,12 +365,12 @@ const UpcomingProducts = () => {
               >
                 <CarouselIndicators
                   items={items4}
-                  activeIndex={activeIndex3}
+                  activeIndex={activeIndex4}
                   onClickHandler={(newIndex) =>
                     goToIndex(newIndex, setActiveIndex4, animating4)
                   }
                 />
-                {renderSlides(items3, animating3, setAnimating3)}
+                {renderSlides(items4, animating4, setAnimating4)}
                 <CarouselControl
                   direction="prev"
                   directionText="Previous"

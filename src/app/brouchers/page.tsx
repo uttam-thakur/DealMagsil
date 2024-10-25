@@ -11,15 +11,15 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 const brochures = [
   {
     id: 1,
-    title: "React Brochure",
-    description: "A complete guide to our React-based products and services.",
-    file: "/brochure/react.pdf",
+    title: "Catalogue",
+    description: "An overview of our offerings products.",
+    file: "/brochure/DEAL MAGSIL Catalogue.pdf",
   },
   {
     id: 2,
-    title: "Next.js Brochure",
-    description: "An overview of our offerings built with Next.js.",
-    file: "/brochure/nextjs.pdf",
+    title: "React Brochure",
+    description: "A complete guide to our React-based products and services.",
+    file: "/brochure/react.pdf",
   },
   {
     id: 3,

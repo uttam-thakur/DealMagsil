@@ -14,40 +14,54 @@ import FeatureGrid from "../components/FeatureGrid";
 
 const items = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    // src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Precast Slabs/1.jpg",
     altText: "Slide 1",
     caption: "Slide 1",
     key: 1,
   },
   {
-    src: "https://picsum.photos/id/456/1200/400",
+    src: "/images/products/Precast Slabs/2.jpg",
     altText: "Slide 2",
     caption: "Slide 2",
     key: 2,
   },
   {
-    src: "https://picsum.photos/id/678/1200/400",
+    src: "/images/products/Precast Slabs/3.jpg",
     altText: "Slide 3",
     caption: "Slide 3",
+    key: 3,
+  },
+  {
+    src: "/images/products/Precast Slabs/4.jpg",
+    altText: "Slide 4",
+    caption: "Slide 4",
+    key: 3,
+  },
+  {
+    src: "/images/products/Precast Slabs/5.jpg",
+    altText: "Slide 5",
+    caption: "Slide 5",
     key: 3,
   },
 ];
 
 const fenceItems = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    // src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Fencing Poles/1.jpg",
     altText: "Slide 1",
     caption: "Slide 1",
     key: 1,
   },
   {
-    src: "https://picsum.photos/id/456/1200/400",
+    src: "/images/products/Fencing Poles/2.jpg",
     altText: "Slide 2",
     caption: "Slide 2",
     key: 2,
   },
   {
-    src: "https://picsum.photos/id/678/1200/400",
+    src: "/images/products/Fencing Poles/3.jpg",
     altText: "Slide 3",
     caption: "Slide 3",
     key: 3,
@@ -104,7 +118,11 @@ const ProductInfo = () => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <img
+          src={item.src}
+          alt={item.altText}
+          style={{ height: 400, width: 1200 }}
+        />
         <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}
