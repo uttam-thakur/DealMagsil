@@ -31,6 +31,7 @@ const navItems = [
   { label: "Projects", path: "/projects" },
   { label: "Products", path: "/products" },
   { label: "Contact Us", path: "/contact" },
+  { label: "Brouchers", path: "/brouchers" },
 ];
 
 export default function DrawerAppBar(props: Props) {

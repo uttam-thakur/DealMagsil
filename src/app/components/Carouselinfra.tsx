@@ -8,7 +8,6 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-// import {site1} from '../../../public/images/site/site1'
 const items = [
   {
     src: "/images/site/site1.jpg",
@@ -16,13 +15,11 @@ const items = [
     caption: "Site 1 Caption",
   },
   {
-    // src: "https://images.unsplash.com/photo-1577335029365-35029f68d093?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluZnJhc3RydWN0dXJlJTIwZmFjdG9yeXxlbnwwfHwwfHx8MA%3D%3D",
     src: "/images/site/site2.jpg",
     altText: "Site 2",
     caption: "Site 2 Caption",
   },
   {
-    // src: "https://images.unsplash.com/photo-1685708731554-c74f3679b2ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGluZnJhc3RydWN0dXJlJTIwZmFjdG9yeXxlbnwwfHwwfHx8MA%3D%3D",
     src: "/images/site/site3.jpg",
     altText: "Site 3",
     caption: "Site 3 Caption",
@@ -89,8 +86,8 @@ const Carouselinfra = () => {
             height: "400px",
             borderRadius: "10px",
             objectFit: "cover",
-          }} // Setting image size
-          className="d-block mx-auto" // Centers the image
+          }}
+          className="d-block mx-auto"
         />
         <CarouselCaption
           captionText={item.caption}
