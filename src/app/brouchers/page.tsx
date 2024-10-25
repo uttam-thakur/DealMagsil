@@ -1,6 +1,8 @@
 // src/app/brochure/page.js
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@mui/material";
+import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 
 export default function Brouchers() {
   return (
@@ -29,9 +31,13 @@ export default function Brouchers() {
 
       {/* Download Button */}
       <Link href="/brochure.pdf" target="_blank" download>
-        <button className="px-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-md hover:bg-blue-700 transition">
+        <Button
+          variant="contained"
+          color="primary"
+          startIcon={<PictureAsPdfIcon />}
+        >
           Download Brochure
-        </button>
+        </Button>
       </Link>
     </main>
   );
