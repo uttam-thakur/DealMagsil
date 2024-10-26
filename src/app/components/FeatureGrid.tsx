@@ -4,88 +4,88 @@ import styles from "../components/styles/FeatureGrid.module.css";
 
 const features = [
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image
-    title: "Library Agnostic",
+    imageSrc: "/images/tiles/dotted.webp",
+    title: "DOTTED",
     description:
-      "Swiper doesn't require any JavaScript libraries like jQuery, which makes Swiper much smaller and faster.",
+      "A versatile, dotted pattern tile ideal for adding subtle texture and depth to any space.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image
-    title: "Modular Structure",
+    imageSrc: "/images/tiles/barfi.jfif",
+    title: "BARFI",
     description:
-      "Swiper has a modular structure and allows you to use only the necessary modules to make its size even smaller.",
+      "Inspired by classic Barfi shapes, this tile brings a unique charm with its geometric elegance.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Full RTL Support",
-    title: "Library Agnostic",
-
-    description: "Swiper provides 100% RTL support with correct layout.",
-  },
-  {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Multi Row Slides Layout",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/quarter circle.jfif",
+    title: "QUARTER CIRCLE",
     description:
-      "Swiper allows a multiple row slides layout, with a few slides per column.",
+      "Features a unique quarter-circle design, perfect for creating dynamic patterns in floors or walls.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Transition Effects",
-    title: "Library Agnostic",
-
-    description: "There are a lot of transition effects including 3D effects.",
-  },
-  {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Full Navigation Control",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/chequered.jfif",
+    title: "CHEQUERED",
     description:
-      "All required navigation elements are here - Pagination, Navigation, Scrollbar.",
+      "A classic chequered pattern that brings a bold, timeless style to interiors and exteriors.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Two-way Control & Thumbs",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/grey quarter circle.jfif",
+    title: "GREY QUARTER CIRCLE",
     description:
-      "Swiper can be used as a controller for any number of other Swipers.",
+      "A subtle, grey-toned quarter-circle tile that provides a modern look with an artistic flair.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Most Flexible Slides Layout Grid",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/cadburry.jfif",
+    title: "CADBURRY",
     description:
-      "Swiper has a lot of parameters to make it as flexible as possible.",
+      "Rich and smooth, the Cadbury tile adds an elegant, luxurious feel to any surface.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Parallax Transitions",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/roof.jfif",
+    title: "ROOF TILE",
     description:
-      "Swiper supports modern parallax transition effects that can be used on any element inside of Swiper.",
+      "Durable and weather-resistant, this tile is ideal for roofing with a stylish, traditional look.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Images Lazy Loading",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/black&white.jfif",
+    title: "BLACK AND WHITE CHECKER",
     description:
-      "Delays loading of images in inactive/invisible slides until the user swipes to them.",
+      "A bold black-and-white checker pattern that enhances spaces with a striking, modern appeal.",
   },
   {
-    imageSrc:
-      "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Virtual Slides",
-    title: "Library Agnostic",
-
+    imageSrc: "/images/tiles/l-shaped.jfif",
+    title: "L-SHAPED SAND BLAST",
     description:
-      "This feature is great when you have a lot of content-heavy slides so it keeps just the required amount of slides in DOM.",
+      "The L-shaped design with a sandblast finish adds texture and modernity to any project.",
+  },
+  {
+    imageSrc: "/images/tiles/hex.jfif",
+    title: "TRI - HEX",
+    description:
+      "Combines triangular and hexagonal shapes, perfect for creating eye-catching, intricate patterns.",
+  },
+  {
+    imageSrc: "/images/tiles/zig-zag.jfif",
+    title: "ZIG - ZAG UNI PAVER",
+    description:
+      "A unique zig-zag pattern that provides strong interlocking support for outdoor paving needs.",
+  },
+  {
+    imageSrc: "/images/tiles/milano.jfif",
+    title: "MILANO",
+    description:
+      "Elegant and smooth, Milano tiles are designed to bring Italian charm and sophistication to any surface.",
+  },
+  {
+    imageSrc: "/images/tiles/squared shaped stone finish.jfif",
+    title: "SQUARED SHAPED STONE FINISH",
+    description:
+      "Features a natural stone finish that adds earthy tones and texture to floors or walls.",
+  },
+  {
+    imageSrc: "/images/tiles/brick.jfif",
+    title: "BRICK SHAPED",
+    description:
+      "A classic brick shape that offers a rustic, timeless appeal for both indoor and outdoor spaces.",
   },
 ];
 
