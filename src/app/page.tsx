@@ -10,9 +10,7 @@ const Home = () => {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Carousel />
-      {/* <br /> */}
       <WelcomeCard />
-      {/* <br /> */}
       <Carouselinfra />
       <FeedbackSlider />
       <RegistrationSection />

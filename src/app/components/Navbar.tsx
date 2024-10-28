@@ -45,7 +45,9 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <img
-        src="http://nebula.wsimg.com/f6f02f85f065096f57161ffd21c2a893?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1"
+        // src="http://nebula.wsimg.com/f6f02f85f065096f57161ffd21c2a893?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1"
+        src="/images/dmlogo1.png"
+        // src="/images/dmlogo1.png"
         alt="Company Logo"
         style={{
           height: "60px",
@@ -180,7 +182,8 @@ export default function DrawerAppBar(props: Props) {
           <Link href="/" passHref>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <img
-                src="http://nebula.wsimg.com/f6f02f85f065096f57161ffd21c2a893?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1"
+                // src="http://nebula.wsimg.com/f6f02f85f065096f57161ffd21c2a893?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1"
+                src="/images/dmlogo.jpeg"
                 alt="Company Logo"
                 style={{
                   height: "60px",

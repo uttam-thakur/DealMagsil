@@ -79,21 +79,21 @@ export default function App() {
       <WelcomeCard
         // title="About Us"
         image={AboutUs}
-        description="Established in 1991, DEAL MAGSIL is a prominent company committed towards manufacturing and supplying precast concrete products and Interlocking paver block. Being an experienced company we excel in upholding our quality standards, reliability and efficiency. With time DEAL MAGSIL has emerged as a chief turnkey service manufacturer and provider in National Highway – 2 Panagarh to Barwa Adda Stretch, BAPL Andal Airport, Asansol, Durgapur , Kulti Municipal Corporations and DVC RTPP Raghunathpur Underground Cable Covers Suppliers and many other prestigious projects all over. 
- DEAL MAGSIL is registered under Government of West Bengal S.S.I Unit certified Manufacturer and Supplier of a wide range of Concrete and allied products including Registered Vendor of SAIL - IISCO, DVC, L&T, AMC, DMC and many other Public and Private Authorities.
- Positioned as one of the oldest and biggest SSI unit of its kind in this domain, we rely only on the latest technology and the technical expertise of a qualified team that is committed to excellence. Being a part of the infrastructural development in the country, we are a regular supplier to various government departments and private companies like: Steel Authority of India Ltd IISCO steel plant, National Highway Authority of India, Maheswari Brothers Limited, SMS Infrastructure Limited, Asansol Municipal Corporation, Damodar Valley Corporation and so on. "
+        description="Established in 1991, DEAL MAGSIL is a leading manufacturer and supplier of high-quality precast concrete products and interlocking paver blocks. With decades of experience, we uphold strict standards of reliability, quality, and efficiency in every project.
+
+As a registered S.S.I Unit with the Government of West Bengal and certified supplier to organizations like SAIL - IISCO, DVC, L&T, and several Municipal Corporations, DEAL MAGSIL is recognized for its turnkey solutions in prestigious projects, including the National Highway-2 Panagarh-Barwa Adda stretch, Andal Airport, and DVC RTPP Raghunathpur.
+
+With a skilled team and cutting-edge technology, we proudly support infrastructure development across the country, consistently serving both government departments and private sectors."
       />
       {/* Third Card */}
       <WelcomeCard
         // title="Quality Assurance"
         image={QualityAss}
-        description="We being Quality conscious always endeavor to excel in quality standards. We use high grade 100% clear virgin raw material. Each of our products is confirming to all Quality Standards and meeting all the parameters for ultimate performance. We believe in high business ethical values and commitment.
- Company established in 1991 with perception of development and to create a benchmark in construction activities Industry by maintaining QUALITY, SPEED and SERVICES with most advanced Hi-tech Technology with super mechanized system and Innovative concepts to lead the market.
- <br>
- Our Technical Team is also engaged in designing and developing the wide range of Innovative concrete products, which are cost effective, maintenance free and environmental friendly and stands better replacement for conventional products. Which are manufactured under precision conditions through automated and Hi-Tech Machines.
- With the aim to achieve and exceed customer expectations our team strives for continuous improvement in our systems of services and quality control by adopting modern technology and enhancing competence of our people. We are committed to improve the quality of our products through Hi- Tech technology & up-gradation and services
- The products developed by the company has its own designs and patterns, which lead to market by its Quality and performance in operation, the market reach of our products extends to every corner of the district. DEAL MAGSIL brand has established a formidable credibility and is associated with high quality, state of the art technology and exemplary services.
- Looking towards to maintain the flagship in market our Team of Technicians also given the emphasis on appearance, Aesthetic view, Strength and Economical range to our products which are Eco-friendly too."
+        description="Since 1991, we’ve set benchmarks in construction with our commitment to quality, speed, and innovative technology. Our products are made from 100% virgin raw materials, ensuring premium quality that meets all performance standards.
+
+Our specialized technical team designs and develops a range of cost-effective, eco-friendly concrete products, manufactured with cutting-edge technology and precision. We emphasize durability, aesthetics, and affordability, creating sustainable solutions that surpass conventional products.
+
+With the DEAL MAGSIL brand, we’re proud to provide industry-leading quality, modern technology, and exceptional service across the district, consistently aiming to exceed customer expectations."
       />
     </>
   );

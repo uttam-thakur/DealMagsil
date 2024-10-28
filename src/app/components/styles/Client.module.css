@@ -7,15 +7,13 @@
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 100%; /* Make width 100% for responsiveness */
-  max-width: 90%; /* Set a max width */
+  width: 100%;
+  max-width: 90%;
 }
 
 .slideTrack {
   display: flex;
-  width: calc(
-    250px * 14
-  ); /* Width based on number of slides (7 original + 7 duplicates) */
+  width: calc(250px * 14);
   animation: scroll 40s linear infinite;
 }
 
@@ -23,22 +21,21 @@
   display: inline-block;
   margin-right: 20px;
   height: 100px;
-  width: 250px; /* Fixed width for desktop */
-  flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+  width: 250px;
+  flex: 0 0 auto;
 }
 
 .img {
   height: 100%;
-  width: auto; /* Maintain aspect ratio */
+  width: auto;
 }
 
 .logo {
-  width: 150px; /* Adjust the size as needed */
+  width: 150px;
   height: auto;
-  mix-blend-mode: multiply; /* Change blend mode as desired */
+  mix-blend-mode: multiply;
 }
 
-/* Optional additional modes you can try */
 .logo.overlay {
   mix-blend-mode: overlay;
 }
@@ -55,24 +52,23 @@
   mix-blend-mode: lighten;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .slide {
-    width: 200px; /* Adjust width for smaller screens */
+    width: 200px;
   }
 
   .slider {
-    height: 80px; /* Reduce height */
+    height: 80px;
   }
 }
 
 @media (max-width: 480px) {
   .slide {
-    width: 150px; /* Further adjust for mobile */
+    width: 150px;
   }
 
   .slider {
-    height: 90px; /* Further reduce height */
+    height: 90px;
   }
   .img {
     padding: 10px;
@@ -86,9 +82,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(
-      calc(-250px * 7)
-    ); /* Move by the width of 7 original slides */
+    transform: translateX(calc(-250px * 7));
   }
 }
 

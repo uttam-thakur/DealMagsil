@@ -14,7 +14,7 @@ interface Feedback {
 
 const feedbackData: Feedback[] = [
   {
-    image: "/images/clients/1.jpg",
+    image: "/images/feedback/1.jfif",
     feedback:
       "Amazing service and top-notch product quality! The attention to detail exceeded my expectations.",
     rating: 5,
@@ -22,7 +22,7 @@ const feedbackData: Feedback[] = [
     designation: "CEO, TechCorp",
   },
   {
-    image: "/images/clients/2.jpg",
+    image: "/images/feedback/2.jfif",
     feedback:
       "Incredible experience! Professionalism and product quality were top-notch.",
     rating: 4.5,
@@ -30,7 +30,7 @@ const feedbackData: Feedback[] = [
     designation: "Marketing Director, Webify",
   },
   {
-    image: "/images/clients/3.jpg",
+    image: "/images/feedback/3.jfif",
     feedback: "Great service, quick turnaround, and excellent product quality!",
     rating: 5,
     name: "Robert Johnson",
