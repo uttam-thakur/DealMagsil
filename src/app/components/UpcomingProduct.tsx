@@ -171,6 +171,7 @@ const UpcomingProducts = () => {
                 Light Weight Bricks
               </CardText>
               <Carousel
+                interval={false}
                 activeIndex={activeIndex1}
                 next={() =>
                   next(activeIndex1, setActiveIndex1, items1.length, animating1)

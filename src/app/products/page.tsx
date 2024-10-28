@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import {
   Carousel,
   CarouselItem,
@@ -11,6 +12,8 @@ import {
 import "./page.css";
 import UpcomingProduct from "../components/UpcomingProduct";
 import FeatureGrid from "../components/FeatureGrid";
+import { InputAdornment, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 const items = [
   {
@@ -69,6 +72,8 @@ const fenceItems = [
 ];
 
 const ProductInfo = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
   const products = [
     {
       title: "PRECAST SLABS",
@@ -90,6 +95,14 @@ const ProductInfo = () => {
     },
     // Add more products as needed
   ];
+
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm)
+  );
 
   const CarouselComponent = ({ images }: any) => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -131,7 +144,12 @@ const ProductInfo = () => {
     ));
 
     return (
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        interval={false} // Disable auto-sliding explicitly
+      >
         <CarouselIndicators
           items={images}
           activeIndex={activeIndex}
@@ -154,27 +172,73 @@ const ProductInfo = () => {
 
   return (
     <>
-      <div className="product-container">
-        {products.map((product, index) => (
-          <div
-            className={`product-section ${
-              index % 2 === 0 ? "normal-layout" : "reverse-layout"
-            }`}
-            key={index}
-          >
-            <div className="product-details">
-              <h2 className="product-title">{product.title}</h2>
-              <p className="product-description">{product.description}</p>
+      <TextField
+        variant="standard"
+        placeholder="Search Tiles"
+        value={searchTerm}
+        onChange={handleSearch}
+        className="search-bar"
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
+        fullWidth // Optional: Use this to make it full-width
+        margin="normal" // Optional: Adds some margin around the TextField
+      />
+      {/* Only show filtered results if there's a search term */}
+      {searchTerm ? (
+        <>
+          {filteredProducts.length > 0 ? (
+            <div className="product-container">
+              {filteredProducts.map((product, index) => (
+                <div
+                  className={`product-section ${
+                    index % 2 === 0 ? "normal-layout" : "reverse-layout"
+                  }`}
+                  key={index}
+                >
+                  <div className="product-details">
+                    <h2 className="product-title">{product.title}</h2>
+                    <p className="product-description">{product.description}</p>
+                  </div>
+                  <div className="image-wrapper">
+                    <CarouselComponent images={product.images} />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="image-wrapper">
-              <CarouselComponent images={product.images} />
-            </div>
+          ) : (
+            <p>Product not found</p>
+          )}
+          <FeatureGrid searchTerm={searchTerm} />
+        </>
+      ) : (
+        <>
+          <div className="product-container">
+            {products.map((product, index) => (
+              <div
+                className={`product-section ${
+                  index % 2 === 0 ? "normal-layout" : "reverse-layout"
+                }`}
+                key={index}
+              >
+                <div className="product-details">
+                  <h2 className="product-title">{product.title}</h2>
+                  <p className="product-description">{product.description}</p>
+                </div>
+                <div className="image-wrapper">
+                  <CarouselComponent images={product.images} />
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-
-      <UpcomingProduct />
-      <FeatureGrid />
+          <UpcomingProduct />
+          <FeatureGrid searchTerm={searchTerm} />
+        </>
+      )}
     </>
   );
 };

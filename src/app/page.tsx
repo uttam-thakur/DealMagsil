@@ -8,17 +8,15 @@ import FeedbackSlider from "./components/FeedbackSlider";
 
 const Home = () => {
   return (
-    <>
-      <div style={{ overflowX: "hidden" }}>
-        <Carousel />
-        {/* <br /> */}
-        <WelcomeCard />
-        {/* <br /> */}
-        <Carouselinfra />
-        <FeedbackSlider />
-        <RegistrationSection />
-      </div>
-    </>
+    <div style={{ overflowX: "hidden" }}>
+      <Carousel />
+      {/* <br /> */}
+      <WelcomeCard />
+      {/* <br /> */}
+      <Carouselinfra />
+      <FeedbackSlider />
+      <RegistrationSection />
+    </div>
   );
 };
 

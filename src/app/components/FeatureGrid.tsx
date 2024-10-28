@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import FeatureCard from "./FeatureCard";
+import { Typography } from "@mui/material";
+
 import styles from "../components/styles/FeatureGrid.module.css";
 
 const features = [
@@ -81,6 +84,7 @@ const features = [
     description:
       "Features a natural stone finish that adds earthy tones and texture to floors or walls.",
   },
+
   {
     imageSrc: "/images/tiles/brick.jfif",
     title: "BRICK SHAPED",
@@ -88,38 +92,31 @@ const features = [
       "A classic brick shape that offers a rustic, timeless appeal for both indoor and outdoor spaces.",
   },
 ];
+interface FeatureGridProps {
+  searchTerm: string;
+}
 
-const FeatureGrid: React.FC = () => {
+const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
+  const filteredFeatures = features.filter((feature) =>
+    feature.title.toLowerCase().includes(searchTerm)
+  );
   return (
-    <div className={styles.featureGrid}>
-      {features.map((feature, index) => (
-        <FeatureCard
-          key={index}
-          imageSrc={feature?.imageSrc}
-          title={feature?.title}
-          description={feature?.description}
-        />
-      ))}
-    </div>
+    <>
+      {/* <Typography variant="h4" component="h2" gutterBottom>
+        Different Types of Tiles
+      </Typography> */}
+      <div className={styles.featureGrid}>
+        {filteredFeatures.map((feature, index) => (
+          <FeatureCard
+            key={index}
+            imageSrc={feature?.imageSrc}
+            title={feature?.title}
+            description={feature?.description}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
 export default FeatureGrid;
-
-//second ui
-// const FeatureGrid: React.FC = () => {
-//   return (
-//     <div className={styles.featureGrid}>
-//       {features.map((feature, index) => (
-//         <FeatureCard
-//           key={index}
-//           imageSrc={feature.imageSrc}
-//           title={feature.title}
-//           description={feature.description}
-//         />
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default FeatureGrid;

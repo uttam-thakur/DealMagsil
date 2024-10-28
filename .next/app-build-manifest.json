@@ -12,17 +12,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/contact/page.css",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/brouchers/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/brouchers/page.js"
-    ],
     "/products/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
