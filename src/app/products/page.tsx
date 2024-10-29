@@ -15,7 +15,13 @@ import FeatureGrid from "../components/FeatureGrid";
 import { InputAdornment, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-const items = [
+interface CarouselItemProps {
+  src: string;
+  altText: string;
+  caption: string;
+  key: number;
+}
+const items: CarouselItemProps[] = [
   {
     // src: "https://picsum.photos/id/123/1200/400",
     src: "/images/products/Precast Slabs/1.jpg",
@@ -49,7 +55,7 @@ const items = [
   },
 ];
 
-const fenceItems = [
+const fenceItems: CarouselItemProps[] = [
   {
     // src: "https://picsum.photos/id/123/1200/400",
     src: "/images/products/Fencing Poles/1.jpg",
@@ -71,10 +77,16 @@ const fenceItems = [
   },
 ];
 
-const ProductInfo = () => {
+interface ProductProps {
+  title: string;
+  description: string;
+  images: CarouselItemProps[];
+}
+
+const ProductInfo: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  const products = [
+  const products: ProductProps[] = [
     {
       title: "PRECAST SLABS",
       description: `
@@ -104,7 +116,9 @@ const ProductInfo = () => {
     product.title.toLowerCase().includes(searchTerm)
   );
 
-  const CarouselComponent = ({ images }: any) => {
+  const CarouselComponent: React.FC<{ images: CarouselItemProps[] }> = ({
+    images,
+  }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -120,12 +134,12 @@ const ProductInfo = () => {
       setActiveIndex(nextIndex);
     };
 
-    const goToIndex = (newIndex: any) => {
+    const goToIndex = (newIndex: number) => {
       if (animating) return;
       setActiveIndex(newIndex);
     };
 
-    const slides = images.map((item: any) => (
+    const slides = images.map((item) => (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
@@ -134,7 +148,8 @@ const ProductInfo = () => {
         <img
           src={item.src}
           alt={item.altText}
-          style={{ height: 400, width: 1200 }}
+          className="image"
+          // style={{ height: 400, width: 1200 }}
         />
         <CarouselCaption
           captionText={item.caption}
@@ -185,60 +200,30 @@ const ProductInfo = () => {
             </InputAdornment>
           ),
         }}
-        fullWidth // Optional: Use this to make it full-width
-        margin="normal" // Optional: Adds some margin around the TextField
+        fullWidth
+        margin="normal"
       />
       {/* Only show filtered results if there's a search term */}
-      {searchTerm ? (
-        <>
-          {filteredProducts.length > 0 ? (
-            <div className="product-container">
-              {filteredProducts.map((product, index) => (
-                <div
-                  className={`product-section ${
-                    index % 2 === 0 ? "normal-layout" : "reverse-layout"
-                  }`}
-                  key={index}
-                >
-                  <div className="product-details">
-                    <h2 className="product-title">{product.title}</h2>
-                    <p className="product-description">{product.description}</p>
-                  </div>
-                  <div className="image-wrapper">
-                    <CarouselComponent images={product.images} />
-                  </div>
-                </div>
-              ))}
+      <div className="product-container">
+        {(searchTerm ? filteredProducts : products).map((product, index) => (
+          <div
+            className={`product-section ${
+              index % 2 === 0 ? "normal-layout" : "reverse-layout"
+            }`}
+            key={index}
+          >
+            <div className="product-details">
+              <h2 className="product-title">{product.title}</h2>
+              <p className="product-description">{product.description}</p>
             </div>
-          ) : (
-            <p>Product not found</p>
-          )}
-          <FeatureGrid searchTerm={searchTerm} />
-        </>
-      ) : (
-        <>
-          <div className="product-container">
-            {products.map((product, index) => (
-              <div
-                className={`product-section ${
-                  index % 2 === 0 ? "normal-layout" : "reverse-layout"
-                }`}
-                key={index}
-              >
-                <div className="product-details">
-                  <h2 className="product-title">{product.title}</h2>
-                  <p className="product-description">{product.description}</p>
-                </div>
-                <div className="image-wrapper">
-                  <CarouselComponent images={product.images} />
-                </div>
-              </div>
-            ))}
+            <div className="image-wrapper">
+              <CarouselComponent images={product.images} />
+            </div>
           </div>
-          <UpcomingProduct />
-          <FeatureGrid searchTerm={searchTerm} />
-        </>
-      )}
+        ))}
+      </div>
+      {!searchTerm && <UpcomingProduct />}
+      <FeatureGrid searchTerm={searchTerm} />
     </>
   );
 };

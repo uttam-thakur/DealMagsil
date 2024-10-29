@@ -1,13 +1,12 @@
-/* Ensure the card and image have uniform sizes */
-.custom-card {
-  height: 350px; /* Set a uniform height for all cards */
+/* Ensure the card and image have uniform sizes .custom-card {
+  height: 350px;
   margin: 20px;
 }
 
 .carousel-image {
   width: 100%;
-  height: 400px; /* Set a fixed height for all images */
-  object-fit: cover; /* Ensure images maintain aspect ratio */
+  height: 400px;
+  object-fit: cover;
 }
 .carousel-item img {
   max-width: 100%;
@@ -15,8 +14,33 @@
   border-radius: 8px;
   height: 400;
   width: 1200;
-}
-/* .text-heading {
-  color: red;
-  font-size: 35px;
 } */
+
+.custom-card {
+  margin-bottom: 50px;
+}
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: 500px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .carousel-image,
+  .carousel-item img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-image,
+  .carousel-item img {
+    height: 200px;
+  }
+}

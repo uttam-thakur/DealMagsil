@@ -3,18 +3,28 @@ import React, { useState, useRef } from "react";
 import { Modal, TextField, Typography, Box, Button } from "@mui/material";
 import { toast } from "react-toastify";
 import { sendEmail } from "../services/services";
+interface ContactModalProps {
+  open: boolean;
+  onClose: () => void;
+}
+interface FormValues {
+  name: string;
+  email: string;
+  phone: string;
+  query: string;
+}
 
-export default function ContactModal({ open, onClose }: any) {
+export default function ContactModal({ open, onClose }: ContactModalProps) {
   const formRef = useRef(null); // Create a ref for the form
 
-  const [formValues, setFormValues] = useState({
+  const [formValues, setFormValues] = useState<FormValues>({
     name: "",
     email: "",
     phone: "",
     query: "",
   });
 
-  const validateModalInputs = () => {
+  const validateModalInputs = (): boolean => {
     const { name, email, phone, query } = formValues;
     const nameRegex = /^[a-zA-Z\s]+$/;
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -51,7 +61,7 @@ export default function ContactModal({ open, onClose }: any) {
     }
   };
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValues((prev) => ({ ...prev, [name]: value }));
   };

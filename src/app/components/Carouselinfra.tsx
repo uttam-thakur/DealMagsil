@@ -66,7 +66,7 @@ const Carouselinfra = () => {
     setActiveIndex(prevIndex);
   };
 
-  const goToIndex = (newIndex: any) => {
+  const goToIndex = (newIndex: number) => {
     if (animating) return;
     setActiveIndex(newIndex);
   };

@@ -1,11 +1,20 @@
 import * as React from "react";
 import { Card, Typography } from "@mui/material";
-import Image from "next/image"; // Importing the Next.js Image component
+import Image, { StaticImageData } from "next/image"; // Importing the Next.js Image component
 import Welcome from "../../../public/images/welcome.jpg"; // Importing from src folder
 import AboutUs from "../../../public/images/aboutus.png"; // Importing from src folder
 import QualityAss from "../../../public/images/quality1.png"; // Importing from src folder
 
-const WelcomeCard = ({ title, image, description }: any) => {
+interface WelcomeCardProps {
+  title?: string;
+  image: StaticImageData; // Since we're using Next.js Image component, StaticImageData is suitable here
+  description: string;
+}
+const WelcomeCard: React.FC<WelcomeCardProps> = ({
+  title,
+  image,
+  description,
+}) => {
   return (
     <>
       <Card

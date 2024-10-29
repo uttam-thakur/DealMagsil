@@ -18,7 +18,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <SEO
           title="Cement Products Manufacturing | Slabs, Tiles, Fencing, Pipes"
           description="Deal Magsil specializes in high-quality cement products including precast slabs, fencing pillars, roofing tiles, RCC pipes, and more for industrial and commercial use."
-          keywords="Asansol cement product, durgapur cement product, cement products, precast concrete, roofing tiles, fencing pillars, RCC pipes, cement slabs, concrete blocks, precast construction materials, precast housing solutions, high-quality concrete"
+          keywords="Asansol cement product, durgapur cement product, cement products, precast concrete, roofing tiles, fencing pillars, RCC pipes, cement slabs, concrete blocks, precast construction materials, precast housing solutions, high-quality concrete, tiles"
           author="Deal Magsil"
           canonical="https://yourwebsite.com"
           ogTitle="Cement Products Manufacturing | Slabs, Tiles, Fencing, Pipes"

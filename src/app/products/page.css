@@ -24,7 +24,9 @@ body {
 .image-wrapper {
   max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
+
 .carousel-item img {
   max-width: 100%;
   height: auto;
@@ -38,7 +40,10 @@ body {
   border-radius: 8px;
   object-fit: cover;
 }
-
+.image {
+  height: 400px;
+  width: 1200px;
+}
 .image-caption {
   position: absolute;
   bottom: 10px;
@@ -48,11 +53,6 @@ body {
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 14px;
-}
-
-.image-wrapper {
-  position: relative;
-  flex: 1;
 }
 
 .product-details {
@@ -76,14 +76,13 @@ body {
     gap: 10px;
   }
 
-  .reverse-layout {
-    flex-direction: column;
-  }
-
   .image-wrapper {
     width: 100%;
   }
-
+  .image {
+    height: 400px;
+    width: 1200px;
+  }
   .product-image {
     max-width: 100%;
   }
@@ -91,35 +90,36 @@ body {
   .product-details {
     text-align: center;
   }
-}
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .product-section {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .image-wrapper {
-    padding: 10px;
-  }
-
-  .product-details {
-    padding: 10px;
-  }
-
-  /* Adjusting the image size for smaller screens */
-  .image-wrapper img {
+  .carousel-item img {
     width: 100%;
     height: auto;
   }
 
-  /* Adjust text size */
   .product-title {
     font-size: 1.5rem;
   }
 
   .product-description {
     font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .product-container {
+    margin: 0; /* Remove margin for extra-small screens */
+  }
+
+  .product-section {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 1.4rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
   }
 }

@@ -1,6 +1,6 @@
 import { CommonRegex } from "../regexes";
 
-export const contactOnWhatsapp = (phoneNumber:any, message:any) => {
+export const contactOnWhatsapp = (phoneNumber: any, message: any) => {
   if (phoneNumber && /^\+?\d+$/.test(phoneNumber)) {
     const userAgent = navigator.userAgent;
 
