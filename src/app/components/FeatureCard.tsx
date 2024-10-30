@@ -27,27 +27,3 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 };
 
 export default FeatureCard;
-
-// second ui
-
-// const FeatureCard: React.FC<FeatureCardProps> = ({
-//   imageSrc,
-//   title,
-//   description,
-// }) => {
-//   return (
-//     <div className={styles.featureCard}>
-//       <img src={imageSrc} alt={title} className={styles.featureImage} />
-//       <div className={styles.textContent}>
-//         <Typography variant="h6" className={styles.title}>
-//           {title}
-//         </Typography>
-//         <Typography variant="body2" className={styles.description}>
-//           {description}
-//         </Typography>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default FeatureCard;

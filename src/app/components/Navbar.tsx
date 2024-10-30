@@ -45,9 +45,7 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <img
-        // src="http://nebula.wsimg.com/f6f02f85f065096f57161ffd21c2a893?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1"
         src="/images/dmlogo1.png"
-        // src="/images/dmlogo1.png"
         alt="Company Logo"
         style={{
           height: "60px",
@@ -101,9 +99,9 @@ export default function DrawerAppBar(props: Props) {
             sx={{
               color: "white",
               "&:hover": {
-                color: "green", // Change to your desired hover color
-                transform: "scale(1.5)", // Example of scaling effect
-                transition: "all 0.3s ease", // Smooth transition
+                color: "green",
+                transform: "scale(1.5)",
+                transition: "all 0.3s ease",
               },
             }}
           />
@@ -117,9 +115,9 @@ export default function DrawerAppBar(props: Props) {
             sx={{
               color: "white",
               "&:hover": {
-                color: "blue", // Change to your desired hover color
-                transform: "scale(1.5)", // Example of scaling effect
-                transition: "all 0.3s ease", // Smooth transition
+                color: "blue",
+                transform: "scale(1.5)",
+                transition: "all 0.3s ease",
               },
             }}
           />
@@ -133,9 +131,9 @@ export default function DrawerAppBar(props: Props) {
             sx={{
               color: "white",
               "&:hover": {
-                color: "red", // Change to your desired hover color
-                transform: "scale(1.5)", // Example of scaling effect
-                transition: "all 0.3s ease", // Smooth transition
+                color: "red",
+                transform: "scale(1.5)",
+                transition: "all 0.3s ease",
               },
             }}
           />
@@ -149,9 +147,9 @@ export default function DrawerAppBar(props: Props) {
             sx={{
               color: "white",
               "&:hover": {
-                color: "blue", // Change to your desired hover color
-                transform: "scale(1.5)", // Example of scaling effect
-                transition: "all 0.3s ease", // Smooth transition
+                color: "blue",
+                transform: "scale(1.5)",
+                transition: "all 0.3s ease",
               },
             }}
           />
@@ -182,7 +180,6 @@ export default function DrawerAppBar(props: Props) {
           <Link href="/" passHref>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
               <img
-                // src="http://nebula.wsimg.com/f6f02f85f065096f57161ffd21c2a893?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1"
                 src="/images/dmlogo.jpeg"
                 alt="Company Logo"
                 style={{
@@ -195,10 +192,8 @@ export default function DrawerAppBar(props: Props) {
             </Box>
           </Link>
 
-          {/* Spacer to push navigation items to the right */}
           <Box sx={{ flexGrow: 1 }} />
 
-          {/* Navigation Links for desktop */}
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link href={item.path} passHref key={item.label}>

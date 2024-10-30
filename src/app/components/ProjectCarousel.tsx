@@ -1,12 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import "../components/styles/style.css";
+import styles from "../components/styles/projectcarousel.module.css"; // Import the CSS module
 
 // import required modules
 import { Keyboard, Pagination, Navigation } from "swiper/modules";
@@ -22,27 +20,27 @@ type ImageCarouselProps = {
 
 const ProjectCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   return (
-    <>
+    <div id="app">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        keyboard={{
-          enabled: true,
-        }}
-        pagination={{
-          clickable: true,
-        }}
+        keyboard={{ enabled: true }}
+        pagination={{ clickable: true }}
         navigation={true}
         modules={[Keyboard, Pagination, Navigation]}
-        className="mySwiper"
+        className={styles.swiperContainer} // Apply the swiper container style
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
-            <img src={image.src} alt={`Slide ${index + 1}`} />
+          <SwiperSlide key={index} className={styles.swiperSlide}>
+            <img
+              src={image.src}
+              alt={`Slide ${index + 1}`}
+              className={styles.swiperSlideImage}
+            />
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

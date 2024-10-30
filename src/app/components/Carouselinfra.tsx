@@ -8,6 +8,8 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
+import styles from "../components/styles/Carouselinfra.module.css"; // Import the CSS module
+
 const items = [
   {
     src: "/images/site/site1.jpg",
@@ -71,31 +73,23 @@ const Carouselinfra = () => {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        key={item.src}
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-      >
-        <img
-          src={item.src}
-          alt={item.altText}
-          style={{
-            width: "800px",
-            height: "400px",
-            borderRadius: "10px",
-            objectFit: "cover",
-          }}
-          className="d-block mx-auto"
-        />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.altText}
-        />
-      </CarouselItem>
-    );
-  });
+  const slides = items.map((item) => (
+    <CarouselItem
+      key={item.src}
+      onExiting={() => setAnimating(true)}
+      onExited={() => setAnimating(false)}
+    >
+      <img
+        src={item.src}
+        alt={item.altText}
+        className={`${styles.carouselImage} d-block mx-auto`}
+      />
+      <CarouselCaption
+        captionText={item.caption}
+        captionHeader={item.altText}
+      />
+    </CarouselItem>
+  ));
 
   return (
     <>
@@ -120,13 +114,11 @@ const Carouselinfra = () => {
           direction="prev"
           directionText="Previous"
           onClickHandler={previous}
-          className="custom-prev"
         />
         <CarouselControl
           direction="next"
           directionText="Next"
           onClickHandler={next}
-          className="custom-next"
         />
       </Carousel>
 
@@ -142,29 +134,10 @@ const Carouselinfra = () => {
         standard and customized products. We have curing ponds to obtain the
         desired strength and durability of various products. In addition, we
         have facilities for carrying out various tests at laboratories that
-        further assures the desired strength and longevity of the products .
+        further assures the desired strength and longevity of the products.
       </Typography>
-      <div
-        style={{
-          position: "relative",
-          width: "90%",
-          margin: "30px auto",
-          height: "0.5px",
-          backgroundColor: "gray",
-        }}
-      >
-        <div
-          style={{
-            width: "10px",
-            height: "10px",
-            backgroundColor: "gray",
-            borderRadius: "50%",
-            position: "absolute",
-            top: "-5px",
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
-        />
+      <div className={styles.customDivider}>
+        <div className={styles.dot} />
       </div>
     </>
   );

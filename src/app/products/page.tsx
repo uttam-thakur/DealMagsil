@@ -9,7 +9,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import "./page.css";
+import styles from "./page.module.css";
 import UpcomingProduct from "../components/UpcomingProduct";
 import FeatureGrid from "../components/FeatureGrid";
 import { InputAdornment, TextField } from "@mui/material";
@@ -148,7 +148,7 @@ const ProductInfo: React.FC = () => {
         <img
           src={item.src}
           alt={item.altText}
-          className="image"
+          className={styles.image}
           // style={{ height: 400, width: 1200 }}
         />
         <CarouselCaption
@@ -192,7 +192,7 @@ const ProductInfo: React.FC = () => {
         placeholder="Search Tiles"
         value={searchTerm}
         onChange={handleSearch}
-        className="search-bar"
+        className={styles.searchrbar}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -200,23 +200,22 @@ const ProductInfo: React.FC = () => {
             </InputAdornment>
           ),
         }}
-        fullWidth
         margin="normal"
       />
       {/* Only show filtered results if there's a search term */}
-      <div className="product-container">
+      <div className={styles.productcontainer}>
         {(searchTerm ? filteredProducts : products).map((product, index) => (
           <div
-            className={`product-section ${
-              index % 2 === 0 ? "normal-layout" : "reverse-layout"
+            className={`${styles.productsection} ${
+              index % 2 === 0 ? styles.normallayout : styles.reverselayout
             }`}
             key={index}
           >
-            <div className="product-details">
-              <h2 className="product-title">{product.title}</h2>
-              <p className="product-description">{product.description}</p>
+            <div className={styles.productdetails}>
+              <h2 className={styles.producttitle}>{product.title}</h2>
+              <p className={styles.productdescription}>{product.description}</p>
             </div>
-            <div className="image-wrapper">
+            <div className={styles.imagewrapper}>
               <CarouselComponent images={product.images} />
             </div>
           </div>
