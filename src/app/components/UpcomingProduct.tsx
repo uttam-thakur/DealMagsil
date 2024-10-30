@@ -12,7 +12,7 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import "../components/styles/UpcomingProducts.css";
+import styles from "../components/styles/UpcomingProducts.module.css";
 
 const carouselData = [
   {
@@ -162,22 +162,30 @@ const UpcomingProducts = () => {
         }
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} className="carousel-image" />
+        <img
+          src={item.src}
+          alt={item.altText}
+          className={styles.carouselimage}
+        />
         <CarouselCaption captionText={item.caption} />
       </CarouselItem>
     ));
 
   return (
-    <div className="upcoming-products-section">
-      <h2 className="text-center" style={{ color: "red", fontSize: "35px" }}>
+    <div className={styles.upcomingproductssection}>
+      <h2 className="text-center " style={{ color: "red", fontSize: "35px" }}>
         NEWLY LAUNCH PRODUCTS
       </h2>
       <Row>
         {carouselData.map((carousel, index) => (
           <Col md="6" key={index}>
-            <Card className="custom-card">
+            <Card className={styles.customcard}>
               <CardBody>
-                <CardTitle tag="h5" className="text-center">
+                <CardTitle
+                  tag="h5"
+                  className="text-center "
+                  style={{ color: "rgb(51, 51, 255)" }}
+                >
                   {carousel.title}
                 </CardTitle>
                 <CardText className="text-center">

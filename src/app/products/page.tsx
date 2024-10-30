@@ -193,6 +193,9 @@ const ProductInfo: React.FC = () => {
         value={searchTerm}
         onChange={handleSearch}
         className={styles.searchrbar}
+        style={{
+          marginTop: "50px",
+        }}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -200,7 +203,8 @@ const ProductInfo: React.FC = () => {
             </InputAdornment>
           ),
         }}
-        margin="normal"
+        fullWidth
+        // margin="normal"
       />
       {/* Only show filtered results if there's a search term */}
       <div className={styles.productcontainer}>
