@@ -1,6 +1,6 @@
 import cx from "classnames";
 
-import { useEffect, useState, useCallback, Fragment, ReactNode } from "react";
+import { useEffect, useState, useCallback, ReactNode } from "react";
 
 import styles from "./styles.module.css";
 

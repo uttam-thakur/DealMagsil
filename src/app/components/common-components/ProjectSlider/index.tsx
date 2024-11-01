@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectCarousel from "../../ProjectCarousel";
+import ProjectCarousel from "../../ProjectCarousel/index";
 import styles from "./styles.module.css";
 
 type ImageData = {

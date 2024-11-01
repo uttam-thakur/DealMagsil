@@ -1,11 +1,9 @@
-import SecureImage from "../components/common-components/SecureImage";
+import SecureImage from "../components/common-components/SecureImage/index";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "./style.css";
-import styles from "./styles.module.css";
+import styles from "./styles/projectcarousel.module.css";
 
-// import required modules
 import {
   Keyboard,
   Pagination,

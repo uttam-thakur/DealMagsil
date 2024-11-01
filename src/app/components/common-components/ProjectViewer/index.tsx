@@ -4,7 +4,7 @@ import cx from "classnames";
 import Drawer from "../Drawer";
 
 import styles from "./styles.module.css";
-import SecureImage from "../SecureImage";
+import SecureImage from "../SecureImage/index";
 import Portal from "../Portal";
 
 interface Image {

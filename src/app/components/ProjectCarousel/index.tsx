@@ -1,8 +1,7 @@
-import SecureImage from "../components/common-components/SecureImage";
+import SecureImage from "../common-components/SecureImage/index";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import "./style.css";
 import styles from "./styles.module.css";
 
 // import required modules

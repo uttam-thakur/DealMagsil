@@ -5,7 +5,7 @@ import cx from "classnames";
 import Image from "next/image";
 import DefaultImage from "../DefaultImage";
 
-import styles from "./style.module.css";
+import styles from "./styles.module.css";
 
 interface SecureImageProps {
   type?: string;

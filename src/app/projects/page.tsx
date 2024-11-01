@@ -13,12 +13,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import ".././projects/page.css";
-import styles from "./page.module.css";
+import "./page.css";
+import styles from "./styles.module.css";
 
 const ProjectsPage = () => {
   const [showProjectView, setShowProjectView] = useState(false);
-  const [selectedProject, setSelectedProject] = useState({});
+  const [selectedProject, setSelectedProject]: any = useState({});
 
   const onProjectClick = (projectData: any) => {
     console.log(projectData);
