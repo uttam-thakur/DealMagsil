@@ -8,7 +8,8 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-// import {site1} from '../../../public/images/site/site1'
+import styles from "../components/styles/Carouselinfra.module.css"; // Import the CSS module
+
 const items = [
   {
     src: "/images/site/site1.jpg",
@@ -16,13 +17,11 @@ const items = [
     caption: "Site 1 Caption",
   },
   {
-    // src: "https://images.unsplash.com/photo-1577335029365-35029f68d093?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGluZnJhc3RydWN0dXJlJTIwZmFjdG9yeXxlbnwwfHwwfHx8MA%3D%3D",
     src: "/images/site/site2.jpg",
     altText: "Site 2",
     caption: "Site 2 Caption",
   },
   {
-    // src: "https://images.unsplash.com/photo-1685708731554-c74f3679b2ac?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjN8fGluZnJhc3RydWN0dXJlJTIwZmFjdG9yeXxlbnwwfHwwfHx8MA%3D%3D",
     src: "/images/site/site3.jpg",
     altText: "Site 3",
     caption: "Site 3 Caption",
@@ -69,36 +68,28 @@ const Carouselinfra = () => {
     setActiveIndex(prevIndex);
   };
 
-  const goToIndex = (newIndex: any) => {
+  const goToIndex = (newIndex: number) => {
     if (animating) return;
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => {
-    return (
-      <CarouselItem
-        key={item.src}
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-      >
-        <img
-          src={item.src}
-          alt={item.altText}
-          style={{
-            width: "800px",
-            height: "400px",
-            borderRadius: "10px",
-            objectFit: "cover",
-          }} // Setting image size
-          className="d-block mx-auto" // Centers the image
-        />
-        <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.altText}
-        />
-      </CarouselItem>
-    );
-  });
+  const slides = items.map((item) => (
+    <CarouselItem
+      key={item.src}
+      onExiting={() => setAnimating(true)}
+      onExited={() => setAnimating(false)}
+    >
+      <img
+        src={item.src}
+        alt={item.altText}
+        className={`${styles.carouselImage} d-block mx-auto`}
+      />
+      <CarouselCaption
+        captionText={item.caption}
+        captionHeader={item.altText}
+      />
+    </CarouselItem>
+  ));
 
   return (
     <>
@@ -123,13 +114,11 @@ const Carouselinfra = () => {
           direction="prev"
           directionText="Previous"
           onClickHandler={previous}
-          className="custom-prev"
         />
         <CarouselControl
           direction="next"
           directionText="Next"
           onClickHandler={next}
-          className="custom-next"
         />
       </Carousel>
 
@@ -145,29 +134,10 @@ const Carouselinfra = () => {
         standard and customized products. We have curing ponds to obtain the
         desired strength and durability of various products. In addition, we
         have facilities for carrying out various tests at laboratories that
-        further assures the desired strength and longevity of the products .
+        further assures the desired strength and longevity of the products.
       </Typography>
-      <div
-        style={{
-          position: "relative",
-          width: "90%",
-          margin: "30px auto",
-          height: "0.5px",
-          backgroundColor: "gray",
-        }}
-      >
-        <div
-          style={{
-            width: "10px",
-            height: "10px",
-            backgroundColor: "gray",
-            borderRadius: "50%",
-            position: "absolute",
-            top: "-5px",
-            left: "50%",
-            transform: "translateX(-50%)",
-          }}
-        />
+      <div className={styles.customDivider}>
+        <div className={styles.dot} />
       </div>
     </>
   );

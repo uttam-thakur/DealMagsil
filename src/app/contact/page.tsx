@@ -1,23 +1,47 @@
+"use client";
+import React, { useState } from "react";
 import {
   Container,
   Typography,
   Grid,
   Paper,
   Box,
-  Button,
+  IconButton,
   Accordion,
   AccordionSummary,
   AccordionDetails,
-  TextField,
+  Button,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-// import "./page.css";
+import ThumbsUpIcon from "@mui/icons-material/ThumbUp";
+import ThumbsDownIcon from "@mui/icons-material/ThumbDown";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import ContactModal from "../components/ContactModal";
+import GetInTouchForm from "../components/GetInTouchForm";
 
 export default function Contact() {
+  const [openModal, setOpenModal] = useState(false);
+  const [expanded, setExpanded] = useState<string | false>(false);
+
+  const handleThumbsDown = () => setOpenModal(true);
+  const handleThumbsUp = () => toast.success("Thank you for choosing us!");
+
+  const faqData = [
+    {
+      question: "Is there a free trial available?",
+      answer: "Yes, you can try us for free for 30 days...",
+    },
+    {
+      question: "Can I change my plan later?",
+      answer: "Yes, you can change your plan anytime.",
+    },
+  ];
+
   return (
     <>
-      <Container maxWidth="md" style={{ marginTop: "30px" }}>
-        {/* Header Section */}
+      <ToastContainer />
+      <Container maxWidth="md" sx={{ marginTop: 5 }}>
         <Box textAlign="center" mb={4}>
           <Typography
             variant="h4"
@@ -28,11 +52,8 @@ export default function Contact() {
             Contact our friendly team
           </Typography>
           <Typography variant="body1">Let us know how we can help.</Typography>
-        </Box>
-
-        {/* Contact Options */}
+        </Box>{" "}
         <Grid container spacing={3}>
-          {/* Ensure all cards are the same size */}
           <Grid item xs={12} md={6} lg={3}>
             <Paper
               elevation={3}
@@ -50,7 +71,7 @@ export default function Contact() {
                 Speak to our friendly team.
               </Typography>
               <Typography variant="body2" color="primary">
-                sales@untitledui.com
+                abhradey11@gmail.com
               </Typography>
             </Paper>
           </Grid>
@@ -70,7 +91,7 @@ export default function Contact() {
               <Typography variant="h6">Chat to support</Typography>
               <Typography variant="body2">We're here to help.</Typography>
               <Typography variant="body2" color="primary">
-                support@untitledui.com
+                abhra@dealmagsil.com
               </Typography>
             </Paper>
           </Grid>
@@ -108,121 +129,55 @@ export default function Contact() {
               <Typography variant="h6">Call us</Typography>
               <Typography variant="body2">Mon-Fri from 8am to 5pm.</Typography>
               <Typography variant="body2" color="primary">
-                +1(555) 000-0000
+                +91 9332331442
               </Typography>
             </Paper>
           </Grid>
         </Grid>
-
-        {/* FAQ Section */}
         <Box mt={6}>
           <Typography variant="h5" sx={{ fontWeight: "bold" }} gutterBottom>
             Frequently asked questions
           </Typography>
-
-          {/* Use Accordion for FAQ with Expand More Arrow */}
-          <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="subtitle1">
-                Is there a free trial available?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body2">
-                Yes, you can try us for free for 30 days. We'll also provide a
-                free 30-minute onboarding call to get you set up.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          <Accordion>
-            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-              <Typography variant="subtitle1">
-                Can I change my plan later?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography variant="body2">
-                Yes, you can change your plan anytime.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-
-          {/* Add more FAQs here using Accordion */}
+          {faqData.map((faq, index) => (
+            <Accordion
+              key={index}
+              expanded={expanded === `panel${index}`}
+              onChange={() => setExpanded(expanded ? false : `panel${index}`)}
+            >
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="subtitle1">{faq.question}</Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Typography variant="body2">{faq.answer}</Typography>
+                <Box
+                  mt={2}
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
+                >
+                  <Typography variant="body2" sx={{ color: "blue" }}>
+                    is this information helpful?
+                  </Typography>
+                  <Box>
+                    <IconButton onClick={handleThumbsUp}>
+                      <ThumbsUpIcon color="success" />
+                    </IconButton>
+                    <IconButton onClick={handleThumbsDown}>
+                      <ThumbsDownIcon color="error" />
+                    </IconButton>
+                  </Box>
+                </Box>
+              </AccordionDetails>
+            </Accordion>
+          ))}
         </Box>
-
-        {/* Footer Section */}
-        <Box textAlign="center" mt={6}>
-          <Typography variant="h5" sx={{ fontWeight: "bold" }}>
-            Ready to level up your dream project?
-          </Typography>
-          <Typography variant="body1" mb={3}></Typography>
-        </Box>
-        <Typography
-          variant="h4"
-          component="h3"
-          gutterBottom
-          sx={{ color: "#ff6347" }}
-        >
-          Get In Touch
-        </Typography>
-
-        {/* Form */}
-        <Box component="form" sx={{ display: "flex", flexDirection: "column" }}>
-          {/* Name Field */}
-          <TextField
-            id="name"
-            name="name"
-            label="Name"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ mb: 3 }}
-          />
-
-          {/* Email Field */}
-          <TextField
-            id="email"
-            name="email"
-            label="Email"
-            type="email"
-            variant="outlined"
-            fullWidth
-            required
-            sx={{ mb: 3 }}
-          />
-
-          {/* Message Field */}
-          <TextField
-            id="message"
-            name="message"
-            label="Message"
-            variant="outlined"
-            fullWidth
-            required
-            multiline
-            rows={5}
-            sx={{ mb: 3 }}
-          />
-
-          {/* Submit Button */}
-          <Button
-            type="submit"
-            variant="contained"
-            sx={{
-              backgroundColor: "#ff6347",
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "18px",
-              padding: "15px",
-              borderRadius: "8px",
-              "&:hover": { backgroundColor: "#e5533d" },
-            }}
-          >
-            Send Message
-          </Button>
+        <Box mt={8}>
+          <Paper elevation={3}>
+            <GetInTouchForm />
+          </Paper>
         </Box>
       </Container>
+      <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
     </>
   );
 }

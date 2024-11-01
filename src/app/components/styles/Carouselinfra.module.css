@@ -1,0 +1,27 @@
+/* Carouselinfra.module.css */
+
+.carouselImage {
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.customDivider {
+  position: relative;
+  width: 90%;
+  margin: 30px auto;
+  height: 0.5px;
+  background-color: gray;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+
 import {
   Carousel,
   CarouselItem,
@@ -8,54 +9,84 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import "./page.css";
+import styles from "./page.module.css";
 import UpcomingProduct from "../components/UpcomingProduct";
 import FeatureGrid from "../components/FeatureGrid";
+import { InputAdornment, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
-const items = [
+interface CarouselItemProps {
+  src: string;
+  altText: string;
+  caption: string;
+  key: number;
+}
+const items: CarouselItemProps[] = [
   {
-    src: "https://picsum.photos/id/123/1200/400",
+    // src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Precast Slabs/1.jpg",
     altText: "Slide 1",
     caption: "Slide 1",
     key: 1,
   },
   {
-    src: "https://picsum.photos/id/456/1200/400",
+    src: "/images/products/Precast Slabs/2.jpg",
     altText: "Slide 2",
     caption: "Slide 2",
     key: 2,
   },
   {
-    src: "https://picsum.photos/id/678/1200/400",
+    src: "/images/products/Precast Slabs/3.jpg",
+    altText: "Slide 3",
+    caption: "Slide 3",
+    key: 3,
+  },
+  {
+    src: "/images/products/Precast Slabs/4.jpg",
+    altText: "Slide 4",
+    caption: "Slide 4",
+    key: 3,
+  },
+  {
+    src: "/images/products/Precast Slabs/5.jpg",
+    altText: "Slide 5",
+    caption: "Slide 5",
+    key: 3,
+  },
+];
+
+const fenceItems: CarouselItemProps[] = [
+  {
+    // src: "https://picsum.photos/id/123/1200/400",
+    src: "/images/products/Fencing Poles/1.jpg",
+    altText: "Slide 1",
+    caption: "Slide 1",
+    key: 1,
+  },
+  {
+    src: "/images/products/Fencing Poles/2.jpg",
+    altText: "Slide 2",
+    caption: "Slide 2",
+    key: 2,
+  },
+  {
+    src: "/images/products/Fencing Poles/3.jpg",
     altText: "Slide 3",
     caption: "Slide 3",
     key: 3,
   },
 ];
 
-const fenceItems = [
-  {
-    src: "https://picsum.photos/id/123/1200/400",
-    altText: "Slide 1",
-    caption: "Slide 1",
-    key: 1,
-  },
-  {
-    src: "https://picsum.photos/id/456/1200/400",
-    altText: "Slide 2",
-    caption: "Slide 2",
-    key: 2,
-  },
-  {
-    src: "https://picsum.photos/id/678/1200/400",
-    altText: "Slide 3",
-    caption: "Slide 3",
-    key: 3,
-  },
-];
+interface ProductProps {
+  title: string;
+  description: string;
+  images: CarouselItemProps[];
+}
 
-const ProductInfo = () => {
-  const products = [
+const ProductInfo: React.FC = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const products: ProductProps[] = [
     {
       title: "PRECAST SLABS",
       description: `
@@ -77,7 +108,17 @@ const ProductInfo = () => {
     // Add more products as needed
   ];
 
-  const CarouselComponent = ({ images }: any) => {
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value.toLowerCase());
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchTerm)
+  );
+
+  const CarouselComponent: React.FC<{ images: CarouselItemProps[] }> = ({
+    images,
+  }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [animating, setAnimating] = useState(false);
 
@@ -93,18 +134,23 @@ const ProductInfo = () => {
       setActiveIndex(nextIndex);
     };
 
-    const goToIndex = (newIndex: any) => {
+    const goToIndex = (newIndex: number) => {
       if (animating) return;
       setActiveIndex(newIndex);
     };
 
-    const slides = images.map((item: any) => (
+    const slides = images.map((item) => (
       <CarouselItem
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img src={item.src} alt={item.altText} />
+        <img
+          src={item.src}
+          alt={item.altText}
+          className={styles.image}
+          // style={{ height: 400, width: 1200 }}
+        />
         <CarouselCaption
           captionText={item.caption}
           captionHeader={item.caption}
@@ -113,7 +159,12 @@ const ProductInfo = () => {
     ));
 
     return (
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        interval={false} // Disable auto-sliding explicitly
+      >
         <CarouselIndicators
           items={images}
           activeIndex={activeIndex}
@@ -136,27 +187,46 @@ const ProductInfo = () => {
 
   return (
     <>
-      <div className="product-container">
-        {products.map((product, index) => (
+      <TextField
+        variant="standard"
+        placeholder="Search Tiles"
+        value={searchTerm}
+        onChange={handleSearch}
+        className={styles.searchrbar}
+        style={{
+          marginTop: "50px",
+        }}
+        InputProps={{
+          startAdornment: (
+            <InputAdornment position="start">
+              <SearchIcon />
+            </InputAdornment>
+          ),
+        }}
+        fullWidth
+        // margin="normal"
+      />
+      {/* Only show filtered results if there's a search term */}
+      <div className={styles.productcontainer}>
+        {(searchTerm ? filteredProducts : products).map((product, index) => (
           <div
-            className={`product-section ${
-              index % 2 === 0 ? "normal-layout" : "reverse-layout"
+            className={`${styles.productsection} ${
+              index % 2 === 0 ? styles.normallayout : styles.reverselayout
             }`}
             key={index}
           >
-            <div className="product-details">
-              <h2 className="product-title">{product.title}</h2>
-              <p className="product-description">{product.description}</p>
+            <div className={styles.productdetails}>
+              <h2 className={styles.producttitle}>{product.title}</h2>
+              <p className={styles.productdescription}>{product.description}</p>
             </div>
-            <div className="image-wrapper">
+            <div className={styles.imagewrapper}>
               <CarouselComponent images={product.images} />
             </div>
           </div>
         ))}
       </div>
-
-      <UpcomingProduct />
-      <FeatureGrid />
+      {!searchTerm && <UpcomingProduct />}
+      <FeatureGrid searchTerm={searchTerm} />
     </>
   );
 };

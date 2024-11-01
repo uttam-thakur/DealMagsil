@@ -1,103 +1,122 @@
-import React from "react";
-import "../components/styles/FeatureGrid.css"; // Import the CSS file for styling
+"use client";
+import React, { useState } from "react";
+import FeatureCard from "./FeatureCard";
+import { Typography } from "@mui/material";
 
-// Individual FeatureCard component
-const FeatureCard = ({ imageSrc, title, description }: any) => {
+import styles from "../components/styles/FeatureGrid.module.css";
+
+const features = [
+  {
+    imageSrc: "/images/tiles/dotted.webp",
+    title: "DOTTED",
+    description:
+      "A versatile, dotted pattern tile ideal for adding subtle texture and depth to any space.",
+  },
+  {
+    imageSrc: "/images/tiles/barfi.jfif",
+    title: "BARFI",
+    description:
+      "Inspired by classic Barfi shapes, this tile brings a unique charm with its geometric elegance.",
+  },
+  {
+    imageSrc: "/images/tiles/quarter circle.jfif",
+    title: "QUARTER CIRCLE",
+    description:
+      "Features a unique quarter-circle design, perfect for creating dynamic patterns in floors or walls.",
+  },
+  {
+    imageSrc: "/images/tiles/chequered.jfif",
+    title: "CHEQUERED",
+    description:
+      "A classic chequered pattern that brings a bold, timeless style to interiors and exteriors.",
+  },
+  {
+    imageSrc: "/images/tiles/grey quarter circle.jfif",
+    title: "GREY QUARTER CIRCLE",
+    description:
+      "A subtle, grey-toned quarter-circle tile that provides a modern look with an artistic flair.",
+  },
+  {
+    imageSrc: "/images/tiles/cadburry.jfif",
+    title: "CADBURRY",
+    description:
+      "Rich and smooth, the Cadbury tile adds an elegant, luxurious feel to any surface.",
+  },
+  {
+    imageSrc: "/images/tiles/roof.jfif",
+    title: "ROOF TILE",
+    description:
+      "Durable and weather-resistant, this tile is ideal for roofing with a stylish, traditional look.",
+  },
+  {
+    imageSrc: "/images/tiles/black&white.jfif",
+    title: "BLACK AND WHITE CHECKER",
+    description:
+      "A bold black-and-white checker pattern that enhances spaces with a striking, modern appeal.",
+  },
+  {
+    imageSrc: "/images/tiles/l-shaped.jfif",
+    title: "L-SHAPED SAND BLAST",
+    description:
+      "The L-shaped design with a sandblast finish adds texture and modernity to any project.",
+  },
+  {
+    imageSrc: "/images/tiles/hex.jfif",
+    title: "TRI - HEX",
+    description:
+      "Combines triangular and hexagonal shapes, perfect for creating eye-catching, intricate patterns.",
+  },
+  {
+    imageSrc: "/images/tiles/zig-zag.jfif",
+    title: "ZIG - ZAG UNI PAVER",
+    description:
+      "A unique zig-zag pattern that provides strong interlocking support for outdoor paving needs.",
+  },
+  {
+    imageSrc: "/images/tiles/milano.jfif",
+    title: "MILANO",
+    description:
+      "Elegant and smooth, Milano tiles are designed to bring Italian charm and sophistication to any surface.",
+  },
+  {
+    imageSrc: "/images/tiles/squared shaped stone finish.jfif",
+    title: "SQUARED SHAPED STONE FINISH",
+    description:
+      "Features a natural stone finish that adds earthy tones and texture to floors or walls.",
+  },
+
+  {
+    imageSrc: "/images/tiles/brick.jfif",
+    title: "BRICK SHAPED",
+    description:
+      "A classic brick shape that offers a rustic, timeless appeal for both indoor and outdoor spaces.",
+  },
+];
+interface FeatureGridProps {
+  searchTerm: string;
+}
+
+const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
+  const filteredFeatures = features.filter((feature) =>
+    feature.title.toLowerCase().includes(searchTerm)
+  );
   return (
-    <div className="feature-card-swiper">
-      {/* Adding image at the top of each card */}
-      <img src={imageSrc} alt={title} className="feature-image" />
-      <h3>{title}</h3>
-      <p>{description}</p>
-    </div>
+    <>
+      {/* <Typography variant="h4" component="h2" gutterBottom>
+        Different Types of Tiles
+      </Typography> */}
+      <div className={styles.featureGrid}>
+        {filteredFeatures.map((feature, index) => (
+          <FeatureCard
+            key={index}
+            imageSrc={feature?.imageSrc}
+            title={feature?.title}
+            description={feature?.description}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 
-// Main FeatureGrid component
-const FeatureGridSwiper = () => {
-  // Array of features with images
-  const features = [
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image
-      title: "Library Agnostic",
-      description:
-        "Swiper doesn't require any JavaScript libraries like jQuery, which makes Swiper much smaller and faster.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image
-      title: "Modular Structure",
-      description:
-        "Swiper has a modular structure and allows you to use only the necessary modules to make its size even smaller.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Full RTL Support",
-      description: "Swiper provides 100% RTL support with correct layout.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Multi Row Slides Layout",
-      description:
-        "Swiper allows a multiple row slides layout, with a few slides per column.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Transition Effects",
-      description:
-        "There are a lot of transition effects including 3D effects.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Full Navigation Control",
-      description:
-        "All required navigation elements are here - Pagination, Navigation, Scrollbar.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Two-way Control & Thumbs",
-      description:
-        "Swiper can be used as a controller for any number of other Swipers.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Most Flexible Slides Layout Grid",
-      description:
-        "Swiper has a lot of parameters to make it as flexible as possible.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Parallax Transitions",
-      description:
-        "Swiper supports modern parallax transition effects that can be used on any element inside of Swiper.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Images Lazy Loading",
-      description:
-        "Delays loading of images in inactive/invisible slides until the user swipes to them.",
-    },
-    {
-      imageSrc:
-        "https://images.jdmagicbox.com/quickquotes/images_main/chequered-tiles-2219490969-sm4dwb3k.jpg", // Add the correct path to the image      title: "Virtual Slides",
-      description:
-        "This feature is great when you have a lot of content-heavy slides so it keeps just the required amount of slides in DOM.",
-    },
-  ];
-
-  return (
-    <div className="feature-grid-swiper">
-      {features.map((feature, index) => (
-        <FeatureCard
-          key={index}
-          imageSrc={feature.imageSrc}
-          title={feature.title}
-          description={feature.description}
-        />
-      ))}
-    </div>
-  );
-};
-
-export default FeatureGridSwiper;
+export default FeatureGrid;
