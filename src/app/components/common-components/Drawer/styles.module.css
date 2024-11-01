@@ -1,0 +1,54 @@
+.slideContainer {
+  position: fixed;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+@media only screen and (max-width: 900px) {
+  .slideMobileContainer {
+    position: fixed;
+    overflow: hidden;
+    z-index: 9999;
+    width: 100%;
+    max-width: 18.875rem;
+  }
+}
+
+.slideContainer.left,
+.slideContainer.right,
+.slideMobileContainer.left,
+.slideMobileContainer.right {
+  top: 0;
+  height: 100%;
+}
+
+.slideContainer.up,
+.slideContainer.down,
+.slideMobileContainer.up,
+.slideMobileContainer.down {
+  left: 0;
+  width: 100%;
+}
+
+.slideContainer.open,
+.slideContainer.closed,
+.slideMobileContainer.open,
+.slideMobileContainer.closed {
+  transition: all 0.5s ease-in-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  display: none;
+}
+
+.open {
+  display: block;
+}

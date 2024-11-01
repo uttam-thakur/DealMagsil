@@ -1,11 +1,36 @@
 "use client";
-import ImageCarousel from "../components/ProjectCarousel";
-import ".././projects/page.css";
+
+import { useRef, useState } from "react";
+import { Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import cx from "classnames";
 import Client from "../components/Clients";
-import { useEffect, useRef } from "react";
-import styled from "styled-components";
+import ProjectSlider from "../components/common-components/ProjectSlider";
+import ProjectsViewer from "../components/common-components/ProjectViewer";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import "./page.css";
+import styles from "./styles.module.css";
 
 const ProjectsPage = () => {
+  const [showProjectView, setShowProjectView] = useState(false);
+  const [selectedProject, setSelectedProject]: any = useState({});
+
+  const onProjectClick = (projectData: any) => {
+    console.log(projectData);
+    setSelectedProject(projectData);
+    setShowProjectView(true);
+  };
+
+  const onProjectImageViewClose = () => {
+    setSelectedProject({});
+    setShowProjectView(false);
+  };
+
   const projectImages = [
     {
       src: "http://nebula.wsimg.com/771ab2bfa3b9e09ea31fdceba426a468?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
@@ -83,6 +108,21 @@ const ProjectsPage = () => {
     },
   ];
   const imageCarouselRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const projects = [
+    { name: "Asansol (PAHARPUR COOLING TOWERS)", images: [...projectImages] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    { name: "PINNACLE HONDA Showroom (Asansol)", images: [...projectImages1] },
+    {
+      name: "NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH",
+      images: [...projectImages2],
+    },
+  ];
 
   return (
     <>
@@ -99,32 +139,29 @@ const ProjectsPage = () => {
         </p>
       </div>
 
-      <div>
-        <div>
-          <ImageCarousel images={projectImages} />
-          <h2>Asansol (PAHARPUR COOLING TOWERS)</h2>
-        </div>
-        <div>
-          <ImageCarousel images={projectImages1} />
-          <h2> PINNACLE HONDA Showroom (Asansol)</h2>
-        </div>
-        <div>
-          <ImageCarousel images={projectImages2} />
-          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
-        </div>
-        <div>
-          <ImageCarousel images={projectImages2} />
-          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
-        </div>
-        <div>
-          <ImageCarousel images={projectImages2} />
-          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
-        </div>
-        <div>
-          <ImageCarousel images={projectImages2} />
-          <h2> NATIONAL HIGHWAY (NH-2) PANAGARH to BARBADDA STRETCH</h2>
-        </div>
-      </div>
+      <Swiper
+        navigation
+        modules={[Pagination]}
+        slidesPerView={"auto"}
+        className={cx(styles.projectSlider, "projects-swiper")}
+        pagination={{ clickable: true }}
+      >
+        {projects.map((project, index) => (
+          <SwiperSlide key={index} className={styles.swiperSlide}>
+            <ProjectSlider
+              images={project.images}
+              name={project.name}
+              onClick={onProjectClick}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      <ProjectsViewer
+        onClose={onProjectImageViewClose}
+        images={selectedProject?.images}
+        showProjectView={showProjectView}
+      />
 
       <h4 className="project-heading">Our Clients Are</h4>
       <Client />

@@ -1,0 +1,18 @@
+.swiperSlide {
+    width: fit-content !important;
+  }
+  .projectImage {
+    height: 250px;
+    width: inherit;
+    position: relative;
+  }
+  .projectImageContainer {
+    width: 100%;
+    position: relative;
+    padding: 16px;
+  }
+  .projectImageSlider {
+    cursor: default;
+    width: inherit !important;
+    position: relative !important;
+  }
