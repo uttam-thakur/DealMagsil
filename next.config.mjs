@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const imageDomains = ["nebula.wsimg.com"];
+
+const nextConfig = {
+  images: {
+    dangerouslyAllowSVG: true,
+    remotePatterns: imageDomains?.map((domainName) => {
+      return { protocol: "http", hostname: domainName };
+    }),
+  },
+};
 
 export default nextConfig;

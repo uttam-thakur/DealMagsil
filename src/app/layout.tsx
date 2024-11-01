@@ -30,6 +30,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           twitterImage="https://cdn.pixabay.com/photo/2017/08/10/07/51/construction-2619702_1280.jpg"
         />
         <main>{children}</main>
+        <div className="application-portal" id={"portalRoot"}></div>
         <Navbar />
         <FABLocation />
         <FABWhatsApp />
