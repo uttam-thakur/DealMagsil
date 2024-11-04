@@ -6,6 +6,7 @@ import Drawer from "../Drawer";
 import styles from "./styles.module.css";
 import SecureImage from "../SecureImage/index";
 import Portal from "../Portal";
+import { FiX } from "react-icons/fi";
 
 interface Image {
   src: string;

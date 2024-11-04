@@ -1,51 +1,55 @@
 .imageGallery {
-    width: 100vw;
-    height: 100dvh;
-    background-color: white;
-    overflow: auto;
-  }
-  
+  width: 100vw;
+  height: 100dvh;
+  background-color: white;
+  overflow: auto;
+}
+
+.imageGalleryContainer {
+  width: 100%;
+  position: relative;
+  padding: 0px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media only screen and (min-width: 900px) {
   .imageGalleryContainer {
-    width: 100%;
-    position: relative;
-    padding: 0px 20px 20px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+    padding: 36px;
+    margin: auto;
+    display: grid;
+    padding-bottom: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  
-  @media only screen and (min-width: 900px) {
-    .imageGalleryContainer {
-      padding: 36px;
-      margin: auto;
-      display: grid;
-      padding-bottom: 20px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  
-  .imageContainer {
-    position: relative;
-    width: 100%;
-    height: 25vh;
-    border-radius: 1rem;
-    overflow: hidden;
-  }
-  
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.imageContainerSpan {
+  grid-column: span 2;
+}
+
+@media (min-width: 768px) {
   .imageContainerSpan {
-    grid-column: span 2;
+    height: 50vh;
   }
-  
-  @media (min-width: 768px) {
-    .imageContainerSpan {
-      height: 50vh;
-    }
-  }
-  
-  .close {
-    padding: 4px;
-    z-index: 1;
-    position: absolute;
-    top: 10px;
-    right: 30px;
-  }
+}
+
+.close {
+  padding: 8px;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  border-radius: 50%;
+  background-color: white;
+  font-size: 25px;
+  font-weight: 700;
+}

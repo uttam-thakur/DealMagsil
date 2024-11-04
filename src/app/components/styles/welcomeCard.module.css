@@ -1,5 +1,8 @@
 /* WelcomeCard.module.css */
-
+.main {
+  padding: 2rem;
+  margin-top: 20px;
+}
 .card {
   max-width: 400px;
   margin: 0 auto;
@@ -36,4 +39,10 @@
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media (max-width: 480px) {
+  .main {
+    margin-top: -90px;
+  }
 }

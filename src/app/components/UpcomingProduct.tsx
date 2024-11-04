@@ -173,9 +173,7 @@ const UpcomingProducts = () => {
 
   return (
     <div className={styles.upcomingproductssection}>
-      <h2 className="text-center " style={{ color: "red", fontSize: "35px" }}>
-        NEWLY LAUNCH PRODUCTS
-      </h2>
+      <h2 className={styles.titleCenter}>NEWLY LAUNCH PRODUCTS</h2>
       <Row>
         {carouselData.map((carousel, index) => (
           <Col md="6" key={index}>

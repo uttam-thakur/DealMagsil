@@ -1,5 +1,7 @@
 /* Carouselinfra.module.css */
-
+.main {
+  padding: 2rem;
+}
 .carouselImage {
   width: 800px;
   height: 400px;

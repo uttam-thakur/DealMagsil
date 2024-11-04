@@ -18,7 +18,7 @@ const WelcomeCard: React.FC<WelcomeCardProps> = ({
   description,
 }) => {
   return (
-    <>
+    <div className={styles.main}>
       <Card className={styles.card}>
         <Typography gutterBottom variant="h4" component="div">
           {title}
@@ -33,7 +33,7 @@ const WelcomeCard: React.FC<WelcomeCardProps> = ({
       <div className={styles.dividerContainer}>
         <div className={styles.circle} />
       </div>
-    </>
+    </div>
   );
 };
 

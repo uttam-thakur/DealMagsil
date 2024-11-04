@@ -39,7 +39,7 @@ export default function Contact() {
   ];
 
   return (
-    <>
+    <div style={{ padding: "2rem" }}>
       <ToastContainer />
       <Container maxWidth="md" sx={{ marginTop: 5 }}>
         <Box textAlign="center" mb={4}>
@@ -178,6 +178,6 @@ export default function Contact() {
         </Box>
       </Container>
       <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
-    </>
+    </div>
   );
 }

@@ -3,11 +3,13 @@
 }
 .carouselimage {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
 }
-.titlecenter {
+.titleCenter {
   color: rgb(51, 51, 255);
+  text-align: center;
+  font-size: "35px";
 }
 .carouselitem img {
   max-width: 100%;

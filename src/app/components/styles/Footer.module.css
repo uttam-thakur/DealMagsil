@@ -1,0 +1,152 @@
+.relative {
+  position: relative;
+}
+
+.footer {
+  background-color: black;
+  padding-bottom: 1.5rem;
+  color: white;
+}
+
+.footerBorder {
+  border-bottom: 1px solid white;
+  padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  /* border-radius: 9999px; */
+  /* margin-top: ; */
+}
+
+.followSection {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.followText {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.iconInsta {
+  font-size: 2rem;
+  transition: transform 0.3s;
+  color: white;
+}
+.iconFacebook {
+  font-size: 2rem;
+  transition: transform 0.3s;
+  color: white;
+}
+
+.iconInsta:hover {
+  transform: scale(1.25);
+  color: rgba(255, 55, 115, 0.884);
+}
+.iconFacebook:hover {
+  transform: scale(1.25);
+  color: blue;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  text-align: center;
+}
+
+/* Footer.module.css */
+.aboutSection {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.aboutLink {
+  color: #cee1f6;
+  margin-left: 10px;
+  text-decoration: none;
+  /* margin-left: "40px"; */
+}
+
+.aboutLink:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1536px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.sectionText {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: aliceblue;
+}
+
+.underline {
+  text-decoration: none;
+  color: #cee1f6;
+}
+.underline:hover {
+  text-decoration: underline;
+}
+
+.footerText {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}

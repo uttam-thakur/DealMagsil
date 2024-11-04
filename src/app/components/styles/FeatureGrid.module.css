@@ -3,7 +3,13 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  padding: 40px;
+  padding: 24px 0px 24px 0px;
+}
+/* styles.css */
+.customTitle {
+  color: #4a90e2; /* Change to your desired color */
+  font-size: 2.5rem; /* Change to your desired font size */
+  text-align: center; /* Center text */
 }
 
 @media (max-width: 768px) {
@@ -12,19 +18,3 @@
     padding: 15px;
   }
 }
-
-/* //second ui */
-/* 
-.featureGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
-  padding: 20px;
-}
-
-@media (max-width: 768px) {
-  .featureGrid {
-    grid-template-columns: 1fr;
-    padding: 15px;
-  }
-} */

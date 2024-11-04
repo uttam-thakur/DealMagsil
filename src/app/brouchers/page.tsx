@@ -1,19 +1,24 @@
+"use client";
+import React from "react";
 import Link from "next/link";
 import {
-  Button,
-  Typography,
   Card,
-  CardContent,
-  CardActions,
-} from "@mui/material";
+  CardGroup,
+  CardImg,
+  CardBody,
+  CardTitle,
+  CardText,
+  Button,
+} from "reactstrap";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 
 const brochures = [
   {
     id: 1,
     title: "Catalogue",
-    description: "An overview of our offerings products.",
-    file: "/brochure/DEAL MAGSIL Catalogue.pdf",
+    description:
+      "An overview of our offerings products and lookeratives deals.",
+    file: "/brochure/DEALMAGSILCatalogue.pdf",
   },
   {
     id: 2,
@@ -27,11 +32,20 @@ const brochures = [
     description: "Detailed insights into our design process and services.",
     file: "/brochure/design.pdf",
   },
+  {
+    id: 4, // Corrected the ID for the fourth brochure
+    title: "Another Brochure",
+    description:
+      "Further insights into our services for future plans and Upcoming products.",
+    file: "/brochure/another.pdf",
+  },
 ];
 
-export default function Brouchers() {
+export default function Brochures() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100 px-4 py-10">
+    // <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100
+    //  p-8 px-4 py-10 ">
+    <main style={{ padding: "2rem", marginTop: "50px" }}>
       {/* Header Section */}
       <header className="text-center mb-12">
         <h1 className="text-5xl font-extrabold text-blue-900">
@@ -39,48 +53,60 @@ export default function Brouchers() {
         </h1>
         <p className="text-lg text-gray-700 mt-4 max-w-xl mx-auto">
           Get detailed information on our products and services by downloading
-          our brochures. Stay informed and up-to-date with the latest insights.
+          our brochures. Stay up-to-date with the latest insights.
         </p>
       </header>
 
       {/* Brochure Cards */}
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl px-6">
+      <CardGroup className="gap-4 px-6 w-full max-w-4xl">
         {brochures.map((brochure) => (
           <Card
             key={brochure.id}
-            className="bg-white shadow-xl rounded-lg transition-transform transform hover:scale-105 duration-300"
+            className="shadow-lg rounded-md overflow-hidden transition-transform transform hover:scale-105 duration-300"
+            style={{ width: "100px", margin: "0 auto", borderRadius: "10px" }} // Smaller card size
           >
-            <CardContent>
-              <Typography
-                variant="h5"
-                component="h2"
-                className="text-blue-800 font-bold"
-              >
+            <CardImg
+              alt="Card image cap"
+              src="/images/card1.jpg"
+              top
+              style={{
+                height: "200px",
+                width: "70%",
+                objectFit: "cover",
+                padding: "20px",
+                borderBottomLeftRadius: "15px",
+                borderBottomRightRadius: "15px",
+                marginLeft: "15%",
+                // backgroundColor: "#DEDDE2",
+              }}
+            />
+            <CardBody className="text-center p-4">
+              <CardTitle tag="h5" className="font-bold text-blue-800">
                 {brochure.title}
-              </Typography>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                className="mt-2 text-gray-600"
-              >
+              </CardTitle>
+
+              <CardText className="text-gray-600 mb-4">
                 {brochure.description}
-              </Typography>
-            </CardContent>
-            <CardActions className="p-4 pt-0">
+              </CardText>
               <Link href={brochure.file} target="_blank" download>
                 <Button
-                  variant="contained"
-                  color="primary"
-                  startIcon={<PictureAsPdfIcon />}
-                  className="bg-blue-700 hover:bg-blue-800 text-white mt-2"
+                  color="transparent"
+                  style={{
+                    border: "1px solid #007bff",
+                    backgroundColor: "transparent",
+                    height: "40px",
+                    borderRadius: "5px",
+                  }}
+                  className="d-flex align-items-center justify-center" // Center aligns the content
                 >
+                  <PictureAsPdfIcon className="mr-2" />
                   Download
                 </Button>
               </Link>
-            </CardActions>
+            </CardBody>
           </Card>
         ))}
-      </div>
+      </CardGroup>
     </main>
   );
 }

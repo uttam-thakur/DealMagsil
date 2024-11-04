@@ -92,7 +92,7 @@ const Carouselinfra = () => {
   ));
 
   return (
-    <>
+    <div className={styles.main}>
       <Typography
         gutterBottom
         variant="h4"
@@ -139,7 +139,7 @@ const Carouselinfra = () => {
       <div className={styles.customDivider}>
         <div className={styles.dot} />
       </div>
-    </>
+    </div>
   );
 };
 

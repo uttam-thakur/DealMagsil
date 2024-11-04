@@ -2,54 +2,27 @@
   background: #f0f0f0;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
-  white-space: nowrap;
-
   margin: auto;
   overflow: hidden;
   position: relative;
   width: 100%;
   max-width: 90%;
 }
-
+.image {
+  height: 100%;
+  width: 100%;
+}
 .slideTrack {
   display: flex;
-  width: calc(250px * 14);
-  animation: scroll 40s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
 .slide {
   display: inline-block;
   margin-right: 20px;
   height: 100px;
-  width: 250px;
   flex: 0 0 auto;
-}
-
-.img {
-  height: 100%;
-  width: auto;
-}
-
-.logo {
-  width: 150px;
-  height: auto;
-  mix-blend-mode: multiply;
-}
-
-.logo.overlay {
-  mix-blend-mode: overlay;
-}
-
-.logo.screen {
-  mix-blend-mode: screen;
-}
-
-.logo.darken {
-  mix-blend-mode: darken;
-}
-
-.logo.lighten {
-  mix-blend-mode: lighten;
+  width: 250px;
 }
 
 @media (max-width: 768px) {
@@ -66,23 +39,21 @@
   .slide {
     width: 150px;
   }
-
-  .slider {
-    height: 90px;
+  .image {
+    height: 80px;
   }
-  .img {
-    padding: 10px;
-    height: 150px;
-    width: 300px;
+  .slider {
+    height: 80px;
   }
 }
 
+/* Update the animation for responsive widths */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-12 * var(--slide-width)));
   }
 }
 

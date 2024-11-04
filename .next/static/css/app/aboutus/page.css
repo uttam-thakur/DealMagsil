@@ -1,159 +1,26 @@
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/aboutus/About.module.css ***!
   \****************************************************************************************************************************************************************************************************************************************************************************/
-/* styles/About.module.css
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 2rem;
-  color: #ffffff;
-  background-color: #1f1f1f; 
-}
-
-.imageContainer {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.image {
-  border-radius: 8px;
-}
-
-.content {
-  text-align: center;
-}
-
-.heading {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-.subheading {
-  font-size: 1.25rem;
-  color: #ffffff;
-  font-weight: bold;
-  margin-top: 1.5rem;
-}
-
-.role {
-  font-size: 1rem;
-  color: #bbbbbb;
-  margin-bottom: 1rem;
-}
-
-.text,
-.description {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    align-items: start;
-  }
-
-  .imageContainer {
-    margin-right: 2rem;
-    margin-bottom: 0;
-  }
-
-  .content {
-    text-align: left;
-  }
-} */
-
-/* its good */
-/* styles/About.module.css */
-/* .container {
-  display: flex;
-  flex-direction: column;
-  background-color: #1f1f1f;
-  color: #ffffff;
-  padding: 2rem;
-}
-
-.profileSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.image {
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-
-.mission {
-  background-color: #333333;
-  padding: 1.5rem;
-  border-radius: 8px;
-  text-align: center;
-  max-width: 600px;
-}
-
-.mission p {
-  margin: 0;
-  color: #ffffff;
-}
-
-.name {
-  font-weight: bold;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-}
-
-.role {
-  color: #cccccc;
-  margin-top: 0.2rem;
-  font-size: 1rem;
-}
-
-.description {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.description p {
-  margin-bottom: 1rem;
-}
-
-
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 4rem;
-  }
-
-  .profileSection {
-    flex: 1;
-    align-items: flex-start;
-  }
-
-  .mission {
-    max-width: 100%;
-  }
-
-  .description {
-    flex: 2;
-    padding-left: 2rem;
-  }
-} */
-/* styles/About.module.css */
 .About_container___K8dZ {
   display: flex;
   flex-direction: column;
   background-color: #1f1f1f;
   color: #ffffff;
-  padding: 2rem;
+  height: auto;
+  padding-top: 4rem;
+  align-items: center;
+  /* padding-right: 1rem; */
+}
+
+.About_description__UNDRq {
+  width: 100%;
+  padding: 8px 16px 0px 16px;
+}
+/* Profile section and description width consistency */
+.About_profileSection__mTtvY,
+.About_mission__4FQNG {
+  width: 100%;
+  padding: 8px 16px 0px 16px;
 }
 
 .About_profileSection__mTtvY {
@@ -172,12 +39,18 @@
   background-color: #333333;
   padding: 1.5rem;
   border-radius: 8px;
-  max-width: 600px;
+  width: 100%;
+  height: auto;
+  margin-top: 21px;
 }
 
 .About_mission__4FQNG p {
   margin: 0;
   color: #ffffff;
+  font-size: 20px;
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+  /* font-weight: bold; Equivalent to font-bold */
 }
 
 .About_name__nSU1S {
@@ -193,9 +66,12 @@
 }
 
 .About_description__UNDRq {
-  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 1rem;
   line-height: 1.6;
+  font-size: 18px;
+  font-family: "Noto Serif", serif;
 }
 
 .About_description__UNDRq p {
@@ -207,19 +83,110 @@
   .About_profileSection__mTtvY {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 
   .About_image__RPyj7 {
     margin: 0 0 1rem 0;
+    width: 100%;
   }
 
   .About_mission__4FQNG {
     max-width: 100%;
+    padding: 1rem;
     text-align: center;
   }
 
   .About_description__UNDRq {
+    max-width: 100%;
     padding-top: 2rem;
+    text-align: center;
+  }
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/styles/Album.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.Album_album__7dzqA .Album_responsiveContainerBlock__gOkPt {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.Album_album__7dzqA .Album_bg__RPJm4 {
+  max-width: 1320px;
+  margin: 0;
+  justify-content: space-between;
+}
+
+.Album_album__7dzqA .Album_img__mwe_N {
+  width: 100%;
+  margin: 0 0px 20px 0px;
+}
+
+.Album_album__7dzqA .Album_imgBig__1NC6n {
+  height: 50%;
+  margin: 0 0 16px 0;
+}
+
+.Album_album__7dzqA .Album_imgCont__ssVaX {
+  flex-direction: column;
+  max-width: 33.3%;
+  height: 100%;
+}
+
+.Album_album__7dzqA .Album_imgLast__oOeoR {
+  margin: 0 0 5px 0;
+}
+
+@media (max-width: 1024px) {
+  .Album_img__mwe_N {
+    margin: 0 0 18px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .Album_img__mwe_N {
+    max-width: 32.5%;
+    margin: 0;
+  }
+
+  .Album_bg__RPJm4 {
+    flex-direction: column;
+  }
+
+  .Album_imgCont__ssVaX {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Album_imgBig__1NC6n {
+    max-width: 49%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .Album_img__mwe_N {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+
+  .Album_imgCont__ssVaX {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .Album_imgBig__1NC6n {
+    max-width: 94%;
+    margin: 0 0 25px 0;
   }
 }
 
