@@ -126,7 +126,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <div>
+      <div className={styles.para}>
         <p>
           Here are a few of the hundreds of projects we’ve completed over the
           past{" "}

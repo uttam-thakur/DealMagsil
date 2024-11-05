@@ -49,14 +49,7 @@ export default function App() {
           from the form, usually the following day. These components are then
           transported to the construction site for erection into place."
       />
-      <WelcomeCard
-        image={AboutUs}
-        description="Established in 1991, DEAL MAGSIL is a leading manufacturer and supplier of high-quality precast concrete products and interlocking paver blocks. With decades of experience, we uphold strict standards of reliability, quality, and efficiency in every project.
 
-As a registered S.S.I Unit with the Government of West Bengal and certified supplier to organizations like SAIL - IISCO, DVC, L&T, and several Municipal Corporations, DEAL MAGSIL is recognized for its turnkey solutions in prestigious projects, including the National Highway-2 Panagarh-Barwa Adda stretch, Andal Airport, and DVC RTPP Raghunathpur.
-
-With a skilled team and cutting-edge technology, we proudly support infrastructure development across the country, consistently serving both government departments and private sectors."
-      />
       <WelcomeCard
         image={QualityAss}
         description="Since 1991, we’ve set benchmarks in construction with our commitment to quality, speed, and innovative technology. Our products are made from 100% virgin raw materials, ensuring premium quality that meets all performance standards.

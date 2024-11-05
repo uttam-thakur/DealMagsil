@@ -53,7 +53,7 @@ const Footer = () => {
             <div className={styles.section}>
               <h3 className={styles.sectionTitle}>Contact Us</h3>
               <p className={styles.sectionText}>
-                Email:{" "}
+                {"Email: "}
                 <a
                   href="uttamthakur2016@gmail.com"
                   className={styles.underline}
@@ -62,13 +62,13 @@ const Footer = () => {
                 </a>
               </p>
               <p className={styles.sectionText}>
-                Phone:{" "}
+                {"Phone: "}
                 <a href={`tel:+91${phoneNumber}`} className={styles.underline}>
                   {`+91${phoneNumber}`}
                 </a>
               </p>
               <p className={styles.sectionText}>
-                WhatsApp:{" "}
+                {"WhatsApp: "}
                 <a
                   href={`https://wa.me/${whatsappNumber}`}
                   target="_blank"

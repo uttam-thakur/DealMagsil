@@ -102,12 +102,9 @@
   width: 5rem;
   height: 5rem;
   object-fit: cover;
-  /* border-radius: 9999px; */
-  /* margin-top: ; */
 }
 
 .Footer_followSection__AGMkK {
-  /* width: 100%; */
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -160,23 +157,57 @@
   text-align: center;
 }
 
-/* Footer.module.css */
 .Footer_aboutSection__Gz9hb {
   display: flex;
   align-items: center;
-  white-space: nowrap; /* Prevent text from wrapping */
-  overflow: hidden; /* Prevent overflow */
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .Footer_aboutLink__r6ZD7 {
   color: #cee1f6;
   margin-left: 10px;
   text-decoration: none;
-  /* margin-left: "40px"; */
 }
 
 .Footer_aboutLink__r6ZD7:hover {
   text-decoration: underline;
+}
+
+.Footer_section__af2Ny {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.Footer_sectionTitle__95pl2 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  /* line-height: 1px; */
+}
+
+.Footer_sectionText__j6HRJ {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+  color: aliceblue;
+  /* line-height: 1px; */
+}
+
+.Footer_underline__mJ03X {
+  text-decoration: none;
+  color: #cee1f6;
+}
+.Footer_underline__mJ03X:hover {
+  text-decoration: underline;
+}
+
+.Footer_footerText__gVIle {
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -195,40 +226,6 @@
   .Footer_grid__Q_FrH {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-}
-
-.Footer_section__af2Ny {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-
-.Footer_sectionTitle__95pl2 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.Footer_sectionText__j6HRJ {
-  font-size: 0.875rem;
-  font-weight: 400;
-  margin-bottom: 0.25rem;
-  color: aliceblue;
-}
-
-.Footer_underline__mJ03X {
-  text-decoration: none;
-  color: #cee1f6;
-}
-.Footer_underline__mJ03X:hover {
-  text-decoration: underline;
-}
-
-.Footer_footerText__gVIle {
-  font-size: 0.875rem;
-  text-align: center;
-  margin-top: 1.5rem;
 }
 
 /*!*****************************************************************************************************************************************************************************************************************************************************************!*\
