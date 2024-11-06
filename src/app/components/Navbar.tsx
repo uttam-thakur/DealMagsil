@@ -67,14 +67,18 @@ export default function DrawerAppBar(props: Props) {
         {navItems.map((item) => (
           <ListItem key={item.label} disablePadding>
             <Link href={item.path} passHref>
-              <ListItemButton sx={{ textAlign: "center", color: "black" }}>
+              <ListItemButton
+                sx={{
+                  textAlign: "center",
+                  color: "black",
+                }}
+              >
                 <ListItemText primary={item.label} />
               </ListItemButton>
             </Link>
           </ListItem>
         ))}
       </List>
-      {/* Footer with social media icons */}
       <Box
         sx={{
           position: "absolute",
@@ -163,7 +167,7 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "black" }}>
+      <AppBar component="nav" sx={{ background: "black", height: "75px" }}>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -177,7 +181,9 @@ export default function DrawerAppBar(props: Props) {
 
           {/* Company Logo */}
           <Link href="/" passHref>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box
+              sx={{ display: { xs: "none", sm: "block", marginTop: "10px" } }}
+            >
               <img
                 src="/images/dmlogo.jpeg"
                 alt="Company Logo"
@@ -196,7 +202,13 @@ export default function DrawerAppBar(props: Props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link href={item.path} passHref key={item.label}>
-                <Button sx={{ color: "#fff", marginLeft: 2 }}>
+                <Button
+                  sx={{
+                    color: "#fff",
+                    marginLeft: 2,
+                    letterSpacing: "0.25rem",
+                  }}
+                >
                   {item.label}
                 </Button>
               </Link>

@@ -9,9 +9,8 @@ const About = () => {
       <div className={styles.container}>
         <div className={styles.profileSection}>
           <Image
-            // src="/images/feedback/3.jfif"
-
-            src="/images/quality1.png"
+            src="/images/feedback/5.png"
+            // src="/images/quality1.png"
             alt="Yazad Irani"
             width={400}
             height={400}
