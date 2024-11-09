@@ -39,7 +39,7 @@ export default function Contact() {
   ];
 
   return (
-    <div style={{ padding: "2rem" }}>
+    <div style={{ padding: "2rem", marginTop: "20px" }}>
       <ToastContainer />
       <Container maxWidth="md" sx={{ marginTop: 5 }}>
         <Box textAlign="center" mb={4}>
@@ -148,7 +148,9 @@ export default function Contact() {
                 <Typography variant="subtitle1">{faq.question}</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <Typography variant="body2">{faq.answer}</Typography>
+                <Typography variant="body2" style={{ display: "flex" }}>
+                  {faq.answer}
+                </Typography>
                 <Box
                   mt={2}
                   display="flex"

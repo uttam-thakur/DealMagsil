@@ -484,6 +484,9 @@
 .FeedbackSlider_heading__0_S9p {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5rem;
 }
 
 .FeedbackSlider_sliderContainer__Y8t8f {
@@ -612,6 +615,10 @@
 .welcomeCard_description__ylKnr {
   margin-top: 16px;
   color: gray;
+  font-size: 20px;
+  line-height: 1.6rem;
+  font-weight: 400;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 
 .welcomeCard_dividerContainer__smGSp {
