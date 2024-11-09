@@ -7,6 +7,8 @@ import styles from "./styles.module.css";
 import SecureImage from "../SecureImage/index";
 import Portal from "../Portal";
 import { FiX } from "react-icons/fi";
+import CloseIcon from "@mui/icons-material/Close";
+import { IconButton } from "@mui/material";
 
 interface Image {
   src: string;
@@ -33,14 +35,23 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   };
   return (
     <Drawer open={showProjectView} direction="right" maxSize={true}>
-      <button
+      {/* <button
         className={styles.close}
         onClick={() => {
           onClose();
         }}
       >
         X
-      </button>
+      </button> */}
+      <IconButton
+        onClick={() => {
+          onClose();
+        }}
+        className={styles.close}
+        aria-label="close"
+      >
+        <CloseIcon />
+      </IconButton>
 
       <div className={styles.imageGallery}>
         <div className={styles.imageGalleryContainer}>

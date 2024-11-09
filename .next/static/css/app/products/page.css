@@ -271,9 +271,11 @@
   transform: translateY(-10px);
 }
 
+.FeatureCard_featureDiv__0dtba {
+  display: flex;
+  flex-direction: column;
+}
 .FeatureCard_featureImage__sMpCV {
-  width: 100px;
-  height: 100px;
   margin-right: 15px;
 }
 
@@ -356,6 +358,8 @@
 }
 
 .FeatureCard_featureModalImage__FCZVl {
+  height: 220px;
+  width: 420px;
   margin-bottom: 24px;
 }
 

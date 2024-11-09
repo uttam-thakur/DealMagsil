@@ -8,7 +8,8 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import styles from "../components/styles/Carouselinfra.module.css"; // Import the CSS module
+import styles from "../components/styles/Carouselinfra.module.css";
+import Image from "next/image";
 
 const items = [
   {
@@ -79,7 +80,9 @@ const Carouselinfra = () => {
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
     >
-      <img
+      <Image
+        width={800}
+        height={400}
         src={item.src}
         alt={item.altText}
         className={`${styles.carouselImage} d-block mx-auto`}
@@ -102,7 +105,6 @@ const Carouselinfra = () => {
         justifyContent="center"
         lineHeight="1.8rem"
         fontWeight="600"
-        // fontSize="1.125rem"
       >
         InfraStructure
       </Typography>

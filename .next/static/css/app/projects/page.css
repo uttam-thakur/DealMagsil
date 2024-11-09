@@ -340,8 +340,8 @@
   right: 40px;
   border-radius: 50%;
   background-color: white;
-  font-size: 25px;
-  font-weight: 700;
+  height: 50px;
+  width: 50px;
 }
 
 /*!****************************************************************************************************************************************************************************************************************************************************************************!*\
@@ -861,7 +861,7 @@ button.swiper-pagination-bullet {
   padding: 3rem;
 } */
 html {
-  margin: 0;
+  margin-top: 0;
   /* padding: 2rem; */
   margin-top: 20px;
   box-sizing: border-box;

@@ -30,15 +30,17 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <>
       <div className={styles.featureCard}>
-        {/* <button className={styles.info} onClick={openDetails}>
-          <i className="fa fa-info-circle" aria-hidden="true"></i>
-        </button> */}
-
         <button className={styles.info} onClick={openDetails}>
           <FontAwesomeIcon icon={faInfoCircle} size="2x" />
         </button>
-        <img src={imageSrc} alt={title} className={styles.featureImage} />
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <Image
+          height={100}
+          width={100}
+          src={imageSrc}
+          alt={title}
+          className={styles.featureImage}
+        />
+        <div className={styles.featureDiv}>
           <Typography variant="h6" className={styles.title}>
             {title}
           </Typography>
@@ -61,6 +63,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
             src={imageSrc}
             className={styles.featureModalImage}
           />
+
           <div>
             <Typography variant="h2" className={styles.featuresTitle}>
               {title}

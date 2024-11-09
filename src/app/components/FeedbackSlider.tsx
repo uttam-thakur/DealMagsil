@@ -70,7 +70,7 @@ const FeedbackSlider: React.FC = () => {
           <Typography
             variant="h6"
             className={styles.feedbackText}
-            marginTop="20px"
+            // marginTop="20px"
           >
             "{feedbackData[currentIndex].feedback}"
           </Typography>

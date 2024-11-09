@@ -13,9 +13,11 @@
   transform: translateY(-10px);
 }
 
+.featureDiv {
+  display: flex;
+  flex-direction: column;
+}
 .featureImage {
-  width: 100px;
-  height: 100px;
   margin-right: 15px;
 }
 
@@ -98,6 +100,8 @@
 }
 
 .featureModalImage {
+  height: 220px;
+  width: 420px;
   margin-bottom: 24px;
 }
 

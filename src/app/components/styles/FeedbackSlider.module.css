@@ -36,12 +36,16 @@
   width: 150px;
   height: 150px;
   margin: 0 auto;
+  min-width: 150px;
+  min-height: 150px;
 }
 
 .feedbackText {
   font-style: italic;
   color: #555;
-  margin: 10px 0;
+  /* margin: 10px 0; */
+  margin-top: 20px;
+
   font-size: 1rem;
 }
 

@@ -3,7 +3,6 @@ import { Card, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 import styles from "../components/styles/welcomeCard.module.css"; // Import CSS module
 import Welcome from "../../../public/images/welcome.jpg";
-import AboutUs from "../../../public/images/aboutus.png";
 import QualityAss from "../../../public/images/quality1.png";
 
 interface WelcomeCardProps {
@@ -19,7 +18,8 @@ const WelcomeCard: React.FC<WelcomeCardProps> = ({
 }) => {
   return (
     <div className={styles.main}>
-      <Card className={styles.card}>
+      {/* <Card className={styles.card}> */}
+      <Card className={styles.card} sx={{ boxShadow: "none", padding: 0 }}>
         <Typography gutterBottom variant="h4" component="div">
           {title}
         </Typography>
