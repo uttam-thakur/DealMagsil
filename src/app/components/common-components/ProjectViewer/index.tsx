@@ -9,6 +9,7 @@ import Portal from "../Portal";
 import { FiX } from "react-icons/fi";
 import CloseIcon from "@mui/icons-material/Close";
 import { IconButton } from "@mui/material";
+import { Height } from "@mui/icons-material";
 
 interface Image {
   src: string;
@@ -50,7 +51,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         className={styles.close}
         aria-label="close"
       >
-        <CloseIcon />
+        <CloseIcon fontSize="large" />
       </IconButton>
 
       <div className={styles.imageGallery}>

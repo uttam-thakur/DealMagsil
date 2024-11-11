@@ -18,12 +18,17 @@ const RegistrationSection = () => {
         variant="h4"
         gutterBottom
         align="center"
-        sx={{ mb: 3 }}
-        lineHeight="1.5rem"
-        fontWeight="600"
+        sx={{
+          mb: 3,
+          lineHeight: { xs: "1.8rem", sm: "1.5rem" },
+          fontWeight: 600,
+          fontSize: { xs: "1.5rem", sm: "2rem" },
+          marginBottom: { xs: 2, sm: 3 },
+        }}
       >
         Our Registrations and Certifications
       </Typography>
+
       <Grid container spacing={2} justifyContent="center">
         {registrations.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>

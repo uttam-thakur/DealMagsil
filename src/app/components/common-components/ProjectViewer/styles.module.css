@@ -13,7 +13,22 @@
   flex-direction: column;
   gap: 16px;
 }
-
+.close {
+  padding: 8px;
+  z-index: 1;
+  position: absolute;
+  top: 10px;
+  right: 13px;
+  /* border-radius: 50%; */
+  /* background-color: rgb(238, 238, 238); */
+  /* height: 60px; */
+  /* width: 60px; */
+  /* border: 1px solid black; */
+}
+.close:hover {
+  color: rgb(237, 5, 5);
+  /* background-color: aliceblue; */
+}
 @media only screen and (min-width: 900px) {
   .imageGalleryContainer {
     padding: 36px;
@@ -40,16 +55,4 @@
   .imageContainerSpan {
     height: 50vh;
   }
-}
-
-.close {
-  padding: 8px;
-  z-index: 1;
-  position: absolute;
-  top: 10px;
-  right: 40px;
-  border-radius: 50%;
-  background-color: white;
-  height: 50px;
-  width: 50px;
 }

@@ -476,12 +476,12 @@
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/styles/FeedbackSlider.module.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
-.FeedbackSlider_mainContainer__rOy7_ {
+/* .mainContainer {
   padding: 20px;
   margin-top: -65px;
 }
 
-.FeedbackSlider_heading__0_S9p {
+.heading {
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
@@ -489,7 +489,7 @@
   line-height: 1.5rem;
 }
 
-.FeedbackSlider_sliderContainer__Y8t8f {
+.sliderContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -503,11 +503,213 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.FeedbackSlider_slide__cFbfy {
+.slide {
   text-align: center;
   padding: 20px;
   width: 100%;
   height: 100%;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+.feedbackText {
+  font-style: italic;
+  color: #555;
+
+  margin-top: 20px;
+
+  font-size: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  color: #333;
+}
+
+.designation {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.navButton {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .sliderContainer {
+    width: 100%;
+    height: 380px;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .slide {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .feedbackText {
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .designation {
+    font-size: 0.8rem;
+  }
+
+  .navButton {
+    position: absolute;
+    bottom: -1px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .navButton:first-of-type {
+    left: 35%;
+  }
+
+  .navButton:last-of-type {
+    right: 35%;
+  }
+} */
+/* 
+.mainContainer {
+  padding: 20px;
+  margin-top: -65px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px; 
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.slide {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  min-width: 80px;
+  min-height: 80px;
+}
+  
+
+.feedbackText {
+  font-style: italic;
+  color: #555;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  color: #333;
+}
+
+.designation {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.navButton {
+  color: #555;
+}
+
+
+@media (max-width: 600px) {
+  .sliderContainer {
+    padding: 15px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .feedbackText {
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .designation {
+    font-size: 0.8rem;
+  }
+} */
+
+.FeedbackSlider_mainContainer__rOy7_ {
+  padding: 20px;
+  margin-top: -65px;
+}
+
+.FeedbackSlider_heading__0_S9p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.FeedbackSlider_sliderContainer__Y8t8f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.FeedbackSlider_slide__cFbfy {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
 }
 
 .FeedbackSlider_avatar__nJu4C {
@@ -521,9 +723,7 @@
 .FeedbackSlider_feedbackText__JGCV_ {
   font-style: italic;
   color: #555;
-  /* margin: 10px 0; */
   margin-top: 20px;
-
   font-size: 1rem;
 }
 
@@ -537,26 +737,51 @@
   font-size: 0.9rem;
 }
 
+/* Left and right arrow buttons */
 .FeedbackSlider_navButton__vvPRR {
   color: #555;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: -50px;
+}
+
+.FeedbackSlider_navButton__vvPRR.FeedbackSlider_left__hO__4 {
+  left: 10px;
+}
+
+.FeedbackSlider_navButton__vvPRR.FeedbackSlider_right__jqZ9w {
+  right: 10px;
+}
+
+/* Radio button pagination */
+.FeedbackSlider_radioContainer__fulsY {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.FeedbackSlider_radioButton__nlbii {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.FeedbackSlider_radioButton__nlbii.FeedbackSlider_active__b2vSi {
+  background-color: #333;
 }
 
 @media (max-width: 600px) {
-  /* .sliderContainer {
-    flex-direction: column;
-    padding: 15px;
-    height: 320px;
-  } */
   .FeedbackSlider_sliderContainer__Y8t8f {
-    width: 100%;
-    height: 320px;
     padding: 15px;
-    flex-direction: column;
-  }
-
-  .FeedbackSlider_slide__cFbfy {
-    max-width: 100%;
-    padding: 10px;
   }
 
   .FeedbackSlider_avatar__nJu4C {
@@ -574,21 +799,6 @@
 
   .FeedbackSlider_designation__I7Eax {
     font-size: 0.8rem;
-  }
-
-  .FeedbackSlider_navButton__vvPRR {
-    position: absolute;
-    bottom: -1px;
-    border-radius: 50%;
-    padding: 5px;
-  }
-
-  .FeedbackSlider_navButton__vvPRR:first-of-type {
-    left: 35%;
-  }
-
-  .FeedbackSlider_navButton__vvPRR:last-of-type {
-    right: 35%;
   }
 }
 

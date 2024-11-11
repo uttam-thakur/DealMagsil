@@ -90,13 +90,13 @@
 }
 
 .featuresTitle {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 10px;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  margin-bottom: 10px !important;
 }
 
 .featuresDescription {
-  font-size: 14px;
+  font-size: 14px !important;
 }
 
 .featureModalImage {

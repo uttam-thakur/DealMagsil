@@ -229,7 +229,7 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <div className={styles.para}>
+      {/* <div className={styles.para}>
         <p>
           Here are a few of the hundreds of projects we’ve completed over the
           past{" "}
@@ -238,6 +238,28 @@ const ProjectsPage = () => {
           experience we need to provide you with a quality, on-schedule project.{" "}
           <span style={{ fontSize: "20px", fontWeight: "bold" }}>
             We are proud to be part of so many exciting projects!
+          </span>
+        </p>
+      </div> */}
+
+      <div className={styles.para}>
+        <p>
+          With over{" "}
+          <span style={{ color: "#e53935", fontWeight: "bold" }}>27 years</span>{" "}
+          of expertise, our portfolio features a diverse range of completed
+          projects, each a testament to our commitment to quality and
+          punctuality.
+          <br />
+          <span
+            style={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              display: "inline-block",
+              marginTop: "10px",
+            }}
+          >
+            We are thrilled to contribute to remarkable projects that shape the
+            future!
           </span>
         </p>
       </div>
