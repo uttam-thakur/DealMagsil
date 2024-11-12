@@ -4,12 +4,16 @@ import Carouselinfra from "./components/Carouselinfra";
 import RegistrationSection from "./components/RegistrationSection";
 import "slick-carousel/slick/slick.css";
 import FeedbackSlider from "./components/FeedbackSlider";
-
+import styles from "./components/styles/Home.module.css";
 const Home = () => {
   return (
     <div style={{ overflowX: "hidden" }}>
-      <Carousel />
-      <WelcomeCard />
+      <div className={styles.carousel}>
+        <Carousel />
+      </div>
+      <div className={styles.welcomeCard}>
+        <WelcomeCard />
+      </div>{" "}
       <Carouselinfra />
       <FeedbackSlider />
       <RegistrationSection />
