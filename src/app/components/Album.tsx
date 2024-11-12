@@ -52,14 +52,6 @@ const Album = () => {
           />
         </div>
       </div>
-      {/* Text Container */}
-      {/* <div className={styles.textContainer}>
-        <h1>Album Title</h1>
-        <p>
-          This is a description of the album. You can showcase your favorite
-          photos here and provide a brief description about the collection.
-        </p>
-      </div> */}
     </div>
   );
 };

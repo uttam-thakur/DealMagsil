@@ -8,7 +8,7 @@ import {
   CarouselCaption,
 } from "reactstrap";
 import { InputAdornment, TextField } from "@mui/material";
-import { motion } from "framer-motion"; // Import Framer Motion
+import { motion } from "framer-motion";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./page.module.css";
 import UpcomingProduct from "../components/UpcomingProduct";
@@ -25,19 +25,19 @@ const items: CarouselItemProps[] = [
   {
     src: "/images/products/Precast Slabs/1.jpg",
     altText: "Slide 1",
-    caption: "Slide 1",
+    caption: "Precast Slabs",
     key: 1,
   },
   {
     src: "/images/products/Precast Slabs/2.jpg",
     altText: "Slide 2",
-    caption: "Slide 2",
+    caption: "Precast Slabs",
     key: 2,
   },
   {
     src: "/images/products/Precast Slabs/3.jpg",
     altText: "Slide 3",
-    caption: "Slide 3",
+    caption: "Precast Slabs",
     key: 3,
   },
 ];
@@ -46,19 +46,19 @@ const fenceItems: CarouselItemProps[] = [
   {
     src: "/images/products/Fencing Poles/1.jpg",
     altText: "Slide 1",
-    caption: "Slide 1",
+    caption: "Fencing Poles",
     key: 1,
   },
   {
     src: "/images/products/Fencing Poles/2.jpg",
     altText: "Slide 2",
-    caption: "Slide 2",
+    caption: "Fencing Poles",
     key: 2,
   },
   {
     src: "/images/products/Fencing Poles/3.jpg",
     altText: "Slide 3",
-    caption: "Slide 3",
+    caption: "Fencing Poles",
     key: 3,
   },
 ];
@@ -133,8 +133,18 @@ const ProductInfo: React.FC = () => {
       >
         <img src={item.src} alt={item.altText} className={styles.image} />
         <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
+          captionText={
+            <span
+              style={{
+                color: "black",
+                fontSize: "1.4rem",
+                letterSpacing: "0.5px",
+              }}
+            >
+              {item.caption}
+            </span>
+          }
+          // captionHeader={item.caption}
         />
       </CarouselItem>
     ));

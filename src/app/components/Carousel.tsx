@@ -180,9 +180,6 @@ const images = [
   "https://www.kajariaceramics.com/images/slider/indias-no1-tile-company.jpg",
   "https://www.kajariaceramics.com/images/slider/celebrating-35-years-of-excellence.jpg",
   "https://www.kajariaceramics.com/images/slider/desh-ki-mitti-se-bani-tile-se-desh-ko-banate-hai.jpg",
-  // "https://4.imimg.com/data4/NM/LJ/MY-773089/cement-fencing-poles-500x500.jpg",
-  // "https://media.istockphoto.com/id/540406066/photo/reinforced-concrete-items.jpg?s=612x612&w=0&k=20&c=OzkqJ7ECpG0_53TAPjS2K3ONqfMSdTkIXPeno5LJxeo=",
-  // "https://media.istockphoto.com/id/1410452186/photo/foamed-lightweight-concrete-isolated-on-white.jpg?s=612x612&w=0&k=20&c=XCtmJhurwiNjjFAuFtvkfB62JEgfk0sv9B32Eq4xywI=",
 ];
 
 export default function Carousel() {

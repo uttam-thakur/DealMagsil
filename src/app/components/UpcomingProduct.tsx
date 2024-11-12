@@ -167,7 +167,6 @@ const UpcomingProducts = () => {
           alt={item.altText}
           className={styles.carouselimage}
         />
-        <CarouselCaption captionText={item.caption} />
       </CarouselItem>
     ));
 
@@ -187,10 +186,21 @@ const UpcomingProducts = () => {
                   >
                     {carousel.title}
                   </CardTitle>
+
+                  <p
+                    className={styles.captionText}
+                    style={{
+                      color: "gray",
+                      fontSize: "1.2rem",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    {carousel.items[activeIndexes[index]].caption}
+                  </p>
                   <br />
-                  {/* <CardText className="text-center">
-                  {carousel.description}
-                </CardText> */}
+
                   <Carousel
                     activeIndex={activeIndexes[index]}
                     interval={false}

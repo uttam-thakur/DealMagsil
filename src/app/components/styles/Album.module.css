@@ -8,12 +8,6 @@
   margin: 0 auto;
   justify-content: flex-start;
 }
-/* 
-.album .bg {
-  max-width: 1320px;
-  margin: 0;
-  justify-content: space-between;
-} */
 
 .album .bg {
   max-width: 1320px;
@@ -28,23 +22,6 @@
   flex-wrap: wrap;
   width: 65%;
 }
-/* 
-.album .textContainer {
-  width: 30%;
-  color: white;
-  padding: 20px;
-  text-align: left;
-}
-
-.album .textContainer h1 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.album .textContainer p {
-  font-size: 1rem;
-  line-height: 1.5;
-} */
 
 .album .img {
   width: 100%;

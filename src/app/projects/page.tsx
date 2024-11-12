@@ -72,7 +72,7 @@ const ProjectsPage = () => {
       caption: "Caption eight",
     },
     {
-      src: "http://nebula.wsimg.com/209e8de253675b6fbe561e29c7f0f6f7?AccessKeyId=EE46D1080F0D18C989B0&disposition=0&alloworigin=1",
+      src: "",
       caption: "Caption seven",
     },
     {
@@ -229,19 +229,6 @@ const ProjectsPage = () => {
 
   return (
     <>
-      {/* <div className={styles.para}>
-        <p>
-          Here are a few of the hundreds of projects we’ve completed over the
-          past{" "}
-          <span style={{ color: "#e53935", fontWeight: "bold" }}>27 years</span>
-          . Our project portfolio is growing every day. We are sure to have the
-          experience we need to provide you with a quality, on-schedule project.{" "}
-          <span style={{ fontSize: "20px", fontWeight: "bold" }}>
-            We are proud to be part of so many exciting projects!
-          </span>
-        </p>
-      </div> */}
-
       <div className={styles.para}>
         <p>
           With over{" "}
@@ -253,6 +240,7 @@ const ProjectsPage = () => {
           <span
             style={{
               fontSize: "20px",
+
               fontWeight: "bold",
               display: "inline-block",
               marginTop: "10px",

@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     dangerouslyAllowSVG: true,
     remotePatterns: imageDomains?.map((domainName) => {
-      return { protocol: "http", hostname: domainName };
+      return { protocol: "http", hostname: domainName, pathname: "/**" };
     }),
   },
 };

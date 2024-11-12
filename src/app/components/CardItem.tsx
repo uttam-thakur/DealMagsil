@@ -18,7 +18,6 @@ const WelcomeCard: React.FC<WelcomeCardProps> = ({
 }) => {
   return (
     <div className={styles.main}>
-      {/* <Card className={styles.card}> */}
       <Card className={styles.card} sx={{ boxShadow: "none", padding: 0 }}>
         <Typography gutterBottom variant="h4" component="div">
           {title}

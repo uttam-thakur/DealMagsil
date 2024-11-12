@@ -1,8 +1,6 @@
 .productcontainer {
   display: grid;
-  /* gap: 40px; */
   margin: 20px;
-  /* background-image: url("https://img.freepik.com/free-vector/abstract-circular-halftone-design-white-background_1055-20932.jpg?semt=ais_hybrid"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

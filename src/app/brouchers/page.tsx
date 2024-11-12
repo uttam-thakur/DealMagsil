@@ -33,7 +33,7 @@ const brochures = [
     file: "/brochure/design.pdf",
   },
   {
-    id: 4, // Corrected the ID for the fourth brochure
+    id: 4,
     title: "Another Brochure",
     description:
       "Further insights into our services for future plans and Upcoming products.",
@@ -43,8 +43,6 @@ const brochures = [
 
 export default function Brochures() {
   return (
-    // <main className="flex flex-col items-center justify-center min-h-screen bg-gray-100
-    //  p-8 px-4 py-10 ">
     <main style={{ padding: "2rem", marginTop: "50px" }}>
       {/* Header Section */}
       <header className="text-center mb-12">
@@ -62,48 +60,49 @@ export default function Brochures() {
         {brochures.map((brochure) => (
           <Card
             key={brochure.id}
-            className="shadow-lg rounded-md overflow-hidden transition-transform transform hover:scale-105 duration-300"
-            style={{ width: "100px", margin: "0 auto", borderRadius: "10px" }} // Smaller card size
+            className="shadow-lg rounded-md overflow-hidden transition-transform transform hover:scale-105 duration-300  mx-auto"
+            style={{ borderRadius: "10px" }}
           >
-            <CardImg
-              alt="Card image cap"
-              src="/images/card1.jpg"
-              top
-              style={{
-                height: "200px",
-                width: "70%",
-                objectFit: "cover",
-                padding: "20px",
-                borderBottomLeftRadius: "15px",
-                borderBottomRightRadius: "15px",
-                marginLeft: "15%",
-                // backgroundColor: "#DEDDE2",
-              }}
-            />
-            <CardBody className="text-center p-4">
-              <CardTitle tag="h5" className="font-bold text-blue-800">
-                {brochure.title}
-              </CardTitle>
+            <div className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56">
+              <CardImg
+                alt="Card image cap"
+                src="/images/card1.jpg"
+                top
+                style={{
+                  height: "200px",
+                  width: "70%",
+                  objectFit: "cover",
+                  padding: "20px",
+                  borderBottomLeftRadius: "15px",
+                  borderBottomRightRadius: "15px",
+                  marginLeft: "15%",
+                }}
+              />
+              <CardBody className="text-center p-4">
+                <CardTitle tag="h5" className="font-bold text-blue-800">
+                  {brochure.title}
+                </CardTitle>
 
-              <CardText className="text-gray-600 mb-4">
-                {brochure.description}
-              </CardText>
-              <Link href={brochure.file} target="_blank" download>
-                <Button
-                  color="transparent"
-                  style={{
-                    border: "1px solid #007bff",
-                    backgroundColor: "transparent",
-                    height: "40px",
-                    borderRadius: "5px",
-                  }}
-                  className="d-flex align-items-center justify-center" // Center aligns the content
-                >
-                  <PictureAsPdfIcon className="mr-2" />
-                  Download
-                </Button>
-              </Link>
-            </CardBody>
+                <CardText className="text-gray-600 mb-4">
+                  {brochure.description}
+                </CardText>
+                <Link href={brochure.file} target="_blank" download>
+                  <Button
+                    color="transparent"
+                    style={{
+                      border: "1px solid #007bff",
+                      backgroundColor: "transparent",
+                      height: "40px",
+                      borderRadius: "5px",
+                    }}
+                    className="d-flex align-items-center justify-center"
+                  >
+                    <PictureAsPdfIcon className="mr-2" />
+                    Download
+                  </Button>
+                </Link>
+              </CardBody>
+            </div>
           </Card>
         ))}
       </CardGroup>
