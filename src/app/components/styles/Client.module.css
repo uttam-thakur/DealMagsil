@@ -47,7 +47,6 @@
   }
 }
 
-/* Update the animation for responsive widths */
 @keyframes scroll {
   0% {
     transform: translateX(0);
