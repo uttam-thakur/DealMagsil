@@ -1,13 +1,21 @@
+.main {
+  background-color: rgb(238, 236, 233);
+}
+.upcomingproductssection {
+  padding: 3rem;
+}
 .customcard {
   margin-bottom: 50px;
 }
 .carouselimage {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
 }
-.titlecenter {
-  color: rgb(51, 51, 255);
+.titleCenter {
+  color: rgb(34, 34, 36);
+  text-align: center;
+  font-size: "35px";
 }
 .carouselitem img {
   max-width: 100%;
@@ -24,6 +32,16 @@
 }
 
 @media (max-width: 576px) {
+  .upcomingproductssection {
+    padding: 0;
+    margin-top: 30px;
+  }
+  .titleCenter {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: "1px";
+  }
   .carouselimage,
   .carouselitem img {
     height: 200px;

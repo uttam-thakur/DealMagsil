@@ -167,58 +167,69 @@ const UpcomingProducts = () => {
           alt={item.altText}
           className={styles.carouselimage}
         />
-        <CarouselCaption captionText={item.caption} />
       </CarouselItem>
     ));
 
   return (
-    <div className={styles.upcomingproductssection}>
-      <h2 className="text-center " style={{ color: "red", fontSize: "35px" }}>
-        NEWLY LAUNCH PRODUCTS
-      </h2>
-      <Row>
-        {carouselData.map((carousel, index) => (
-          <Col md="6" key={index}>
-            <Card className={styles.customcard}>
-              <CardBody>
-                <CardTitle
-                  tag="h5"
-                  className="text-center "
-                  style={{ color: "rgb(51, 51, 255)" }}
-                >
-                  {carousel.title}
-                </CardTitle>
-                <CardText className="text-center">
-                  {carousel.description}
-                </CardText>
-                <Carousel
-                  activeIndex={activeIndexes[index]}
-                  interval={false}
-                  next={() => next(index)}
-                  previous={() => previous(index)}
-                >
-                  <CarouselIndicators
-                    items={carousel.items}
+    <div className={styles.main}>
+      <div className={styles.upcomingproductssection}>
+        <h2 className={styles.titleCenter}>NEWLY LAUNCH PRODUCTS</h2>
+        <Row>
+          {carouselData.map((carousel, index) => (
+            <Col md="6" key={index}>
+              <Card className={styles.customcard}>
+                <CardBody>
+                  <CardTitle
+                    tag="h5"
+                    className="text-center "
+                    style={{ color: "rgb(102, 96, 96)" }}
+                  >
+                    {carousel.title}
+                  </CardTitle>
+
+                  <p
+                    className={styles.captionText}
+                    style={{
+                      color: "gray",
+                      fontSize: "1.2rem",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      letterSpacing: "1px",
+                    }}
+                  >
+                    {carousel.items[activeIndexes[index]].caption}
+                  </p>
+                  <br />
+
+                  <Carousel
                     activeIndex={activeIndexes[index]}
-                    onClickHandler={(newIndex) => goToIndex(newIndex, index)}
-                  />
-                  {renderSlides(carousel.items, index)}
-                  <CarouselControl
-                    direction="prev"
-                    directionText="Previous"
-                    onClickHandler={() => previous(index)}
-                  />
-                  <CarouselControl
-                    direction="next"
-                    directionText="Next"
-                    onClickHandler={() => next(index)}
-                  />
-                </Carousel>
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+                    interval={false}
+                    next={() => next(index)}
+                    previous={() => previous(index)}
+                  >
+                    <CarouselIndicators
+                      items={carousel.items}
+                      activeIndex={activeIndexes[index]}
+                      onClickHandler={(newIndex) => goToIndex(newIndex, index)}
+                    />
+                    {renderSlides(carousel.items, index)}
+                    <CarouselControl
+                      direction="prev"
+                      directionText="Previous"
+                      onClickHandler={() => previous(index)}
+                    />
+                    <CarouselControl
+                      direction="next"
+                      directionText="Next"
+                      onClickHandler={() => next(index)}
+                    />
+                  </Carousel>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
     </div>
   );
 };

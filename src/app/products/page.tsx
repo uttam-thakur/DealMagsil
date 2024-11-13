@@ -1,7 +1,5 @@
 "use client";
-
 import React, { useState } from "react";
-
 import {
   Carousel,
   CarouselItem,
@@ -9,11 +7,12 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
+import { InputAdornment, TextField } from "@mui/material";
+import { motion } from "framer-motion";
+import SearchIcon from "@mui/icons-material/Search";
 import styles from "./page.module.css";
 import UpcomingProduct from "../components/UpcomingProduct";
 import FeatureGrid from "../components/FeatureGrid";
-import { InputAdornment, TextField } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 
 interface CarouselItemProps {
   src: string;
@@ -21,58 +20,45 @@ interface CarouselItemProps {
   caption: string;
   key: number;
 }
+
 const items: CarouselItemProps[] = [
   {
-    // src: "https://picsum.photos/id/123/1200/400",
     src: "/images/products/Precast Slabs/1.jpg",
     altText: "Slide 1",
-    caption: "Slide 1",
+    caption: "Precast Slabs",
     key: 1,
   },
   {
     src: "/images/products/Precast Slabs/2.jpg",
     altText: "Slide 2",
-    caption: "Slide 2",
+    caption: "Precast Slabs",
     key: 2,
   },
   {
     src: "/images/products/Precast Slabs/3.jpg",
     altText: "Slide 3",
-    caption: "Slide 3",
-    key: 3,
-  },
-  {
-    src: "/images/products/Precast Slabs/4.jpg",
-    altText: "Slide 4",
-    caption: "Slide 4",
-    key: 3,
-  },
-  {
-    src: "/images/products/Precast Slabs/5.jpg",
-    altText: "Slide 5",
-    caption: "Slide 5",
+    caption: "Precast Slabs",
     key: 3,
   },
 ];
 
 const fenceItems: CarouselItemProps[] = [
   {
-    // src: "https://picsum.photos/id/123/1200/400",
     src: "/images/products/Fencing Poles/1.jpg",
     altText: "Slide 1",
-    caption: "Slide 1",
+    caption: "Fencing Poles",
     key: 1,
   },
   {
     src: "/images/products/Fencing Poles/2.jpg",
     altText: "Slide 2",
-    caption: "Slide 2",
+    caption: "Fencing Poles",
     key: 2,
   },
   {
     src: "/images/products/Fencing Poles/3.jpg",
     altText: "Slide 3",
-    caption: "Slide 3",
+    caption: "Fencing Poles",
     key: 3,
   },
 ];
@@ -145,15 +131,20 @@ const ProductInfo: React.FC = () => {
         onExited={() => setAnimating(false)}
         key={item.src}
       >
-        <img
-          src={item.src}
-          alt={item.altText}
-          className={styles.image}
-          // style={{ height: 400, width: 1200 }}
-        />
+        <img src={item.src} alt={item.altText} className={styles.image} />
         <CarouselCaption
-          captionText={item.caption}
-          captionHeader={item.caption}
+          captionText={
+            <span
+              style={{
+                color: "black",
+                fontSize: "1.4rem",
+                letterSpacing: "0.5px",
+              }}
+            >
+              {item.caption}
+            </span>
+          }
+          // captionHeader={item.caption}
         />
       </CarouselItem>
     ));
@@ -163,7 +154,7 @@ const ProductInfo: React.FC = () => {
         activeIndex={activeIndex}
         next={next}
         previous={previous}
-        interval={false} // Disable auto-sliding explicitly
+        interval={false}
       >
         <CarouselIndicators
           items={images}
@@ -186,16 +177,14 @@ const ProductInfo: React.FC = () => {
   };
 
   return (
-    <>
+    <div style={{ padding: "2rem" }}>
       <TextField
         variant="standard"
-        placeholder="Search Tiles"
+        placeholder="Search Products"
         value={searchTerm}
         onChange={handleSearch}
-        className={styles.searchrbar}
-        style={{
-          marginTop: "50px",
-        }}
+        className={styles.searchbar}
+        style={{ marginTop: "50px" }}
         InputProps={{
           startAdornment: (
             <InputAdornment position="start">
@@ -204,9 +193,9 @@ const ProductInfo: React.FC = () => {
           ),
         }}
         fullWidth
-        // margin="normal"
       />
-      {/* Only show filtered results if there's a search term */}
+      <FeatureGrid searchTerm={searchTerm} />
+
       <div className={styles.productcontainer}>
         {(searchTerm ? filteredProducts : products).map((product, index) => (
           <div
@@ -215,10 +204,19 @@ const ProductInfo: React.FC = () => {
             }`}
             key={index}
           >
-            <div className={styles.productdetails}>
+            {/* Description with Animation */}
+            <motion.div
+              className={styles.productdetails}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ ease: "easeInOut", duration: 0.8 }}
+            >
               <h2 className={styles.producttitle}>{product.title}</h2>
               <p className={styles.productdescription}>{product.description}</p>
-            </div>
+            </motion.div>
+
+            {/* Image Carousel */}
             <div className={styles.imagewrapper}>
               <CarouselComponent images={product.images} />
             </div>
@@ -226,8 +224,7 @@ const ProductInfo: React.FC = () => {
         ))}
       </div>
       {!searchTerm && <UpcomingProduct />}
-      <FeatureGrid searchTerm={searchTerm} />
-    </>
+    </div>
   );
 };
 

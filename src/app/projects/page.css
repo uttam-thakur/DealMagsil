@@ -1,17 +1,19 @@
-body,
+/* body {
+  padding: 3rem;
+} */
 html {
-  margin: 0;
-  padding: 0;
+  margin-top: 0;
+  /* padding: 2rem; */
   margin-top: 20px;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f9; /* Light background for a clean layout */
-  color: #333; /* Standard dark gray for text */
+  background-color: #f4f4f9;
+  color: #333;
 }
 
 h4 {
   font-size: 2rem;
-  color: #444; /* Muted dark color for headings */
+  color: #444;
   text-align: center;
   margin: 50px 0 30px 0;
   font-weight: 600;
@@ -19,21 +21,22 @@ h4 {
 
 .mainDiv {
   max-width: 1200px;
-  margin: 0 auto; /* Center the main container */
-  padding: 0 20px; /* Add padding for better readability */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 p {
   font-size: 1.1rem;
-  color: #555; /* Slightly muted text color */
+  color: #555;
   line-height: 1.6;
-  text-align: center; /* Center-align the intro text */
+  text-align: center;
   margin-bottom: 40px;
+  margin-top: 50px;
 }
 
 .project-heading {
   font-size: 1.8rem;
-  color: #e53935; /* Highlighted project heading */
+  color: #2a2626;
   margin-top: 60px;
   text-align: center;
   font-weight: bold;
@@ -47,26 +50,23 @@ p {
 /* Carousel Container - More grid-based layout for better spacing */
 .carousel-container {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Responsive grid */
-  gap: 30px; /* Space between the images */
-  justify-items: center; /* Align items in the center */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
 /* Carousel Images */
 .carousel-container img {
   width: 100%;
   max-width: 300px;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .carousel-container img:hover {
-  transform: scale(1.05); /* Slight zoom-in effect on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .caption {

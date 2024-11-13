@@ -1,8 +1,11 @@
 /* Carouselinfra.module.css */
-
+.main {
+  padding: 2rem;
+  margin-top: -70px;
+}
 .carouselImage {
-  width: 800px;
-  height: 400px;
+  /* width: 800px;
+  height: 400px; */
   border-radius: 10px;
   object-fit: cover;
 }

@@ -10,21 +10,24 @@ type ImageData = {
 interface ProjectSliderProps {
   images: ImageData[];
   name: string;
+  title: any;
   onClick: any;
 }
 
 const ProjectSlider: React.FC<ProjectSliderProps> = ({
   images,
   name,
+  title,
   onClick,
 }) => {
   return (
     <div className={styles.projectSlider}>
+      <h1 className={styles.projectTitle}>{title}</h1>
       <ProjectCarousel images={images} />
       <div
         className={styles.projectDetails}
         onClick={() => {
-          onClick({ images, name });
+          onClick({ images, name, title });
         }}
       >
         <h1 className={styles.projectName}>{name}</h1>

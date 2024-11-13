@@ -102,9 +102,15 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
   );
   return (
     <>
-      {/* <Typography variant="h4" component="h2" gutterBottom>
-        Different Types of Tiles
-      </Typography> */}
+      <Typography
+        className={styles.customTitle} // Adjust color and font size using Tailwind CSS
+        variant="h4"
+        component="h2"
+        gutterBottom
+      >
+        DIFFRENT TYPES OF TILES
+      </Typography>
+
       <div className={styles.featureGrid}>
         {filteredFeatures.map((feature, index) => (
           <FeatureCard

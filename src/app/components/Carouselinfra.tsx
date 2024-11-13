@@ -8,7 +8,8 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import styles from "../components/styles/Carouselinfra.module.css"; // Import the CSS module
+import styles from "../components/styles/Carouselinfra.module.css";
+import Image from "next/image";
 
 const items = [
   {
@@ -79,7 +80,9 @@ const Carouselinfra = () => {
       onExiting={() => setAnimating(true)}
       onExited={() => setAnimating(false)}
     >
-      <img
+      <Image
+        width={800}
+        height={400}
         src={item.src}
         alt={item.altText}
         className={`${styles.carouselImage} d-block mx-auto`}
@@ -92,7 +95,7 @@ const Carouselinfra = () => {
   ));
 
   return (
-    <>
+    <div className={styles.main}>
       <Typography
         gutterBottom
         variant="h4"
@@ -100,6 +103,8 @@ const Carouselinfra = () => {
         display="flex"
         alignItems="center"
         justifyContent="center"
+        lineHeight="1.8rem"
+        fontWeight="600"
       >
         InfraStructure
       </Typography>
@@ -122,24 +127,31 @@ const Carouselinfra = () => {
         />
       </Carousel>
 
-      <Typography gutterBottom variant="h6" component="div" marginTop="15px">
-        Our state-of-the-art infrastructure comprises of a factory that is
-        situated 5 km from Asansol Railway Station and 4 km from Asansol Bus
-        Stand & just 5 minutes from Jubilee More, National Highway-2, West
-        Bengal. The facilities are outfitted with the machinery and equipment to
-        manufacture the products as per standards. The production capacity of
-        the factory is well-suited to meet the ever-growing and changing needs
-        of the industry. Our successful track record is the result of providing
-        the best quality by making use of the finest raw materials for the
-        standard and customized products. We have curing ponds to obtain the
-        desired strength and durability of various products. In addition, we
-        have facilities for carrying out various tests at laboratories that
-        further assures the desired strength and longevity of the products.
+      <Typography
+        gutterBottom
+        variant="h6"
+        component="div"
+        marginTop="15px"
+        color="gray"
+      >
+        Our state-of-the-art manufacturing facility is strategically located
+        just 5 km from Asansol Railway Station, 4 km from Asansol Bus Stand, and
+        a 5-minute drive from Jubilee More on National Highway-2 in West Bengal.
+        Outfitted with advanced machinery and cutting-edge equipment, our
+        factory is designed to meet industry standards and adapt to the evolving
+        demands of our clients. With a high production capacity, we are equipped
+        to handle a wide range of requirements, delivering both standard and
+        customized products with exceptional quality. Our success stems from a
+        commitment to excellence, using only premium raw materials in our
+        manufacturing process. Our facility includes curing ponds to achieve
+        optimal product strength and durability, along with fully equipped
+        laboratories for rigorous testing to ensure our products meet the
+        highest standards of longevity and resilience
       </Typography>
       <div className={styles.customDivider}>
         <div className={styles.dot} />
       </div>
-    </>
+    </div>
   );
 };
 

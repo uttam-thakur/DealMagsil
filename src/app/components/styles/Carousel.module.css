@@ -1,5 +1,4 @@
-.carouselWrapper {
-  /* margin-top: 30px; */
+/* .carouselWrapper {
   margin-left: -40px;
   perspective: 1000px;
   width: 100vw;
@@ -7,7 +6,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-image: url("../images/Family\ Values\ -\ Abstract.png"); */
   background-image: url("../../../../public/images/Family\ Values\ -\ Abstract.png");
 }
 
@@ -80,7 +78,6 @@
   transform: rotateY(324deg) translateZ(482px);
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .carouselWrapper {
     height: 60vh;
@@ -228,5 +225,90 @@
   }
   .card:nth-child(10) {
     transform: rotateY(324deg) translateZ(250px);
+  }
+} */
+
+/* second UI  kajstyle*/
+.carousel {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carouselImage {
+  margin-top: 0px;
+  width: 100%;
+  height: 100%;
+  background-size: contain; /* Ensure the full image is visible */
+  background-position: center center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  transition: background-image 1s ease-in-out;
+}
+
+.prevButton,
+.nextButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel {
+    height: 60vh; /* Reduce height on tablets and smaller screens */
+  }
+  .carouselImage {
+    margin-top: -55px;
+  }
+  .prevButton,
+  .nextButton {
+    font-size: 1.5rem; /* Adjust button size */
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .carouselImage {
+    margin-top: -200px;
+  }
+  .prevButton,
+  .nextButton {
+    position: absolute;
+    top: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 40vh; /* Reduce height on mobile */
+  }
+  .carouselImage {
+    margin-top: -27px;
+  }
+  .prevButton,
+  .nextButton {
+    font-size: 1.2rem; /* Smaller buttons for mobile */
+    padding: 0.2rem 0.5rem;
+    top: 40%;
+  }
+
+  .nextButton {
+    right: 20px;
   }
 }

@@ -2,6 +2,8 @@ export const phoneNumber = 8670288140;
 
 export const whatsappNumber = 8670288140;
 
+export const dealMagsilLogo = "/images/dmlogo.jpeg";
+
 const message = `Thank you for contacting DEAL MAGSIL.
 Kindly share your requirement, we would be more than happy to help you. 
 

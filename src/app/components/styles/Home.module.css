@@ -1,0 +1,19 @@
+@media (max-width: 1024px) {
+  .welcomeCard {
+    margin-top: -450px;
+  }
+}
+
+@media (max-width: 760px) {
+  .carousel {
+    margin-top: 15px;
+  }
+  .welcomeCard {
+    margin-top: -150px;
+  }
+}
+@media (max-width: 480px) {
+  .carousel {
+    margin-top: 14px;
+  }
+}
