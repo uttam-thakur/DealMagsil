@@ -23,7 +23,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
           canonical="https://yourwebsite.com"
           ogTitle="Cement Products Manufacturing | Slabs, Tiles, Fencing, Pipes"
           ogDescription="Deal Magsil provides high-quality cement products for industrial and commercial use. Learn more about our slabs, tiles, fencing, and more."
-          ogImage="https://cdn.pixabay.com/photo/2017/08/10/07/51/construction-2619702_1280.jpg"
+          ogImage="/images/dmlogo1.png"
           ogUrl="./app/favicon.ico"
           twitterTitle="Cement Products Manufacturing | Slabs, Tiles, Fencing, Pipes"
           twitterDescription="Find out about high-quality cement products from Deal Magsil, including slabs, tiles, RCC pipes, and more."
