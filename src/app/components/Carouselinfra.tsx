@@ -74,7 +74,7 @@ const Carouselinfra = () => {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map((item) => (
+  const slides = items.map((item, index) => (
     <CarouselItem
       key={item.src}
       onExiting={() => setAnimating(true)}
@@ -86,6 +86,7 @@ const Carouselinfra = () => {
         src={item.src}
         alt={item.altText}
         className={`${styles.carouselImage} d-block mx-auto`}
+        loading="lazy"
       />
       <CarouselCaption
         captionText={item.caption}

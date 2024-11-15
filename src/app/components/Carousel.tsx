@@ -172,6 +172,7 @@
 // };
 
 // export default Carousel;
+
 "use client";
 import { useState, useEffect } from "react";
 import styles from "../../app/components/styles/Carousel.module.css";

@@ -1,5 +1,6 @@
 .productcontainer {
   display: grid;
+
   margin: 20px;
   background-repeat: no-repeat;
   background-size: cover;

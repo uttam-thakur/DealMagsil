@@ -4,8 +4,6 @@
   margin-top: -70px;
 }
 .carouselImage {
-  /* width: 800px;
-  height: 400px; */
   border-radius: 10px;
   object-fit: cover;
 }
@@ -27,4 +25,12 @@
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (max-width: 480px) {
+  .carouselImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
 }
