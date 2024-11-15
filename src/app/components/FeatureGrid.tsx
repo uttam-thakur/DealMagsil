@@ -4,6 +4,7 @@ import FeatureCard from "./FeatureCard";
 import { Typography } from "@mui/material";
 
 import styles from "../components/styles/FeatureGrid.module.css";
+import PrecastSlider from "./FeatureGridSlider";
 
 type PrecastItem = {
   images: string[];
@@ -180,6 +181,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
           />
         ))}
       </div>
+      <PrecastSlider />
     </>
   );
 };
