@@ -105,7 +105,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
   return (
     <>
       <Typography
-        className={styles.customTitle} // Adjust color and font size using Tailwind CSS
+        className={styles.customTitle}
         variant="h4"
         component="h2"
         gutterBottom

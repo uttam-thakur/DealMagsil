@@ -102,79 +102,78 @@ const ProductInfo: React.FC = () => {
     product.title.toLowerCase().includes(searchTerm)
   );
 
-  const CarouselComponent: React.FC<{ images: CarouselItemProps[] }> = ({
-    images,
-  }) => {
-    const [activeIndex, setActiveIndex] = useState(0);
-    const [animating, setAnimating] = useState(false);
+  // const CarouselComponent: React.FC<{ images: CarouselItemProps[] }> = ({
+  //   images,
+  // }) => {
+  //   const [activeIndex, setActiveIndex] = useState(0);
+  //   const [animating, setAnimating] = useState(false);
 
-    const next = () => {
-      if (animating) return;
-      const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
-      setActiveIndex(nextIndex);
-    };
+  //   const next = () => {
+  //     if (animating) return;
+  //     const nextIndex = activeIndex === images.length - 1 ? 0 : activeIndex + 1;
+  //     setActiveIndex(nextIndex);
+  //   };
 
-    const previous = () => {
-      if (animating) return;
-      const nextIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
-      setActiveIndex(nextIndex);
-    };
+  //   const previous = () => {
+  //     if (animating) return;
+  //     const nextIndex = activeIndex === 0 ? images.length - 1 : activeIndex - 1;
+  //     setActiveIndex(nextIndex);
+  //   };
 
-    const goToIndex = (newIndex: number) => {
-      if (animating) return;
-      setActiveIndex(newIndex);
-    };
+  //   const goToIndex = (newIndex: number) => {
+  //     if (animating) return;
+  //     setActiveIndex(newIndex);
+  //   };
 
-    const slides = images.map((item) => (
-      <CarouselItem
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-        key={item.src}
-      >
-        <img src={item.src} alt={item.altText} className={styles.image} />
-        <CarouselCaption
-          captionText={
-            <span
-              style={{
-                color: "black",
-                fontSize: "1.4rem",
-                letterSpacing: "0.5px",
-              }}
-            >
-              {item.caption}
-            </span>
-          }
-          // captionHeader={item.caption}
-        />
-      </CarouselItem>
-    ));
+  //   const slides = images.map((item) => (
+  //     <CarouselItem
+  //       onExiting={() => setAnimating(true)}
+  //       onExited={() => setAnimating(false)}
+  //       key={item.src}
+  //     >
+  //       <img src={item.src} alt={item.altText} className={styles.image} />
+  //       <CarouselCaption
+  //         captionText={
+  //           <span
+  //             style={{
+  //               color: "black",
+  //               fontSize: "1.4rem",
+  //               letterSpacing: "0.5px",
+  //             }}
+  //           >
+  //             {item.caption}
+  //           </span>
+  //         }
+  //       />
+  //     </CarouselItem>
+  //   ));
 
-    return (
-      <Carousel
-        activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        interval={false}
-      >
-        <CarouselIndicators
-          items={images}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
-    );
-  };
+  //   return (
+  //     <Carousel
+  //       activeIndex={activeIndex}
+  //       next={next}
+  //       previous={previous}
+  //       interval={false}
+  //     >
+  //       <CarouselIndicators
+  //         items={images}
+  //         activeIndex={activeIndex}
+  //         onClickHandler={goToIndex}
+  //       />
+  //       {slides}
+  //       <CarouselControl
+  //         direction="prev"
+  //         directionText="Previous"
+  //         onClickHandler={previous}
+  //       />
+  //       <CarouselControl
+  //         direction="next"
+  //         directionText="Next"
+  //         onClickHandler={next}
+  //       />
+  //     </Carousel>
+  //   );
+  // };
 
   return (
     <div style={{ padding: "2rem" }}>
@@ -195,6 +194,7 @@ const ProductInfo: React.FC = () => {
         fullWidth
       />
       <FeatureGrid searchTerm={searchTerm} />
+      {!searchTerm && <UpcomingProduct />}
 
       <div className={styles.productcontainer}>
         {(searchTerm ? filteredProducts : products).map((product, index) => (
@@ -205,7 +205,7 @@ const ProductInfo: React.FC = () => {
             key={index}
           >
             {/* Description with Animation */}
-            <motion.div
+            {/* <motion.div
               className={styles.productdetails}
               initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -214,16 +214,16 @@ const ProductInfo: React.FC = () => {
             >
               <h2 className={styles.producttitle}>{product.title}</h2>
               <p className={styles.productdescription}>{product.description}</p>
-            </motion.div>
+            </motion.div> */}
 
             {/* Image Carousel */}
-            <div className={styles.imagewrapper}>
+            {/* <div className={styles.imagewrapper}>
               <CarouselComponent images={product.images} />
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
-      {!searchTerm && <UpcomingProduct />}
+      {/* {!searchTerm && <UpcomingProduct />} */}
     </div>
   );
 };

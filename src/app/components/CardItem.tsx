@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Card, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
-import styles from "../components/styles/welcomeCard.module.css"; // Import CSS module
+import styles from "../components/styles/welcomeCard.module.css";
 import Welcome from "../../../public/images/welcome.jpg";
 import QualityAss from "../../../public/images/quality1.png";
 

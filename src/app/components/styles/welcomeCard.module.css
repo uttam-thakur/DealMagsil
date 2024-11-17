@@ -10,7 +10,7 @@
   margin: 0 auto;
   text-align: center;
   box-shadow: none;
-  box-shadow: none; /* Removes the shadow */
+  box-shadow: none;
 }
 
 .image {

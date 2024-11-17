@@ -10,8 +10,7 @@ const About = () => {
         <div className={styles.profileSection}>
           <Image
             src="/images/feedback/5.png"
-            // src="/images/quality1.png"
-            alt="Yazad Irani"
+            alt="Abeha Dey"
             width={400}
             height={400}
             className={styles.image}

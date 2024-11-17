@@ -2,7 +2,7 @@
 
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useScrolling } from "../../common/hooks/useScrolling";
-import "./style.css"; // Import your CSS file
+import "./style.css";
 
 const FABLocation = () => {
   const scrolling = useScrolling({ fallbackTime: 750 });

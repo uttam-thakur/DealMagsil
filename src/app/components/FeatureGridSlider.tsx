@@ -299,7 +299,7 @@ const FeatureGridSlider = () => {
               sx={{
                 marginTop: "1rem",
                 fontWeight: "700",
-                fontSize: { xs: "1.2rem", md: "1.5rem" }, // Responsive font size
+                fontSize: { xs: "1.2rem", md: "1.5rem" },
               }}
             >
               {selectedItem.title}
@@ -330,7 +330,7 @@ const FeatureGridSlider = () => {
                 margin: "1rem 0",
                 lineHeight: "1.5",
                 letterSpacing: "1px",
-                fontSize: { xs: "0.9rem", md: "1rem" }, // Responsive font size
+                fontSize: { xs: "0.9rem", md: "1rem" },
               }}
             >
               {selectedItem.description}
@@ -343,7 +343,7 @@ const FeatureGridSlider = () => {
               onClick={handleCloseModal}
               sx={{
                 marginTop: "1rem",
-                fontSize: { xs: "0.8rem", md: "1rem" }, // Responsive button size
+                fontSize: { xs: "0.8rem", md: "1rem" },
               }}
             >
               Close

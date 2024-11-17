@@ -22,19 +22,27 @@ const brochures = [
   },
   {
     id: 2,
-    title: "React Brochure",
+    title: "Tiles Brochure",
     description: "A complete guide to our React-based products and services.",
     file: "/brochure/react.pdf",
   },
   {
     id: 3,
-    title: "UI/UX Design Brochure",
+    title: "Pavor Tiles Brochure",
     description: "Detailed insights into our design process and services.",
     file: "/brochure/design.pdf",
   },
   {
     id: 4,
-    title: "Another Brochure",
+    title: "Interlock Tiles Brochure",
+    description:
+      "Further insights into our services for future plans and Upcoming products.",
+    file: "/brochure/another.pdf",
+  },
+
+  {
+    id: 5,
+    title: "Precast Product Brochure",
     description:
       "Further insights into our services for future plans and Upcoming products.",
     file: "/brochure/another.pdf",
