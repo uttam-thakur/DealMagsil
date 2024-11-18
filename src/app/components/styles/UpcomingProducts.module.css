@@ -13,9 +13,10 @@
   object-fit: cover;
 }
 .titleCenter {
-  color: rgb(34, 34, 36);
+  color: gray;
   text-align: center;
-  font-size: "35px";
+  font-size: "2rem";
+  font-weight: 700;
 }
 .carouselitem img {
   max-width: 100%;

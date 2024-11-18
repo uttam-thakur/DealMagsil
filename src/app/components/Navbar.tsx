@@ -57,7 +57,7 @@ export default function DrawerAppBar(props: Props) {
         Deal Magsil
         <br />
         <Typography
-          sx={{ my: 2, fontSize: "15px", color: "red", marginTop: "-5px" }}
+          sx={{ my: 2, fontSize: "15px", color: "gray", marginTop: "-5px" }}
         >
           Since 1991
         </Typography>

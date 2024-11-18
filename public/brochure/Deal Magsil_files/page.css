@@ -1,0 +1,907 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/slick-carousel/slick/slick.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/Carousel.module.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/* .carouselWrapper {
+  margin-left: -40px;
+  perspective: 1000px;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../../public/images/Family\ Values\ -\ Abstract.png");
+}
+
+.carousel {
+  width: 400px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  background-color: gray;
+  margin: 0;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+.bottomRightText {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: grey;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(482px);
+}
+.card:nth-child(2) {
+  transform: rotateY(36deg) translateZ(482px);
+}
+.card:nth-child(3) {
+  transform: rotateY(72deg) translateZ(482px);
+}
+.card:nth-child(4) {
+  transform: rotateY(108deg) translateZ(482px);
+}
+.card:nth-child(5) {
+  transform: rotateY(144deg) translateZ(482px);
+}
+.card:nth-child(6) {
+  transform: rotateY(180deg) translateZ(482px);
+}
+.card:nth-child(7) {
+  transform: rotateY(216deg) translateZ(482px);
+}
+.card:nth-child(8) {
+  transform: rotateY(252deg) translateZ(482px);
+}
+.card:nth-child(9) {
+  transform: rotateY(288deg) translateZ(482px);
+}
+.card:nth-child(10) {
+  transform: rotateY(324deg) translateZ(482px);
+}
+
+@media (max-width: 768px) {
+  .carouselWrapper {
+    height: 60vh;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .carousel {
+    width: 280px;
+    height: 150px;
+  }
+
+  .card {
+    width: 220px;
+    height: 150px;
+    font-size: 1.2rem;
+    transform: rotateY(0deg) translateZ(400px);
+  }
+
+  .card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(400px);
+  }
+  .card:nth-child(2) {
+    transform: rotateY(36deg) translateZ(400px);
+  }
+  .card:nth-child(3) {
+    transform: rotateY(72deg) translateZ(400px);
+  }
+  .card:nth-child(4) {
+    transform: rotateY(108deg) translateZ(400px);
+  }
+  .card:nth-child(5) {
+    transform: rotateY(144deg) translateZ(400px);
+  }
+  .card:nth-child(6) {
+    transform: rotateY(180deg) translateZ(400px);
+  }
+  .card:nth-child(7) {
+    transform: rotateY(216deg) translateZ(400px);
+  }
+  .card:nth-child(8) {
+    transform: rotateY(252deg) translateZ(400px);
+  }
+  .card:nth-child(9) {
+    transform: rotateY(288deg) translateZ(400px);
+  }
+  .card:nth-child(10) {
+    transform: rotateY(324deg) translateZ(400px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselWrapper {
+    height: 50vh;
+    width: 80vw;
+  }
+
+  .carousel {
+    width: 200px;
+    height: 120px;
+  }
+
+  .card {
+    width: 150px;
+    height: 120px;
+    font-size: 1rem;
+    transform: rotateY(0deg) translateZ(300px);
+  }
+
+  .card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+  }
+  .card:nth-child(2) {
+    transform: rotateY(36deg) translateZ(300px);
+  }
+  .card:nth-child(3) {
+    transform: rotateY(72deg) translateZ(300px);
+  }
+  .card:nth-child(4) {
+    transform: rotateY(108deg) translateZ(300px);
+  }
+  .card:nth-child(5) {
+    transform: rotateY(144deg) translateZ(300px);
+  }
+  .card:nth-child(6) {
+    transform: rotateY(180deg) translateZ(300px);
+  }
+  .card:nth-child(7) {
+    transform: rotateY(216deg) translateZ(300px);
+  }
+  .card:nth-child(8) {
+    transform: rotateY(252deg) translateZ(300px);
+  }
+  .card:nth-child(9) {
+    transform: rotateY(288deg) translateZ(300px);
+  }
+  .card:nth-child(10) {
+    transform: rotateY(324deg) translateZ(300px);
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselWrapper {
+    height: 30vh;
+  }
+
+  .carousel {
+    width: 200px;
+    height: 120px;
+  }
+
+  .card {
+    width: 150px;
+    height: 120px;
+    font-size: 1rem;
+    transform: rotateY(0deg) translateZ(300px);
+  }
+
+  .card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(250px);
+  }
+  .card:nth-child(2) {
+    transform: rotateY(36deg) translateZ(250px);
+  }
+  .card:nth-child(3) {
+    transform: rotateY(72deg) translateZ(250px);
+  }
+  .card:nth-child(4) {
+    transform: rotateY(108deg) translateZ(250px);
+  }
+  .card:nth-child(5) {
+    transform: rotateY(144deg) translateZ(250px);
+  }
+  .card:nth-child(6) {
+    transform: rotateY(180deg) translateZ(250px);
+  }
+  .card:nth-child(7) {
+    transform: rotateY(216deg) translateZ(250px);
+  }
+  .card:nth-child(8) {
+    transform: rotateY(252deg) translateZ(250px);
+  }
+  .card:nth-child(9) {
+    transform: rotateY(288deg) translateZ(250px);
+  }
+  .card:nth-child(10) {
+    transform: rotateY(324deg) translateZ(250px);
+  }
+} */
+
+/* second UI  kajstyle*/
+.Carousel_carousel__3cnQr {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.Carousel_carouselImage__ty_MC {
+  /* margin-top: 0px; */
+  margin-top: 75px;
+  width: 100%;
+  height: 100%;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+
+.Carousel_prevButton__scRNZ,
+.Carousel_nextButton__99Bq2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+}
+
+.Carousel_prevButton__scRNZ {
+  left: 20px;
+}
+
+.Carousel_nextButton__99Bq2 {
+  right: 40px;
+}
+
+@media (max-width: 768px) {
+  .Carousel_carousel__3cnQr {
+    height: 60vh;
+  }
+  .Carousel_carouselImage__ty_MC {
+    /* background-size: contain; */
+
+    margin-top: -55px;
+  }
+  .Carousel_prevButton__scRNZ,
+  .Carousel_nextButton__99Bq2 {
+    font-size: 1.5rem;
+    padding: 0.3rem 0.8rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Carousel_carouselImage__ty_MC {
+    margin-top: -132px;
+    background-size: contain;
+  }
+  .Carousel_prevButton__scRNZ,
+  .Carousel_nextButton__99Bq2 {
+    position: absolute;
+    top: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Carousel_carousel__3cnQr {
+    height: 40vh; /* Reduce height on mobile */
+  }
+  .Carousel_carouselImage__ty_MC {
+    /* margin-top: -27px; */
+    background-size: contain;
+
+    margin-top: -1px;
+  }
+  .Carousel_prevButton__scRNZ,
+  .Carousel_nextButton__99Bq2 {
+    font-size: 1.2rem; /* Smaller buttons for mobile */
+    padding: 0.2rem 0.5rem;
+    top: 40%;
+  }
+
+  .Carousel_nextButton__99Bq2 {
+    right: 20px;
+  }
+}
+
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/Carouselinfra.module.css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************/
+/* Carouselinfra.module.css */
+.Carouselinfra_main__J2lpC {
+  padding: 2rem;
+  margin-top: -70px;
+}
+.Carouselinfra_carouselImage__yjRCv {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.Carouselinfra_customDivider__npP8J {
+  position: relative;
+  width: 90%;
+  margin: 30px auto;
+  height: 0.5px;
+  background-color: gray;
+}
+
+.Carouselinfra_dot__ykNoF {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 480px) {
+  .Carouselinfra_carouselImage__yjRCv {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/FeedbackSlider.module.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+/* .mainContainer {
+  padding: 20px;
+  margin-top: -65px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slide {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+.feedbackText {
+  font-style: italic;
+  color: #555;
+
+  margin-top: 20px;
+
+  font-size: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  color: #333;
+}
+
+.designation {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.navButton {
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .sliderContainer {
+    width: 100%;
+    height: 380px;
+    padding: 15px;
+    flex-direction: column;
+  }
+
+  .slide {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .feedbackText {
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .designation {
+    font-size: 0.8rem;
+  }
+
+  .navButton {
+    position: absolute;
+    bottom: -1px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-bottom: 15px;
+  }
+
+  .navButton:first-of-type {
+    left: 35%;
+  }
+
+  .navButton:last-of-type {
+    right: 35%;
+  }
+} */
+/* 
+.mainContainer {
+  padding: 20px;
+  margin-top: -65px;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.sliderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px; 
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.slide {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  min-width: 80px;
+  min-height: 80px;
+}
+  
+
+.feedbackText {
+  font-style: italic;
+  color: #555;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.name {
+  font-weight: bold;
+  color: #333;
+}
+
+.designation {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+.navButton {
+  color: #555;
+}
+
+
+@media (max-width: 600px) {
+  .sliderContainer {
+    padding: 15px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .feedbackText {
+    font-size: 0.9rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .designation {
+    font-size: 0.8rem;
+  }
+} */
+
+.FeedbackSlider_mainContainer__rOy7_ {
+  padding: 20px;
+  margin-top: -65px;
+}
+
+.FeedbackSlider_heading__0_S9p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.FeedbackSlider_sliderContainer__Y8t8f {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.FeedbackSlider_slide__cFbfy {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.FeedbackSlider_feedbackText__JGCV_ {
+  font-style: normal;
+  color: #555;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1.2px;
+}
+
+.FeedbackSlider_avatar__nJu4C {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  min-width: 150px;
+  min-height: 150px;
+}
+
+.FeedbackSlider_name__s_3pz {
+  font-weight: bold;
+  color: #333;
+}
+
+.FeedbackSlider_designation__I7Eax {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* Left and right arrow buttons */
+.FeedbackSlider_navButton__vvPRR {
+  color: #555;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-bottom: -50px;
+}
+
+.FeedbackSlider_navButton__vvPRR.FeedbackSlider_left__hO__4 {
+  left: 10px;
+}
+
+.FeedbackSlider_navButton__vvPRR.FeedbackSlider_right__jqZ9w {
+  right: 10px;
+}
+
+/* Radio button pagination */
+.FeedbackSlider_radioContainer__fulsY {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.FeedbackSlider_radioButton__nlbii {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.FeedbackSlider_radioButton__nlbii.FeedbackSlider_active__b2vSi {
+  background-color: #333;
+}
+
+@media (max-width: 600px) {
+  .FeedbackSlider_sliderContainer__Y8t8f {
+    padding: 15px;
+  }
+
+  .FeedbackSlider_avatar__nJu4C {
+    width: 80px;
+    height: 80px;
+  }
+
+  .FeedbackSlider_feedbackText__JGCV_ {
+    font-size: 0.9rem;
+  }
+
+  .FeedbackSlider_name__s_3pz {
+    font-size: 1rem;
+  }
+
+  .FeedbackSlider_designation__I7Eax {
+    font-size: 0.8rem;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/welcomeCard.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+/* WelcomeCard.module.css */
+
+.welcomeCard_main__7Oqwi {
+  padding: 2rem;
+
+  margin-top: -50px;
+}
+.welcomeCard_card__ZDnzs {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: none;
+}
+
+.welcomeCard_image__zO_uN {
+  object-fit: fill;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+.welcomeCard_description__ylKnr {
+  margin-top: 16px;
+  color: gray;
+  font-size: 20px;
+  line-height: 1.6rem;
+  font-weight: 400;
+}
+
+.welcomeCard_dividerContainer__smGSp {
+  position: relative;
+  width: 90%;
+  margin: 30px auto;
+  height: 0.5px;
+  background-color: gray;
+}
+
+.welcomeCard_circle__6nJzv {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 1024px) {
+  .welcomeCard_main__7Oqwi {
+    margin-top: -70px;
+    /* margin-top: 0px; */
+  }
+  .welcomeCard_card__ZDnzs {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcomeCard_main__7Oqwi {
+    margin-top: -90px;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/Home.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+@media (max-width: 1024px) {
+  .Home_welcomeCard__33e_a {
+    margin-top: -450px;
+  }
+}
+
+@media (max-width: 760px) {
+  .Home_carousel__3Z6YZ {
+    margin-top: 15px;
+  }
+  .Home_welcomeCard__33e_a {
+    margin-top: -120px;
+  }
+}
+@media (max-width: 480px) {
+  .Home_carousel__3Z6YZ {
+    margin-top: 14px;
+  }
+}
+

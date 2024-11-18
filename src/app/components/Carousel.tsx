@@ -178,9 +178,18 @@ import { useState, useEffect } from "react";
 import styles from "../../app/components/styles/Carousel.module.css";
 
 const images = [
-  "https://www.kajariaceramics.com/images/slider/indias-no1-tile-company.jpg",
-  "https://www.kajariaceramics.com/images/slider/celebrating-35-years-of-excellence.jpg",
-  "https://www.kajariaceramics.com/images/slider/desh-ki-mitti-se-bani-tile-se-desh-ko-banate-hai.jpg",
+  "/images/mainImage1.webp",
+  "/images/mainImage2.webp",
+  "/images/mainImage3.webp",
+  "/images/mainImage4.webp",
+  "/images/mainImage5.webp",
+  "/images/mainImage6.webp",
+  "/images/mainImage7.webp",
+  "/images/mainImage8.webp",
+  "/images/mainImage9.webp",
+  // "https://www.kajariaceramics.com/images/slider/indias-no1-tile-company.jpg",
+  // "https://www.kajariaceramics.com/images/slider/celebrating-35-years-of-excellence.jpg",
+  // "https://www.kajariaceramics.com/images/slider/desh-ki-mitti-se-bani-tile-se-desh-ko-banate-hai.jpg",
 ];
 
 export default function Carousel() {

@@ -3,7 +3,7 @@
 .main {
   padding: 2rem;
 
-  margin-top: -80px;
+  margin-top: -50px;
 }
 .card {
   max-width: 400px;
@@ -45,6 +45,15 @@
   top: -5px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (max-width: 1024px) {
+  .main {
+    margin-top: -70px;
+    /* margin-top: 0px; */
+  }
+  .card {
+    margin-top: 50px;
+  }
 }
 
 @media (max-width: 480px) {
