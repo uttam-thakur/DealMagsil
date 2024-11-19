@@ -167,7 +167,16 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "black", height: "75px" }}>
+      <AppBar
+        component="nav"
+        sx={{
+          background:
+            "linear-gradient(180deg, hsla(0, 0%, 5%, .85) 33.03%, hsla(0, 0%, 5%, 0) 91.03%)",
+          height: "190px",
+          position: "absolute",
+          boxShadow: "none",
+        }}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -180,11 +189,11 @@ export default function DrawerAppBar(props: Props) {
           </IconButton>
 
           {/* Company Logo */}
-          <Link href="/" passHref>
+          <Link href="/" passHref style={{ textDecoration: "none" }}>
             <Box
               sx={{ display: { xs: "none", sm: "block", marginTop: "10px" } }}
             >
-              <img
+              {/* <img
                 src="/images/dmlogo.jpeg"
                 alt="Company Logo"
                 style={{
@@ -193,7 +202,15 @@ export default function DrawerAppBar(props: Props) {
                   marginRight: "10px",
                   cursor: "pointer",
                 }}
-              />
+              /> */}
+              <h2
+                style={{
+                  color: "white",
+                  letterSpacing: "4px",
+                }}
+              >
+                DEAL MAGSIL
+              </h2>
             </Box>
           </Link>
 
@@ -206,7 +223,7 @@ export default function DrawerAppBar(props: Props) {
                   sx={{
                     color: "#fff",
                     marginLeft: 2,
-                    letterSpacing: "0.25rem",
+                    letterSpacing: "0.15rem",
                   }}
                 >
                   {item.label}

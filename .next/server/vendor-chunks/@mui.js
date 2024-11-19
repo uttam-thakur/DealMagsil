@@ -81,16 +81,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "(ssr)/./node_modules/@mui/icons-material/esm/PictureAsPdf.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@mui/icons-material/esm/PictureAsPdf.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/createSvgIcon */ \"(ssr)/./node_modules/@mui/material/utils/createSvgIcon.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-runtime */ \"(ssr)/./node_modules/next/dist/server/future/route-modules/app-page/vendored/ssr/react-jsx-runtime.js\");\n/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_utils_createSvgIcon__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx)(\"path\", {\n    d: \"M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5zm4-3H19v1h1.5V11H19v2h-1.5V7h3zM9 9.5h1v-1H9zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4zm10 5.5h1v-3h-1z\"\n}), \"PictureAsPdf\"));\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9ub2RlX21vZHVsZXMvQG11aS9pY29ucy1tYXRlcmlhbC9lc20vUGljdHVyZUFzUGRmLmpzIiwibWFwcGluZ3MiOiI7Ozs7Ozs7NkRBRWtEO0FBQ0Y7QUFDaEQsaUVBQWVBLGdFQUFhQSxDQUFFLFdBQVcsR0FBRUUsc0RBQUlBLENBQUMsUUFBUTtJQUN0REMsR0FBRztBQUNMLElBQUksaUJBQWdCIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vZGVhbG1hZ3NpbC8uL25vZGVfbW9kdWxlcy9AbXVpL2ljb25zLW1hdGVyaWFsL2VzbS9QaWN0dXJlQXNQZGYuanM/YzhmOCJdLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBjbGllbnRcIjtcblxuaW1wb3J0IGNyZWF0ZVN2Z0ljb24gZnJvbSAnLi91dGlscy9jcmVhdGVTdmdJY29uJztcbmltcG9ydCB7IGpzeCBhcyBfanN4IH0gZnJvbSBcInJlYWN0L2pzeC1ydW50aW1lXCI7XG5leHBvcnQgZGVmYXVsdCBjcmVhdGVTdmdJY29uKCAvKiNfX1BVUkVfXyovX2pzeChcInBhdGhcIiwge1xuICBkOiBcIk0yMCAySDhjLTEuMSAwLTIgLjktMiAydjEyYzAgMS4xLjkgMiAyIDJoMTJjMS4xIDAgMi0uOSAyLTJWNGMwLTEuMS0uOS0yLTItMm0tOC41IDcuNWMwIC44My0uNjcgMS41LTEuNSAxLjVIOXYySDcuNVY3SDEwYy44MyAwIDEuNS42NyAxLjUgMS41em01IDJjMCAuODMtLjY3IDEuNS0xLjUgMS41aC0yLjVWN0gxNWMuODMgMCAxLjUuNjcgMS41IDEuNXptNC0zSDE5djFoMS41VjExSDE5djJoLTEuNVY3aDN6TTkgOS41aDF2LTFIOXpNNCA2SDJ2MTRjMCAxLjEuOSAyIDIgMmgxNHYtMkg0em0xMCA1LjVoMXYtM2gtMXpcIlxufSksICdQaWN0dXJlQXNQZGYnKTsiXSwibmFtZXMiOlsiY3JlYXRlU3ZnSWNvbiIsImpzeCIsIl9qc3giLCJkIl0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./node_modules/@mui/icons-material/esm/PictureAsPdf.js\n");
-
-/***/ }),
-
 /***/ "(ssr)/./node_modules/@mui/icons-material/esm/Search.js":
 /*!********************************************************!*\
   !*** ./node_modules/@mui/icons-material/esm/Search.js ***!
@@ -2531,23 +2521,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\UTTAM\Desktop\Deal Magsil React\dealmagsil\dealMagsil\node_modules\@mui\material\Box\Box.js#default`));
-
-
-/***/ }),
-
-/***/ "(rsc)/./node_modules/@mui/material/Card/Card.js":
-/*!*************************************************!*\
-  !*** ./node_modules/@mui/material/Card/Card.js ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/dist/build/webpack/loaders/next-flight-loader/module-proxy */ "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-loader/module-proxy.js");
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,next_dist_build_webpack_loaders_next_flight_loader_module_proxy__WEBPACK_IMPORTED_MODULE_0__.createProxy)(String.raw`C:\Users\UTTAM\Desktop\Deal Magsil React\dealmagsil\dealMagsil\node_modules\@mui\material\Card\Card.js#default`));
 
 
 /***/ }),
