@@ -1,7 +1,7 @@
 /*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/Client.module.css ***!
   \***************************************************************************************************************************************************************************************************************************************************************************************/
-.Client_slider__DHTwf {
+/* .slider {
   background: #f0f0f0;
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 100px;
@@ -11,16 +11,16 @@
   width: 100%;
   max-width: 90%;
 }
-.Client_image__q4Uhs {
+.image {
   height: 100%;
   width: 100%;
 }
-.Client_slideTrack__XEvja {
+.slideTrack {
   display: flex;
-  animation: Client_scroll__pZJgq 60s linear infinite;
+  animation: scroll 60s linear infinite;
 }
 
-.Client_slide__uWAOq {
+.slide {
   display: inline-block;
   margin-right: 20px;
   height: 100px;
@@ -29,28 +29,28 @@
 }
 
 @media (max-width: 768px) {
-  .Client_slide__uWAOq {
+  .slide {
     width: 200px;
   }
 
-  .Client_slider__DHTwf {
+  .slider {
     height: 80px;
   }
 }
 
 @media (max-width: 480px) {
-  .Client_slide__uWAOq {
+  .slide {
     width: 150px;
   }
-  .Client_image__q4Uhs {
+  .image {
     height: 80px;
   }
-  .Client_slider__DHTwf {
+  .slider {
     height: 80px;
   }
 }
 
-@keyframes Client_scroll__pZJgq {
+@keyframes scroll {
   0% {
     transform: translateX(0);
   }
@@ -59,8 +59,8 @@
   }
 }
 
-.Client_slider__DHTwf::before,
-.Client_slider__DHTwf::after {
+.slider::before,
+.slider::after {
   content: "";
   height: 100px;
   position: absolute;
@@ -73,16 +73,214 @@
   );
 }
 
-.Client_slider__DHTwf::after {
+.slider::after {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
 }
 
-.Client_slider__DHTwf::before {
+.slider::before {
   left: 0;
   top: 0;
+} */
+
+/* second ui */
+/* .clientsSection {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
 }
+
+.subHeading {
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.clientCard {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clientCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.clientLogo {
+  max-width: 100px;
+  height: auto;
+}
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .clientsGrid {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 100px;
+    gap: 15px;
+  }
+}
+
+.clientCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%;
+}
+
+.clientCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clientLogo {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .clientsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
+  }
+} */
+.Client_clientsSection__YVrap {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+.Client_subHeading__j5_fl {
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
+}
+
+.Client_heading__g7ZBh {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.Client_description__JeEGR {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.Client_clientsGrid__WMas8 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust based on the desired width */
+  gap: 15px; /* Add spacing between the cards */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the grid width */
+}
+
+.Client_clientCard__yIh5Y {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%; /* Match the height for consistency */
+}
+
+.Client_clientCard__yIh5Y:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.Client_clientLogo__CVnVJ {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Custom diamond pattern layout */
+.Client_clientsGrid__WMas8 > :nth-child(1) {
+  grid-column: 2; /* Start from the 2nd column */
+  grid-row: 1; /* First row */
+}
+
+.Client_clientsGrid__WMas8 > :nth-child(2) {
+  grid-column: 1; /* First column */
+  grid-row: 2;
+}
+
+.Client_clientsGrid__WMas8 > :nth-child(3) {
+  grid-column: 3; /* Third column */
+  grid-row: 2;
+}
+
+.Client_clientsGrid__WMas8 > :nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.Client_clientsGrid__WMas8 > :nth-child(5) {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.Client_clientsGrid__WMas8 > :nth-child(6) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+@media screen and (max-width: 768px) {
+  .Client_clientsGrid__WMas8 {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
+  }
+}
+
+/* Add more placements as needed for additional items */
 
 /*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/common-components/DefaultImage/styles.module.css ***!
@@ -173,7 +371,7 @@
 
 .styles_projectSlider__xlStX {
   width: 300px;
-  height: 400px; /* Fixed height for each card */
+  height: 350px; /* Fixed height for each card */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -194,14 +392,15 @@
 }
 
 .styles_projectName__kbPxK {
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 500;
+  /* line-height: 26px; */
   text-align: center;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  height: 40px; /* Fixed height for title */
+  height: 40px;
   margin: 0;
 }
 .styles_projectTitle__4Sl7v {

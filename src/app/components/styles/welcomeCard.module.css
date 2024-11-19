@@ -125,7 +125,10 @@
     border-radius: 10px;
     width: 100%;
     height: auto;
-    margin-top: 240px;
+    margin-top: 100px;
+  }
+  .imageContainer {
+    margin-top: -90px;
   }
 }
 

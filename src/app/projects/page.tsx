@@ -277,7 +277,7 @@ const ProjectsPage = () => {
         showProjectView={showProjectView}
       />
 
-      <h4 className="project-heading">Our Clients Are</h4>
+      {/* <h4 className="project-heading">Our Clients Are</h4> */}
       <Client />
     </>
   );

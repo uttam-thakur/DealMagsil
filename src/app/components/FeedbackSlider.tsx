@@ -153,66 +153,78 @@ const FeedbackSlider: React.FC = () => {
   };
 
   return (
-    <Box className={styles.mainContainer}>
+    <>
       <Typography variant="h4" className={styles.heading}>
         Client Feedback
       </Typography>
-      <Box className={styles.sliderContainer}>
-        {/* Left Arrow */}
-        <button
-          onClick={handlePrev}
-          className={`${styles.navButton} ${styles.left}`}
-        >
-          <ArrowBackIos />
-        </button>
+      <Box
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          padding: "50px 20px",
+          opacity: "0.8",
+        }}
+        className={styles.mainContainer}
+      >
+        <Box className={styles.sliderContainer}>
+          {/* Left Arrow */}
+          <button
+            onClick={handlePrev}
+            className={`${styles.navButton} ${styles.left}`}
+          >
+            <ArrowBackIos />
+          </button>
 
-        {/* Slide Content */}
-        <Box className={styles.slide}>
-          <Avatar
-            alt={feedbackData[currentIndex].name}
-            src={feedbackData[currentIndex].image}
-            className={styles.avatar}
-          />
-          <Typography variant="h6" className={styles.feedbackText}>
-            "{feedbackData[currentIndex].feedback}"
-          </Typography>
-          <Rating
-            name="read-only"
-            value={feedbackData[currentIndex].rating}
-            precision={0.5}
-            readOnly
-            sx={{ marginTop: "10px" }}
-          />
-          <Typography variant="h6" className={styles.name} marginTop="10px">
-            {feedbackData[currentIndex].name}
-          </Typography>
-          <Typography variant="subtitle1" className={styles.designation}>
-            {feedbackData[currentIndex].designation}
-          </Typography>
+          {/* Slide Content */}
+          <Box className={styles.slide}>
+            <Avatar
+              alt={feedbackData[currentIndex].name}
+              src={feedbackData[currentIndex].image}
+              className={styles.avatar}
+            />
+            <Typography variant="h6" className={styles.feedbackText}>
+              "{feedbackData[currentIndex].feedback}"
+            </Typography>
+            <Rating
+              name="read-only"
+              value={feedbackData[currentIndex].rating}
+              precision={0.5}
+              readOnly
+              sx={{ marginTop: "10px" }}
+            />
+            <Typography variant="h6" className={styles.name} marginTop="10px">
+              {feedbackData[currentIndex].name}
+            </Typography>
+            <Typography variant="subtitle1" className={styles.designation}>
+              {feedbackData[currentIndex].designation}
+            </Typography>
+          </Box>
+
+          {/* Right Arrow */}
+          <button
+            onClick={handleNext}
+            className={`${styles.navButton} ${styles.right}`}
+          >
+            <ArrowForwardIos />
+          </button>
         </Box>
 
-        {/* Right Arrow */}
-        <button
-          onClick={handleNext}
-          className={`${styles.navButton} ${styles.right}`}
-        >
-          <ArrowForwardIos />
-        </button>
+        {/* Radio Button Pagination */}
+        <Box className={styles.radioContainer}>
+          {feedbackData.map((_, index) => (
+            <div
+              key={index}
+              onClick={() => handleRadioClick(index)}
+              className={`${styles.radioButton} ${
+                currentIndex === index ? styles.active : ""
+              }`}
+            />
+          ))}
+        </Box>
       </Box>
-
-      {/* Radio Button Pagination */}
-      <Box className={styles.radioContainer}>
-        {feedbackData.map((_, index) => (
-          <div
-            key={index}
-            onClick={() => handleRadioClick(index)}
-            className={`${styles.radioButton} ${
-              currentIndex === index ? styles.active : ""
-            }`}
-          />
-        ))}
-      </Box>
-    </Box>
+    </>
   );
 };
 

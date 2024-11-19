@@ -63,7 +63,7 @@ const Home = () => {
       </div> */}
       <Carouselinfra />
 
-      <div
+      {/* <div
         className={styles.feedbackSection}
         style={{
           backgroundImage:
@@ -74,8 +74,8 @@ const Home = () => {
           opacity: "0.8",
         }}
       >
-        <FeedbackSlider />
-      </div>
+      </div> */}
+      <FeedbackSlider />
 
       {/* <div
         className={styles.registrationSection}

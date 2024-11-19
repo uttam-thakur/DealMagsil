@@ -22,7 +22,6 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
 }) => {
   return (
     <div className={styles.projectSlider}>
-      <h1 className={styles.projectTitle}>{title}</h1>
       <ProjectCarousel images={images} />
       <div
         className={styles.projectDetails}
@@ -31,6 +30,7 @@ const ProjectSlider: React.FC<ProjectSliderProps> = ({
         }}
       >
         <h1 className={styles.projectName}>{name}</h1>
+        {/* <h1 className={styles.projectTitle}>{title}</h1> */}
       </div>
     </div>
   );
