@@ -176,36 +176,53 @@ const ProductInfo: React.FC = () => {
   // };
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <TextField
-        variant="standard"
-        placeholder="Search Products"
-        value={searchTerm}
-        onChange={handleSearch}
-        className={styles.searchbar}
-        style={{ marginTop: "50px" }}
-        InputProps={{
-          startAdornment: (
-            <InputAdornment position="start">
-              <SearchIcon />
-            </InputAdornment>
-          ),
-        }}
-        fullWidth
-      />
-      <FeatureGrid searchTerm={searchTerm} />
-      {!searchTerm && <UpcomingProduct />}
+    <>
+      <div className={styles.main}>
+        <h1 className={styles.pageHeader}>
+          Discover Premium Precast Cement Products
+        </h1>
+        <p
+          className={styles.pageSubheader}
+          style={{
+            textAlign: "center",
+            margin: "1rem 2rem",
+            color: "white",
+          }}
+        >
+          Explore our wide range of durable and versatile precast items, perfect
+          for construction, urban design, and landscaping.
+        </p>
+      </div>
+      <div style={{ padding: "2rem" }}>
+        <TextField
+          variant="standard"
+          placeholder="Search Products"
+          value={searchTerm}
+          onChange={handleSearch}
+          className={styles.searchbar}
+          style={{ marginTop: "50px" }}
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <SearchIcon />
+              </InputAdornment>
+            ),
+          }}
+          fullWidth
+        />
+        <FeatureGrid searchTerm={searchTerm} />
+        {!searchTerm && <UpcomingProduct />}
 
-      <div className={styles.productcontainer}>
-        {(searchTerm ? filteredProducts : products).map((product, index) => (
-          <div
-            className={`${styles.productsection} ${
-              index % 2 === 0 ? styles.normallayout : styles.reverselayout
-            }`}
-            key={index}
-          >
-            {/* Description with Animation */}
-            {/* <motion.div
+        <div className={styles.productcontainer}>
+          {(searchTerm ? filteredProducts : products).map((product, index) => (
+            <div
+              className={`${styles.productsection} ${
+                index % 2 === 0 ? styles.normallayout : styles.reverselayout
+              }`}
+              key={index}
+            >
+              {/* Description with Animation */}
+              {/* <motion.div
               className={styles.productdetails}
               initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -216,15 +233,16 @@ const ProductInfo: React.FC = () => {
               <p className={styles.productdescription}>{product.description}</p>
             </motion.div> */}
 
-            {/* Image Carousel */}
-            {/* <div className={styles.imagewrapper}>
+              {/* Image Carousel */}
+              {/* <div className={styles.imagewrapper}>
               <CarouselComponent images={product.images} />
             </div> */}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
+        {/* {!searchTerm && <UpcomingProduct />} */}
       </div>
-      {/* {!searchTerm && <UpcomingProduct />} */}
-    </div>
+    </>
   );
 };
 

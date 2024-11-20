@@ -423,7 +423,8 @@
 
 @media (max-width: 1024px) {
   .Carousel_carouselImage__ty_MC {
-    margin-top: -132px;
+    /* margin-top: -132px; */
+    margin-top: -210px;
     background-size: contain;
   }
   .Carousel_carouselImage__ty_MC::after {
@@ -450,17 +451,20 @@
     /* margin-top: -27px; */
     background-size: contain;
 
-    margin-top: -1px;
+    /* margin-top: -1px; */
+    margin-top: -62px;
   }
+
   .Carousel_carouselImage__ty_MC::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     background-color: transparent;
-    z-index: 1; /* Ensure it's on top of the image */
+    /* background-color: rgba(0, 0, 0, 0.6); */
+    z-index: -1; /* Ensure it's on top of the image */
   }
   .Carousel_prevButton__scRNZ,
   .Carousel_nextButton__99Bq2 {
@@ -1271,34 +1275,22 @@
     margin-top: 1rem;
     width: 100%;
   }
+  .welcomeCard_container__CCvlL {
+    margin-top: -100px;
+  }
   .welcomeCard_secondContent__6503s {
-    margin-top: -300px;
+    /* margin-top: -300px; */
+  }
+  .welcomeCard_list__h_JXq li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+
+    width: 410px;
+    margin-left: -70px;
+    padding-right: 3rem;
   }
 }
 
 @media (max-width: 480px) {
-}
-
-/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/Home.module.css ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************/
-@media (max-width: 1024px) {
-  .Home_welcomeCard__33e_a {
-    margin-top: -450px;
-  }
-}
-
-@media (max-width: 760px) {
-  .Home_carousel__3Z6YZ {
-    margin-top: 15px;
-  }
-  .Home_welcomeCard__33e_a {
-    margin-top: -120px;
-  }
-}
-@media (max-width: 480px) {
-  .Home_carousel__3Z6YZ {
-    margin-top: 14px;
-  }
 }
 

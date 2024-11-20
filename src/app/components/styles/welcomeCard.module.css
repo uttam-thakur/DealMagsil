@@ -158,8 +158,19 @@
     margin-top: 1rem;
     width: 100%;
   }
+  .container {
+    margin-top: -100px;
+  }
   .secondContent {
-    margin-top: -300px;
+    /* margin-top: -300px; */
+  }
+  .list li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+
+    width: 410px;
+    margin-left: -70px;
+    padding-right: 3rem;
   }
 }
 
