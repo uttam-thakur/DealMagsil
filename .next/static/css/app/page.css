@@ -690,6 +690,7 @@
   gap: 1rem;
   align-items: center;
   width: 100%;
+  margin-left: 60px;
 }
 
 .Carouselinfra_card__Ri_oy {
@@ -736,6 +737,9 @@
   .Carouselinfra_card__Ri_oy {
     margin-left: -10px;
     width: 95%;
+  }
+  .Carouselinfra_cardContainer__lmi6y {
+    margin-left: 10px;
   }
 }
 @media (max-width: 768px) {
@@ -1172,7 +1176,8 @@
 
 /* second UI */
 .welcomeCard_container__CCvlL {
-  padding: 2rem;
+  padding: 5rem;
+  /* padding: 10rem; */
   background-color: #ffffff;
 }
 

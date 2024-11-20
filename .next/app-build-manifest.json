@@ -33,6 +33,7 @@
     "/brouchers/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+      "static/css/app/brouchers/page.css",
       "static/chunks/app/brouchers/page.js"
     ]
   }

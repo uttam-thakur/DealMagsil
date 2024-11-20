@@ -229,27 +229,42 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <div className={styles.para}>
-        <p>
-          With over{" "}
-          <span style={{ color: "#e53935", fontWeight: "bold" }}>27 years</span>{" "}
-          of expertise, our portfolio features a diverse range of completed
-          projects, each a testament to our commitment to quality and
-          punctuality.
-          <br />
-          <span
+      <div className={styles.main}>
+        <div className={styles.para}>
+          <p
             style={{
-              fontSize: "20px",
-
-              fontWeight: "bold",
-              display: "inline-block",
-              marginTop: "10px",
+              color: "#fdba74",
+              fontSize: "30px",
+              fontWeight: "400",
+              letterSpacing: "1.2px",
             }}
           >
-            We are thrilled to contribute to remarkable projects that shape the
-            future!
-          </span>
-        </p>
+            We take immense pride in contributing to transformative projects
+            that redefine possibilities and shape a brighter future.
+          </p>
+          <p>
+            With over 27 years of trusted expertise, we are dedicated to
+            offering innovative solutions tailored to your needs. Let us help
+            you create spaces that inspire, with products that stand the test of
+            time.
+          </p>
+          <div
+            style={{
+              border: "1px solid #fdba74",
+              // height: "150px",
+              height: "auto",
+              padding: "5px",
+              fontSize: "31px",
+              borderRadius: "8px",
+              marginTop: "80px",
+            }}
+          >
+            <p>
+              Your satisfaction is our priority—visit us today and explore the
+              difference we can make together!
+            </p>
+          </div>
+        </div>
       </div>
 
       <Swiper
@@ -277,7 +292,6 @@ const ProjectsPage = () => {
         showProjectView={showProjectView}
       />
 
-      {/* <h4 className="project-heading">Our Clients Are</h4> */}
       <Client />
     </>
   );

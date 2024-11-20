@@ -172,9 +172,9 @@ const Carouselinfra = () => {
 
   const cards = [
     {
-      title: "We manage every detail in your Home Buying Journey",
+      title: "We manage every detail in your Buying Journey",
       content:
-        " Our state-of-the-art manufacturing facility is strategically located just 5 km from Asansol Railway Station, 4 km from Asansol Bus Stand, and a 5-minute drive from Jubilee More on National Highway-2 in West Bengal.  Outfitted with advanced machinery and cutting-edge equipment, our  factory is designed to meet industry standards and adapt to the evolving  demands of our clients. With a high production capacity, we are equipped  to handle a wide range of requirements, delivering both standard and customized products with exceptional quality. Our success stems from a  commitment to excellence, using only premium raw materials in ourmanufacturing process. Our facility includes curing ponds to achieve optimal product strength and durability, along with fully equippedlaboratories for rigorous testing to ensure our products meet the highest standards of longevity and resilience",
+        " we believe that a seamless buying experience is as important as the quality of the products we offer. Specializing in premium tiles, pavers, and interlocks, we take pride in managing every detail of your journey, from selection to installation. Whether you're designing a stunning patio, revamping your driveway, or creating a luxurious interior, our team ensures that you receive expert guidance, tailored solutions, and exceptional service at every step. With our attention to detail, we handle the complexities so you can focus on transforming your vision into reality. Choose Deal Magsil for a hassle-free buying experience, where precision, quality, and customer satisfaction are our priorities",
     },
   ];
 

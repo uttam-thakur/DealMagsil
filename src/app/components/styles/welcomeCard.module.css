@@ -63,7 +63,8 @@
 
 /* second UI */
 .container {
-  padding: 2rem;
+  padding: 5rem;
+  /* padding: 10rem; */
   background-color: #ffffff;
 }
 

@@ -11,7 +11,7 @@ import {
   Button,
 } from "reactstrap";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
-
+import Styles from "./page.module.css";
 const brochures = [
   {
     id: 1,
@@ -61,70 +61,75 @@ const brochures = [
 
 export default function Brochures() {
   return (
-    <main style={{ padding: "2rem", marginTop: "50px" }}>
-      {/* Header Section */}
-      <header className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold text-blue-900">
-          Download Our Brochures
-        </h1>
-        <p className="text-lg text-gray-700 mt-4 max-w-xl mx-auto">
-          Get detailed information on our products and services by downloading
-          our brochures. Stay up-to-date with the latest insights.
-        </p>
-      </header>
+    <>
+      <div className={Styles.main}>
+        <main style={{ padding: "2rem", marginTop: "50px", zIndex: 1 }}>
+          {/* Header Section */}
+          <header className="text-center mb-12">
+            <h1 className="text-5xl font-extrabold text-blue-900">
+              Download Our Brochures
+            </h1>
+            <p className="text-lg text-gray-700 mt-4 max-w-xl mx-auto">
+              Get detailed information on our products and services by
+              downloading our brochures. Stay up-to-date with the latest
+              insights.
+            </p>
+          </header>
 
-      {/* Brochure Cards */}
-      <CardGroup className="gap-4 px-6 w-full max-w-4xl">
-        {brochures.map((brochure) => (
-          <Card
-            key={brochure.id}
-            className="shadow-lg rounded-md overflow-hidden transition-transform transform hover:scale-105 duration-300  mx-auto"
-            style={{ borderRadius: "10px" }}
-          >
-            <div className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56">
-              <CardImg
-                alt="Card image cap"
-                // src="https://i.pinimg.com/736x/39/c9/6f/39c96f566d55eff2bf3d273bb41a8037.jpg"
-                src={brochure.image}
-                top
-                style={{
-                  height: "200px",
-                  width: "70%",
-                  objectFit: "cover",
-                  padding: "20px",
-                  borderBottomLeftRadius: "15px",
-                  borderBottomRightRadius: "15px",
-                  marginLeft: "15%",
-                }}
-              />
-              <CardBody className="text-center p-4">
-                <CardTitle tag="h5" className="font-bold text-blue-800">
-                  {brochure.title}
-                </CardTitle>
-
-                <CardText className="text-gray-600 mb-4">
-                  {brochure.description}
-                </CardText>
-                <Link href={brochure.file} target="_blank" download>
-                  <Button
-                    color="transparent"
+          {/* Brochure Cards */}
+          <CardGroup className="gap-4 px-6 w-full max-w-4xl">
+            {brochures.map((brochure) => (
+              <Card
+                key={brochure.id}
+                className="shadow-lg rounded-md overflow-hidden transition-transform transform hover:scale-105 duration-300  mx-auto"
+                style={{ borderRadius: "10px", opacity: "0.9" }}
+              >
+                <div className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56">
+                  <CardImg
+                    alt="Card image cap"
+                    // src="https://i.pinimg.com/736x/39/c9/6f/39c96f566d55eff2bf3d273bb41a8037.jpg"
+                    src={brochure.image}
+                    top
                     style={{
-                      border: "1px solid #007bff",
-                      backgroundColor: "transparent",
-                      height: "40px",
-                      borderRadius: "5px",
+                      height: "200px",
+                      width: "70%",
+                      objectFit: "cover",
+                      padding: "20px",
+                      borderBottomLeftRadius: "15px",
+                      borderBottomRightRadius: "15px",
+                      marginLeft: "15%",
                     }}
-                    className="d-flex align-items-center justify-center"
-                  >
-                    <PictureAsPdfIcon className="mr-2" />
-                    Download
-                  </Button>
-                </Link>
-              </CardBody>
-            </div>
-          </Card>
-        ))}
-      </CardGroup>
-    </main>
+                  />
+                  <CardBody className="text-center p-4">
+                    <CardTitle tag="h5" className="font-bold text-blue-800">
+                      {brochure.title}
+                    </CardTitle>
+
+                    <CardText className="text-gray-600 mb-4">
+                      {brochure.description}
+                    </CardText>
+                    <Link href={brochure.file} target="_blank" download>
+                      <Button
+                        color="transparent"
+                        style={{
+                          border: "1px solid #007bff",
+                          backgroundColor: "transparent",
+                          height: "40px",
+                          borderRadius: "5px",
+                        }}
+                        className="d-flex align-items-center justify-center"
+                      >
+                        <PictureAsPdfIcon className="mr-2" />
+                        Download
+                      </Button>
+                    </Link>
+                  </CardBody>
+                </div>
+              </Card>
+            ))}
+          </CardGroup>
+        </main>
+      </div>
+    </>
   );
 }

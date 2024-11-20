@@ -207,6 +207,7 @@ export default function DrawerAppBar(props: Props) {
                 style={{
                   color: "white",
                   letterSpacing: "4px",
+                  marginTop: "15px",
                 }}
               >
                 DEAL MAGSIL
@@ -224,6 +225,7 @@ export default function DrawerAppBar(props: Props) {
                     color: "#fff",
                     marginLeft: 2,
                     letterSpacing: "0.15rem",
+                    marginTop: "15px",
                   }}
                 >
                   {item.label}
