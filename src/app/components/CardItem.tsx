@@ -82,7 +82,9 @@ export default function HomePage() {
 
         {/* Text */}
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>Virtual Property Exploration</h2>
+          <h2 className={styles.title}>
+            The Process and Benefits of Precast Concrete
+          </h2>
           <p className={styles.subtitle}>Explore Anywhere, Anytime</p>
           <ul className={styles.list}>
             <li>

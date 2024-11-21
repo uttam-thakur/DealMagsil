@@ -41,17 +41,24 @@ export default function Contact() {
   return (
     <>
       <div className={styles.main}>
-        <p className={styles.para}>
-          <span style={{ fontSize: "34px", maxWidth: 500 }}>
-            {" "}
+        <div className={styles.para}>
+          <span
+            style={{
+              fontSize: "34px",
+              maxWidth: 500,
+              color: "rgb(178, 131, 78)",
+            }}
+          >
             Get in Touch with Us
           </span>
           {<br />}
-          We’d love to hear from you! Whether you have a question, need
-          assistance, or want to discuss a project, our team is here to help.
-          Reach out to us through any of the options below, and we’ll get back
-          to you as soon as possible. Contact Us Today!
-        </p>
+          <div className={styles.span}>
+            We’d love to hear from you! Whether you have a question, need
+            assistance, or want to discuss a project, our team is here to help.
+            Reach out to us through any of the options below, and we’ll get back
+            to you as soon as possible. Contact Us Today!
+          </div>
+        </div>
       </div>
       <div>
         <ToastContainer />
@@ -197,6 +204,7 @@ export default function Contact() {
             </Paper>
           </Box>
         </Container>
+
         <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
       </div>
     </>

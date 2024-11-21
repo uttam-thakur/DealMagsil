@@ -18,8 +18,10 @@
 }
 .pageHeader {
   text-align: center;
-  color: white;
+  color: rgb(178, 131, 78);
   margin-top: 400px;
+  z-index: 1;
+  position: relative;
 }
 .productcontainer {
   display: grid;

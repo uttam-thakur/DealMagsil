@@ -187,6 +187,8 @@ const ProductInfo: React.FC = () => {
             textAlign: "center",
             margin: "1rem 2rem",
             color: "white",
+            zIndex: 1,
+            position: "relative",
           }}
         >
           Explore our wide range of durable and versatile precast items, perfect

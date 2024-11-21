@@ -16,15 +16,10 @@ const Footer = () => {
           <div className={`${styles.footerBorder}`}>
             <img
               src={dealMagsilLogo}
-              alt="Cake Heaven Logo"
+              alt="Deal Magsil Logo"
               className={styles.logo}
             />
 
-            <div className={styles.aboutSection}>
-              <Link href="/aboutus" className={styles.aboutLink}>
-                About Us
-              </Link>
-            </div>
             {/* Follow Us Section */}
             <div className={styles.followSection}>
               <h3 className={styles.followText}>Follow Us</h3>
@@ -49,6 +44,15 @@ const Footer = () => {
 
           <div className={styles.container}>
             <div className={styles.grid}>
+              {/* Company Section */}
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>Company</h3>
+                <p className={styles.sectionText}>
+                  <Link href="/aboutus" className={styles.aboutLink}>
+                    About Us
+                  </Link>{" "}
+                </p>
+              </div>
               {/* Contact Section */}
               <div className={styles.section}>
                 <h3 className={styles.sectionTitle}>Contact Us</h3>
@@ -98,14 +102,6 @@ const Footer = () => {
                 </p>
                 <p className={styles.sectionText}>
                   Visit us for quality products!
-                </p>
-              </div>
-
-              {/* Newsletter Section */}
-              <div className={styles.section}>
-                <h3 className={styles.sectionTitle}>Newsletter</h3>
-                <p className={styles.sectionText}>
-                  Subscribe for updates on new items and promotions!
                 </p>
               </div>
             </div>

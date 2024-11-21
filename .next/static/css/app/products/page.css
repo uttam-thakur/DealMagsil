@@ -21,8 +21,10 @@
 }
 .page_pageHeader__Yg3Z6 {
   text-align: center;
-  color: white;
+  color: rgb(178, 131, 78);
   margin-top: 400px;
+  z-index: 1;
+  position: relative;
 }
 .page_productcontainer__Ll8xx {
   display: grid;
