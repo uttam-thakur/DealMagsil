@@ -154,9 +154,7 @@ const FeedbackSlider: React.FC = () => {
 
   return (
     <>
-      <Typography variant="h4" className={styles.heading}>
-        Client Feedback
-      </Typography>
+      <Typography variant="h3" className={styles.heading}></Typography>
       <Box
         style={{
           // backgroundImage:
@@ -169,6 +167,7 @@ const FeedbackSlider: React.FC = () => {
         }}
         className={styles.mainContainer}
       >
+        <p className={styles.heading}>Client Feedback</p>
         <Box className={styles.sliderContainer}>
           {/* Left Arrow */}
           <button

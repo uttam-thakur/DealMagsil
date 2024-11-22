@@ -218,6 +218,7 @@ export default function GetInTouchForm() {
               padding: { xs: "1rem" },
               fontSize: { md: "30px" },
               lineHeightStep: { md: "1rem" },
+              fontFamily: "open saans",
             }}
           >
             We would love to hear from you. Whether you have a question, a

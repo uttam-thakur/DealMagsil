@@ -41,22 +41,20 @@ export default function Contact() {
   return (
     <>
       <div className={styles.main}>
-        <div className={styles.para}>
-          <span
-            style={{
-              fontSize: "34px",
-              maxWidth: 500,
-              color: "rgb(178, 131, 78)",
-            }}
-          >
-            Get in Touch with Us
-          </span>
-          {<br />}
-          <div className={styles.span}>
-            We’d love to hear from you! Whether you have a question, need
-            assistance, or want to discuss a project, our team is here to help.
-            Reach out to us through any of the options below, and we’ll get back
-            to you as soon as possible. Contact Us Today!
+        <div className={styles.info}>
+          <div className={styles.title}>Get in Touch with Us</div>
+          <div className={styles.infoWindow}>
+            <div className={styles.subTitle}>
+              Quick answers and reliable support are just a message away.
+            </div>
+            <div className={styles.description}>
+              We believe that good communication builds strong partnerships.
+              Whether you have a quick question, require detailed information,
+              or need help resolving a challenge, we’re just a click or call
+              away. Our dedicated team ensures that every query is met with
+              promptness and expertise, helping you achieve the results you
+              need.
+            </div>
           </div>
         </div>
       </div>

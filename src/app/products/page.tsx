@@ -196,22 +196,34 @@ const ProductInfo: React.FC = () => {
         </p>
       </div>
       <div style={{ padding: "2rem" }}>
-        <TextField
-          variant="standard"
-          placeholder="Search Products"
-          value={searchTerm}
-          onChange={handleSearch}
-          className={styles.searchbar}
-          style={{ marginTop: "50px" }}
-          InputProps={{
-            startAdornment: (
-              <InputAdornment position="start">
-                <SearchIcon />
-              </InputAdornment>
-            ),
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "flex-start",
+            width: "100%",
           }}
-          fullWidth
-        />
+        >
+          <TextField
+            variant="standard"
+            placeholder="Search Products"
+            value={searchTerm}
+            onChange={handleSearch}
+            className={styles.searchbar}
+            style={{
+              marginTop: "50px",
+              width: "30%",
+            }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+            fullWidth
+          />
+        </div>
+
         <FeatureGrid searchTerm={searchTerm} />
         {!searchTerm && <UpcomingProduct />}
 

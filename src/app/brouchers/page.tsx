@@ -10,9 +10,9 @@ import {
   CardText,
   Button,
 } from "reactstrap";
+
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import Styles from "./page.module.css";
-import Footer from "../components/Footer";
 const brochures = [
   {
     id: 1,
@@ -130,7 +130,6 @@ export default function Brochures() {
           </CardGroup>
         </main>
       </div>
-      <div className={Styles.footer}></div>
     </>
   );
 }
