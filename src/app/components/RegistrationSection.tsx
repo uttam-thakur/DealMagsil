@@ -13,7 +13,13 @@ const RegistrationSection = () => {
   ];
 
   return (
-    <Box sx={{ padding: 4, backgroundColor: "#f9f9f9" }}>
+    <Box
+      sx={{
+        padding: 4,
+        backgroundColor: "black",
+        borderBottom: "3px solid rgb(212,168,99)",
+      }}
+    >
       <Typography
         variant="h4"
         gutterBottom
@@ -24,6 +30,7 @@ const RegistrationSection = () => {
           fontWeight: 600,
           fontSize: { xs: "1.5rem", sm: "2rem" },
           marginBottom: { xs: 2, sm: 3 },
+          color: "white",
         }}
       >
         Our Registrations and Certifications
@@ -38,15 +45,16 @@ const RegistrationSection = () => {
                 padding: 2,
                 display: "flex",
                 alignItems: "center",
+                background: "transparent",
+                border: "1px solid white",
+                borderRadius: "20px",
                 height: "100%",
-                "&:hover": {
-                  transform: "scale(1.08)",
-                  transition: "all 0.5s ease",
-                },
               }}
             >
               <CheckCircle sx={{ color: "green", mr: 2 }} />
-              <Typography variant="body1">{item}</Typography>
+              <Typography variant="body1" color="rgb(212,168,99)">
+                {item}
+              </Typography>
             </Paper>
           </Grid>
         ))}

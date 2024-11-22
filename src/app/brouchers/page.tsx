@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import Styles from "./page.module.css";
+import Footer from "../components/Footer";
 const brochures = [
   {
     id: 1,
@@ -87,7 +88,6 @@ export default function Brochures() {
                 <div className="w-24 sm:w-32 md:w-40 lg:w-48 xl:w-56">
                   <CardImg
                     alt="Card image cap"
-                    // src="https://i.pinimg.com/736x/39/c9/6f/39c96f566d55eff2bf3d273bb41a8037.jpg"
                     src={brochure.image}
                     top
                     style={{
@@ -130,6 +130,7 @@ export default function Brochures() {
           </CardGroup>
         </main>
       </div>
+      <div className={Styles.footer}></div>
     </>
   );
 }

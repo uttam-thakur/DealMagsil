@@ -172,8 +172,8 @@ const UpcomingProducts = () => {
 
   return (
     <>
-      <h2 className={styles.titleCenter}>OUR EXCLUSIVE PRODUCTS</h2>
       <div className={styles.main}>
+        <h2 className={styles.titleCenter}>OUR EXCLUSIVE PRODUCTS</h2>
         <div className={styles.upcomingproductssection}>
           <Row>
             {carouselData.map((carousel, index) => (

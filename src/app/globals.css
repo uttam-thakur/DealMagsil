@@ -46,3 +46,17 @@ li a {
   );
   box-sizing: content-box;
 }
+
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  border: 1px solid gold;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+.lastDiv {
+  height: 50px;
+  width: 100%;
+  color: antiquewhite;
+}

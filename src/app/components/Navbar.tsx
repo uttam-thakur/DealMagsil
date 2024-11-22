@@ -177,7 +177,7 @@ export default function DrawerAppBar(props: Props) {
           boxShadow: "none",
         }}
       >
-        <Toolbar>
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -208,14 +208,26 @@ export default function DrawerAppBar(props: Props) {
                   color: "white",
                   letterSpacing: "4px",
                   marginTop: "15px",
+                  fontSize: "25px",
                 }}
               >
                 DEAL MAGSIL
               </h2>
             </Box>
           </Link>
-
-          <Box sx={{ flexGrow: 1 }} />
+          {/* DEAL MAGSIL Text for Mobile View */}
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              display: { xs: "block", sm: "none" },
+              marginLeft: "auto",
+              color: "white",
+              letterSpacing: "2px",
+            }}
+          >
+            DEAL MAGSIL
+          </Typography>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (

@@ -244,6 +244,7 @@ const ProductInfo: React.FC = () => {
         </div>
         {/* {!searchTerm && <UpcomingProduct />} */}
       </div>
+      {/* <div className="lastDiv"></div> */}
     </>
   );
 };

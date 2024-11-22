@@ -34,7 +34,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
         <FABLocation />
         <FABWhatsApp />
-        <Footer />
+        <div style={{ marginTop: "-145px" }}>
+          <Footer />
+        </div>
       </body>
     </html>
   );

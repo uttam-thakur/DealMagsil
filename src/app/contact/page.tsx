@@ -207,6 +207,7 @@ export default function Contact() {
 
         <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
       </div>
+      <div className="lastDiv"></div>
     </>
   );
 }

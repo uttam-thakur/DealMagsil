@@ -14,12 +14,14 @@ const Footer = () => {
       <div className={styles.relative}>
         <footer className={styles.footer}>
           <div className={`${styles.footerBorder}`}>
-            <img
-              src={dealMagsilLogo}
-              alt="Deal Magsil Logo"
-              className={styles.logo}
-            />
-
+            <div className={`${styles.logoContainer}`}>
+              <img
+                src={dealMagsilLogo}
+                alt="Deal Magsil Logo"
+                className={styles.logo}
+              />
+              <span className={styles.logoText}>Deal Magsil</span>
+            </div>
             {/* Follow Us Section */}
             <div className={styles.followSection}>
               <h3 className={styles.followText}>Follow Us</h3>

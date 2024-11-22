@@ -159,12 +159,13 @@ const FeedbackSlider: React.FC = () => {
       </Typography>
       <Box
         style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920')",
+          // backgroundImage:
+          //   "url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1920')",
           backgroundSize: "cover",
+          backgroundColor: "black",
           backgroundPosition: "center",
           padding: "50px 20px",
-          opacity: "0.8",
+          // opacity: "0.8",
         }}
         className={styles.mainContainer}
       >

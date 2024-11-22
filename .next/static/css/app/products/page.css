@@ -213,6 +213,7 @@
   \*************************************************************************************************************************************************************************************************************************************************************************************************/
 .UpcomingProducts_main__jcTec {
   background-color: rgb(238, 236, 233);
+  margin-top: 50px;
 }
 .UpcomingProducts_upcomingproductssection__Qs0r1 {
   padding: 3rem;
@@ -230,6 +231,7 @@
   text-align: center;
   font-size: "2rem";
   font-weight: 700;
+  padding-top: 2rem;
 }
 .UpcomingProducts_carouselitem__d_cXo img {
   max-width: 100%;
@@ -424,8 +426,11 @@
   color: gray;
   font-size: 2.5rem;
   text-align: center;
+  margin-top: 50px;
 }
-
+.FeatureGrid_featuregridSliderDiv__2GdL5 {
+  margin-top: 50px;
+}
 @media (max-width: 768px) {
   .FeatureGrid_featureGrid__aJgbk {
     grid-template-columns: 1fr;

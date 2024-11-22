@@ -50,6 +50,20 @@ li a {
   box-sizing: content-box;
 }
 
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  border: 1px solid gold;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
+.lastDiv {
+  height: 50px;
+  width: 100%;
+  color: antiquewhite;
+}
+
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************/
@@ -225,8 +239,9 @@ li a {
 }
 
 .Footer_sectionTitle__95pl2 {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-bottom: 0.5rem;
   letter-spacing: 1.3px;
 }
@@ -260,20 +275,34 @@ li a {
   padding-top: 10px;
 }
 
+.Footer_logoContainer__VhKri {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* Adjust spacing between the logo and text */
+}
+
+.Footer_logoText__YeaTa {
+  font-size: 1.25rem;
+  /* font-weight: bold; */
+  color: white;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 1024px) {
   .Footer_footerBorder__JgPKj {
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: center;
     padding: 1rem;
   }
 
   .Footer_logo__8sQzR {
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
   }
 
   .Footer_followSection__AGMkK {
     align-items: center;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 
   .Footer_container__T0tUs {

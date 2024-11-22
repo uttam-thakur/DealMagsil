@@ -34,7 +34,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           {/* <FontAwesomeIcon icon={faInfoCircle} size="2x" /> */}
           <FontAwesomeIcon
             icon={faInfoCircle}
-            size="lg" // Sizes: "xs", "sm", "lg", "2x", "3x", "4x", etc.
+            size="lg"
             style={{ color: "black" }} // Custom color
           />
         </button>

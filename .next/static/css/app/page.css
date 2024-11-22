@@ -659,6 +659,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Adds a dark overlay for readability */
   z-index: 1;
+  /* margin-top: -5px; */
 }
 
 .Carouselinfra_heroSection__IIa4_,
@@ -992,8 +993,8 @@
   text-align: center;
   margin-bottom: 20px;
   font-size: 2rem;
-  font-weight: 700;
-  color: #333;
+  font-weight: 400;
+  color: white;
   z-index: -1;
 }
 

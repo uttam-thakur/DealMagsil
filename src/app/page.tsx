@@ -44,6 +44,7 @@ const Home = () => {
       <FeedbackSlider />
 
       <RegistrationSection />
+      {/* <div className="lastDiv"></div> */}
     </div>
   );
 };
