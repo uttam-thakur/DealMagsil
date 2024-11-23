@@ -2,7 +2,7 @@
   background-image: url("/images/contact1.jpg");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   justify-content: center;
   align-items: center;
