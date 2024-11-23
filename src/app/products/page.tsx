@@ -234,29 +234,10 @@ const ProductInfo: React.FC = () => {
                 index % 2 === 0 ? styles.normallayout : styles.reverselayout
               }`}
               key={index}
-            >
-              {/* Description with Animation */}
-              {/* <motion.div
-              className={styles.productdetails}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ ease: "easeInOut", duration: 0.8 }}
-            >
-              <h2 className={styles.producttitle}>{product.title}</h2>
-              <p className={styles.productdescription}>{product.description}</p>
-            </motion.div> */}
-
-              {/* Image Carousel */}
-              {/* <div className={styles.imagewrapper}>
-              <CarouselComponent images={product.images} />
-            </div> */}
-            </div>
+            ></div>
           ))}
         </div>
-        {/* {!searchTerm && <UpcomingProduct />} */}
       </div>
-      {/* <div className="lastDiv"></div> */}
     </>
   );
 };

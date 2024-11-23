@@ -1,9 +1,5 @@
-/* body {
-  padding: 3rem;
-} */
 html {
   margin-top: 0;
-  /* padding: 2rem; */
   margin-top: 20px;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
@@ -11,53 +7,13 @@ html {
   color: #333;
 }
 
-/* .carouselWrapper {
-  margin: 40px 0;
-} */
-
-/* Carousel Container - More grid-based layout for better spacing */
-/* .carousel-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-items: center;
-} */
-
-/* Carousel Images */
-/* .carousel-container img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-} */
-/* 
-.carousel-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-} */
-
-/* .caption {
-  text-align: center;
-  font-size: 1rem;
-  color: #666;
-  margin-top: 10px;
-  font-style: italic;
-} */
-
-/* Section Separator */
-/* .section-separator {
-  border-top: 1px solid #ddd;
-  margin: 50px 0;
-} */
-
 .main {
-  background-image: url("/images/projectImage.jpg"); /* Replace with your image URL */
+  background-image: url("/images/projectImage.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 100vh;
+  height: 100svh;
   display: flex;
   flex-direction: column;
   align-items: center;
