@@ -1,18 +1,60 @@
-.swiperSlide {
-  width: fit-content !important;
-}
-
-.projectSlider {
-  padding: 36px;
-  padding-bottom: 54px;
-}
-
-.projectSection {
+/* General Section Styling */
+.mainSection {
+  background-image: url("/images/projectImage.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
   height: 100svh;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.mainSection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.introContainer {
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.introHeading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.introSubHeading {
+  font-size: 1.2rem;
+  color: #f0f0f0;
+  margin-bottom: 30px;
+}
+
+.ctaContainer p {
+  font-size: 1rem;
+  color: #fdba74;
+}
+
+/* Project Section */
+.projectSection {
   padding: 40px;
   padding-top: 10vh;
+  position: relative;
   background-image: url("/background/high001626.jpg");
   background-size: cover;
   background-position: center center;
@@ -26,134 +68,69 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100svh;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
-.projectGreeting {
-  width: calc(100vw-72px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.projectHeading,
-.projectDescription {
+.projectGreeting {
   text-align: center;
-  position: relative;
-  padding-left: 100px;
-  padding-right: 100px;
-  z-index: 1;
+  margin-bottom: 30px;
 }
 
 .projectHeading {
-  padding-left: 100px;
-  padding-right: 100px;
   z-index: 1;
+  position: relative;
+  font-size: 2.5rem;
   margin-bottom: 10px;
 }
 
 .projectDescription {
-  width: 70%;
-  font-size: 16px;
-  font-weight: 300;
-  padding: 100px;
   z-index: 1;
-  padding-top: 0px;
+  position: relative;
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0 auto;
+  max-width: 800px;
 }
 
-@media (max-width: 768px) {
-  .projectGreeting {
-    width: -72px;
-  }
-  .projectSlider {
-    padding: 16px;
-    padding-bottom: 54px;
-  }
+/* Swiper Styles */
+.projectSlider {
+  padding: 36px;
+}
 
-  .projectHeading {
-    padding: 16px;
+.swiperSlide {
+  width: fit-content !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .projectSlider {
+    padding: 36px 16px;
   }
 
   .projectSection {
-    padding: 16px;
+    padding: 20px;
+  }
+
+  .introHeading {
+    font-size: 1.5rem;
+  }
+
+  .introSubHeading {
+    font-size: 1rem;
+  }
+
+  .projectHeading {
+    font-size: 2rem;
   }
 
   .projectDescription {
-    padding: 0;
-    margin-bottom: 36px;
-    width: 100%;
+    font-size: 0.9rem;
   }
 }
 
-.main {
-  background-image: url("/images/projectImage.jpg"); /* Replace with your image URL */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  overflow: hidden;
-  margin-top: -20px;
-}
-.main::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Dark overlay / / z-index: 1; */
-}
-.para {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 1200px;
-  text-align: center;
-  /* background: #f9f9f9; */
-
-  z-index: 1;
-}
-
-.para p {
-  /* font-size: 1.1rem; */
-  font-size: 34px;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #333;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  color: white;
-  letter-spacing: 1px;
-  font-family: "Times New Roman", Times, serif;
-}
-.responsiveText {
-  color: #fdba74;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.2px;
-}
-@media (max-width: 460px) {
-  .para p {
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.2;
-    color: #333;
-    text-align: center;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    color: white;
-    letter-spacing: 1px;
-  }
-  .para p:nth-child(2) {
-    color: #f9f9f9; /* Example: Green text */
-    font-size: 16px; /* Example: Adjust font size */
-    font-weight: 400; /* Example: Medium weight */
-    line-height: 1.2; /* Example: Better readability */
+@media (max-width: 768px) {
+  .projectSlider {
+    padding: 36px 8px;
   }
 }
