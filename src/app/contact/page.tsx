@@ -4,13 +4,12 @@ import React, { useState } from "react";
 import styles from "./contact.module.css";
 import ContactModal from "../components/ContactModal";
 import GetInTouchForm from "../components/GetInTouchForm";
+import { BsQuestionSquare } from "react-icons/bs";
+import FAQ from "../components/FAQ";
 
 export default function Contact() {
   const [openModal, setOpenModal] = useState(false);
   const [expanded, setExpanded] = useState<string | false>(false);
-
-  const handleThumbsDown = () => setOpenModal(true);
-  const handleThumbsUp = () => alert("Thank you for choosing us!");
 
   const infoData = {
     title: "Get in Touch with Us",
@@ -40,17 +39,6 @@ export default function Contact() {
       title: "Call us",
       description: "Mon-Fri from 8am to 5pm.",
       contactInfo: "+91 9332331442",
-    },
-  ];
-
-  const faqData = [
-    {
-      question: "Is there a free trial available?",
-      answer: "Yes, you can try us for free for 30 days...",
-    },
-    {
-      question: "Can I change my plan later?",
-      answer: "Yes, you can change your plan anytime.",
     },
   ];
 
@@ -86,45 +74,10 @@ export default function Contact() {
           ))}
         </div>
 
-        <div className={styles.faq}>
-          <h2>Frequently asked questions</h2>
-          {faqData.map((faq, index) => (
-            <div
-              key={index}
-              className={`${styles.accordion} ${
-                expanded === `panel${index}` ? styles.expanded : ""
-              }`}
-              onClick={() =>
-                setExpanded(
-                  expanded === `panel${index}` ? false : `panel${index}`
-                )
-              }
-            >
-              <div className={styles.accordionSummary}>{faq.question}</div>
-              {expanded === `panel${index}` && (
-                <div className={styles.accordionDetails}>
-                  <p>{faq.answer}</p>
-                  <div className={styles.feedback}>
-                    <p>Is this information helpful?</p>
-                    <button onClick={handleThumbsUp} className={styles.thumbUp}>
-                      👍
-                    </button>
-                    <button
-                      onClick={handleThumbsDown}
-                      className={styles.thumbDown}
-                    >
-                      👎
-                    </button>
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
         <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
       </div>
       <GetInTouchForm />
+      <FAQ />
     </>
   );
 }
