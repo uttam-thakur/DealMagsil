@@ -103,6 +103,12 @@
   }
 }
 
+@media (max-width: 400px) {
+  .projectSlider {
+    width: 270px;
+  }
+}
+
 .projectDetaillsSections {
   display: flex;
   align-items: center;
