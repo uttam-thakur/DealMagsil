@@ -73,13 +73,15 @@
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-
 .card {
-  background: #fff;
+  background: rgba(186, 176, 176, 0.2); /* Transparent background */
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Smooth rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
   text-align: center;
+  backdrop-filter: blur(50px); /* Blurring the background */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for the glass effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card h2 {
@@ -89,20 +91,28 @@
 
 .card p {
   margin: 5px 0;
+  /* color: rgb(240, 177, 93); */
 }
 
 .email {
-  /* color: blue; */
-  font-weight: bold;
-}
+  color: rgb(22, 22, 157);
+  font-weight: 400;
 
+  /* color: rgb(0, 72, 206); */
+}
+.email:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #0056b3; /* Optional: Darken the color slightly on hover */
+  cursor: pointer;
+}
 .button {
   background-color: transparent;
   border: none;
   padding: 10px 20px;
-  border: 1px solid black;
+  border: 1px solid rgb(22, 22, 157);
   border-radius: 4px;
   cursor: pointer;
+  color: rgb(22, 22, 157);
 }
 
 .faq {
