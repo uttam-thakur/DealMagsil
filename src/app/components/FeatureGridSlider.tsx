@@ -214,7 +214,7 @@ const FeatureGridSlider = () => {
 
   return (
     <>
-      <div>
+      <div style={{ backgroundColor: "rgb(255, 249, 249)" }}>
         <Typography
           variant="h5"
           sx={{
@@ -227,7 +227,7 @@ const FeatureGridSlider = () => {
         >
           PRECAST PRODUCTS
         </Typography>
-        <Box>
+        <Box sx={{ padding: "16px" }}>
           <Grid container spacing={3}>
             {precastItems.map((item, index) => (
               <Grid item xs={12} sm={6} md={4} lg={3} key={index}>

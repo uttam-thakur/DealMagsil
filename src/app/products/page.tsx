@@ -177,7 +177,7 @@ const ProductInfo: React.FC = () => {
   // };
 
   return (
-    <>
+    <div style={{ backgroundColor: "rgb(244, 244, 244)" }}>
       <div className={styles.main}>
         <h1 className={styles.pageHeader}>
           Discover Premium Precast Cement Products
@@ -196,7 +196,8 @@ const ProductInfo: React.FC = () => {
           for construction, urban design, and landscaping.
         </p>
       </div>
-      <div style={{ padding: "2rem" }}>
+      <div>
+        {/* <div style={{ padding: "2rem" }}> */}
         <div
           style={{
             display: "flex",
@@ -213,6 +214,7 @@ const ProductInfo: React.FC = () => {
             style={{
               marginTop: "50px",
               width: "30%",
+              paddingLeft: "2rem",
             }}
             InputProps={{
               startAdornment: (
@@ -241,7 +243,7 @@ const ProductInfo: React.FC = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

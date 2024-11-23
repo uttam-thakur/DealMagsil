@@ -103,7 +103,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
     feature.title.toLowerCase().includes(searchTerm)
   );
   return (
-    <>
+    <div style={{ backgroundColor: "rgb(244, 242, 242)" }}>
       <Typography
         className={styles.customTitle}
         variant="h4"
@@ -126,7 +126,7 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
       <div className={styles.featuregridSliderDiv}>
         {/* <FeatureGridSlider /> */}
       </div>
-    </>
+    </div>
   );
 };
 

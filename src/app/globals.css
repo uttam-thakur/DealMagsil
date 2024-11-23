@@ -6,7 +6,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: white;
+  background-color: rgb(244, 242, 242);
 }
 
 main {
@@ -54,9 +54,4 @@ li a {
 
 .swiper-pagination-bullet-active {
   background-color: white !important;
-}
-.lastDiv {
-  height: 50px;
-  width: 100%;
-  color: antiquewhite;
 }
