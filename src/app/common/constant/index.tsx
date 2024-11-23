@@ -34,3 +34,34 @@ export const faqData = [
       Additionally, our support team is always available to guide you through the transition and answer any questions.`,
   },
 ];
+
+export const infoData = {
+  title: "Get in Touch with Us",
+  subTitle: "Quick answers and reliable support are just a message away.",
+  description:
+    "We believe that good communication builds strong partnerships. Whether you have a quick question, require detailed information, or need help resolving a challenge, we’re just a click or call away. Our dedicated team ensures that every query is met with promptness and expertise, helping you achieve the results you need.",
+};
+
+export const contactData = [
+  {
+    title: "Chat to sales",
+    description: "Speak to our friendly team.",
+    contactInfo: "abhradey11@gmail.com",
+  },
+  {
+    title: "Chat to support",
+    description: "We’re here to help.",
+    contactInfo: "abhra@dealmagsil.com",
+  },
+  {
+    title: "Visit us",
+    description: "Visit our office HQ.",
+    contactInfo: "View on Google Maps",
+    isButton: true,
+  },
+  {
+    title: "Call us",
+    description: "Mon-Fri from 8am to 5pm.",
+    contactInfo: "+91 9332331442",
+  },
+];
