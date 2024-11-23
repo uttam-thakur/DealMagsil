@@ -1,31 +1,47 @@
 "use client";
+
 import React, { useState } from "react";
-import {
-  Container,
-  Typography,
-  Grid,
-  Paper,
-  Box,
-  IconButton,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  Button,
-} from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ThumbsUpIcon from "@mui/icons-material/ThumbUp";
-import ThumbsDownIcon from "@mui/icons-material/ThumbDown";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import styles from "./contact.module.css";
 import ContactModal from "../components/ContactModal";
 import GetInTouchForm from "../components/GetInTouchForm";
-import styles from "./contact.module.css";
+
 export default function Contact() {
   const [openModal, setOpenModal] = useState(false);
   const [expanded, setExpanded] = useState<string | false>(false);
 
   const handleThumbsDown = () => setOpenModal(true);
-  const handleThumbsUp = () => toast.success("Thank you for choosing us!");
+  const handleThumbsUp = () => alert("Thank you for choosing us!");
+
+  const infoData = {
+    title: "Get in Touch with Us",
+    subTitle: "Quick answers and reliable support are just a message away.",
+    description:
+      "We believe that good communication builds strong partnerships. Whether you have a quick question, require detailed information, or need help resolving a challenge, we’re just a click or call away. Our dedicated team ensures that every query is met with promptness and expertise, helping you achieve the results you need.",
+  };
+
+  const contactData = [
+    {
+      title: "Chat to sales",
+      description: "Speak to our friendly team.",
+      contactInfo: "abhradey11@gmail.com",
+    },
+    {
+      title: "Chat to support",
+      description: "We’re here to help.",
+      contactInfo: "abhra@dealmagsil.com",
+    },
+    {
+      title: "Visit us",
+      description: "Visit our office HQ.",
+      contactInfo: "View on Google Maps",
+      isButton: true,
+    },
+    {
+      title: "Call us",
+      description: "Mon-Fri from 8am to 5pm.",
+      contactInfo: "+91 9332331442",
+    },
+  ];
 
   const faqData = [
     {
@@ -42,181 +58,73 @@ export default function Contact() {
     <>
       <div className={styles.main}>
         <div className={styles.info}>
-          <div className={styles.title}>Get in Touch with Us</div>
+          <div className={styles.title}>{infoData.title}</div>
           <div className={styles.infoWindow}>
-            <div className={styles.subTitle}>
-              Quick answers and reliable support are just a message away.
-            </div>
-            <div className={styles.description}>
-              We believe that good communication builds strong partnerships.
-              Whether you have a quick question, require detailed information,
-              or need help resolving a challenge, we’re just a click or call
-              away. Our dedicated team ensures that every query is met with
-              promptness and expertise, helping you achieve the results you
-              need.
-            </div>
+            <div className={styles.subTitle}>{infoData.subTitle}</div>
+            <div className={styles.description}>{infoData.description}</div>
           </div>
         </div>
       </div>
-      <div>
-        <ToastContainer />
-        <Container
-          sx={{
-            marginTop: 5,
-            width: {
-              xs: "100%", // Full width for mobile screens
-              sm: "90%", // Slightly narrower for tablets
-              md: "80%", // Medium width for larger screens
-              lg: "1200px", // Fixed width for desktops
-            },
-            overflowX: "hidden",
-          }}
-        >
-          <Box textAlign="center" mb={4}>
-            <Typography
-              variant="h4"
-              component="h1"
-              gutterBottom
-              sx={{ fontWeight: "bold" }}
+
+      <div className={styles.container}>
+        <div className={styles.contactHeader}>
+          <h1>Contact our friendly team</h1>
+          <p>Let us know how we can help.</p>
+        </div>
+
+        <div className={styles.grid}>
+          {contactData.map((contact, index) => (
+            <div key={index} className={styles.card}>
+              <h2>{contact.title}</h2>
+              <p>{contact.description}</p>
+              {contact.isButton ? (
+                <button className={styles.button}>{contact.contactInfo}</button>
+              ) : (
+                <p className={styles.email}>{contact.contactInfo}</p>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className={styles.faq}>
+          <h2>Frequently asked questions</h2>
+          {faqData.map((faq, index) => (
+            <div
+              key={index}
+              className={`${styles.accordion} ${
+                expanded === `panel${index}` ? styles.expanded : ""
+              }`}
+              onClick={() =>
+                setExpanded(
+                  expanded === `panel${index}` ? false : `panel${index}`
+                )
+              }
             >
-              Contact our friendly team
-            </Typography>
-            <Typography variant="body1">
-              Let us know how we can help.
-            </Typography>
-          </Box>{" "}
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6} lg={3}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 3,
-                  textAlign: "center",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography variant="h6">Chat to sales</Typography>
-                <Typography variant="body2">
-                  Speak to our friendly team.
-                </Typography>
-                <Typography variant="body2" color="primary">
-                  abhradey11@gmail.com
-                </Typography>
-              </Paper>
-            </Grid>
-
-            <Grid item xs={12} md={6} lg={3}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 3,
-                  textAlign: "center",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography variant="h6">Chat to support</Typography>
-                <Typography variant="body2">We're here to help.</Typography>
-                <Typography variant="body2" color="primary">
-                  abhra@dealmagsil.com
-                </Typography>
-              </Paper>
-            </Grid>
-
-            <Grid item xs={12} md={6} lg={3}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 3,
-                  textAlign: "center",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography variant="h6">Visit us</Typography>
-                <Typography variant="body2">Visit our office HQ.</Typography>
-                <Button>View on Google Maps</Button>
-              </Paper>
-            </Grid>
-
-            <Grid item xs={12} md={6} lg={3}>
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 3,
-                  textAlign: "center",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography variant="h6">Call us</Typography>
-                <Typography variant="body2">
-                  Mon-Fri from 8am to 5pm.
-                </Typography>
-                <Typography variant="body2" color="primary">
-                  +91 9332331442
-                </Typography>
-              </Paper>
-            </Grid>
-          </Grid>
-          <Box mt={6}>
-            <Typography variant="h5" sx={{ fontWeight: "bold" }} gutterBottom>
-              Frequently asked questions
-            </Typography>
-            {faqData.map((faq, index) => (
-              <Accordion
-                key={index}
-                expanded={expanded === `panel${index}`}
-                onChange={() => setExpanded(expanded ? false : `panel${index}`)}
-              >
-                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                  <Typography variant="subtitle1">{faq.question}</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography variant="body2" style={{ display: "flex" }}>
-                    {faq.answer}
-                  </Typography>
-                  <Box
-                    mt={2}
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                  >
-                    <Typography variant="body2" sx={{ color: "blue" }}>
-                      is this information helpful?
-                    </Typography>
-                    <Box>
-                      <IconButton onClick={handleThumbsUp}>
-                        <ThumbsUpIcon color="success" />
-                      </IconButton>
-                      <IconButton onClick={handleThumbsDown}>
-                        <ThumbsDownIcon color="error" />
-                      </IconButton>
-                    </Box>
-                  </Box>
-                </AccordionDetails>
-              </Accordion>
-            ))}
-          </Box>
-        </Container>
-        {/* <Box mt={8}> */}
-        {/* <Paper elevation={3}> */}
-        <GetInTouchForm />
-        {/* </Paper> */}
-        {/* </Box> */}
+              <div className={styles.accordionSummary}>{faq.question}</div>
+              {expanded === `panel${index}` && (
+                <div className={styles.accordionDetails}>
+                  <p>{faq.answer}</p>
+                  <div className={styles.feedback}>
+                    <p>Is this information helpful?</p>
+                    <button onClick={handleThumbsUp} className={styles.thumbUp}>
+                      👍
+                    </button>
+                    <button
+                      onClick={handleThumbsDown}
+                      className={styles.thumbDown}
+                    >
+                      👎
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
 
         <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
       </div>
-      <div className="lastDiv"></div>
+      <GetInTouchForm />
     </>
   );
 }
