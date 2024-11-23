@@ -230,6 +230,8 @@ import { Box, TextField, Typography, Button, Grid } from "@mui/material";
 import { toast } from "react-toastify";
 import { sendEmail } from "../services/services";
 
+import styles from "./styles/GetInTouch.module.css";
+
 export default function GetInTouchForm() {
   const formRef = useRef(null);
 
@@ -281,6 +283,7 @@ export default function GetInTouchForm() {
 
   return (
     <Box
+      className={styles.getInTouch}
       sx={{
         width: "100vw",
         height: "100vh",
@@ -291,11 +294,12 @@ export default function GetInTouchForm() {
         alignItems: "center",
         justifyContent: "center",
         boxShadow: "none",
-        marginLeft: { xs: "0px", sm: "0px", md: "-390px" }, // Adjust margin for specific screen sizes
+        marginLeft: { xs: "px", sm: "0px", md: "0px" }, // Adjust margin for specific screen sizes
         "@media (max-width: 1024px)": {
-          marginLeft: "-120px", // Remove negative margin for tablet view
+          marginLeft: "px", // Remove negative margin for tablet view
           height: "100vh", // Ensure it covers the entire viewport height
           backgroundSize: "cover", // Maintain aspect ratio and coverage
+          boxShadow: "none",
         },
         "@media (max-width: 760px)": {
           marginLeft: "-15px", // Remove negative margin for tablet view
@@ -307,7 +311,7 @@ export default function GetInTouchForm() {
         sx={{
           width: "100%",
           maxWidth: "1200px",
-          marginX: "auto",
+          // marginX: "auto",
           padding: 3,
           alignItems: "center",
         }}
@@ -321,14 +325,14 @@ export default function GetInTouchForm() {
             "@media (max-width: 1024px)": {
               marginTop: "10px", // Adjust top margin for tablet screens
               textAlign: "left",
-              marginLeft: "22.5%",
+              // marginLeft: "22.5%",
             },
             "@media (max-width: 760px)": {
               marginTop: "-40px",
             },
           }}
         >
-          <Typography
+          {/* <Typography
             variant="h3"
             sx={{
               color: "rgb(178, 131, 78)",
@@ -346,8 +350,24 @@ export default function GetInTouchForm() {
             }}
           >
             Get In Touch With Us
-          </Typography>
-          <Typography
+          </Typography> */}
+          <div className={styles.info}>
+            <div className={styles.title}>Get in Touch with Us</div>
+            <div className={styles.infoWindow}>
+              <div className={styles.subTitle}>
+                Quick answers and reliable support are just a message away.
+              </div>
+              <div className={styles.description}>
+                We believe that good communication builds strong partnerships.
+                Whether you have a quick question, require detailed information,
+                or need help resolving a challenge, we’re just a click or call
+                away. Our dedicated team ensures that every query is met with
+                promptness and expertise, helping you achieve the results you
+                need.
+              </div>
+            </div>
+          </div>
+          {/* <Typography
             variant="body1"
             sx={{
               color: "white",
@@ -378,7 +398,7 @@ export default function GetInTouchForm() {
             We would love to hear from you. Whether you have a question, a
             concern, or just want to start a project, drop us a message. Our
             team is always here to help you out!
-          </Typography>
+          </Typography> */}
         </Grid>
 
         {/* Right Section: Form */}
@@ -404,6 +424,7 @@ export default function GetInTouchForm() {
                 // width: "100%",
                 marginTop: "-40px",
                 width: "auto",
+                height: "500px",
                 // marginLeft: "25px",
               },
             }}

@@ -207,12 +207,12 @@ export default function Contact() {
               </Accordion>
             ))}
           </Box>
-          <Box mt={8}>
-            <Paper elevation={3}>
-              <GetInTouchForm />
-            </Paper>
-          </Box>
         </Container>
+        {/* <Box mt={8}> */}
+        {/* <Paper elevation={3}> */}
+        <GetInTouchForm />
+        {/* </Paper> */}
+        {/* </Box> */}
 
         <ContactModal open={openModal} onClose={() => setOpenModal(false)} />
       </div>
