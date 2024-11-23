@@ -17,7 +17,11 @@ const RegistrationSection = () => {
       sx={{
         padding: 4,
         backgroundColor: "black",
-        borderBottom: "3px solid rgb(212,168,99)",
+        borderTop: "1px solid rgb(212,168,99)",
+        borderBottom: "1px solid rgb(212,168,99)",
+        "@media (max-width: 400px)": {
+          borderBottom: "10px solid rgb(212,168,99)",
+        },
       }}
     >
       <Typography

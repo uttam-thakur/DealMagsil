@@ -13,6 +13,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import styles from "./page.module.css";
 import UpcomingProduct from "../components/UpcomingProduct";
 import FeatureGrid from "../components/FeatureGrid";
+import FeatureGridSlider from "../components/FeatureGridSlider";
 
 interface CarouselItemProps {
   src: string;
@@ -225,6 +226,8 @@ const ProductInfo: React.FC = () => {
         </div>
 
         <FeatureGrid searchTerm={searchTerm} />
+        <FeatureGridSlider />
+
         {!searchTerm && <UpcomingProduct />}
 
         <div className={styles.productcontainer}>

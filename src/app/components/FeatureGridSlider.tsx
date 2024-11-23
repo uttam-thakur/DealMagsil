@@ -214,195 +214,206 @@ const FeatureGridSlider = () => {
 
   return (
     <>
-      <Typography
-        variant="h5"
-        sx={{
-          marginTop: "1rem",
-          fontWeight: "700",
-          fontSize: { xs: "1.2rem", md: "2rem" },
-          color: "gray",
-          textAlign: "center",
-        }}
-      >
-        PRECAST PRODUCTS
-      </Typography>
-      <Box sx={{ padding: "2rem" }}>
-        <Grid container spacing={3}>
-          {precastItems.map((item, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-              <Card
-                sx={{
-                  padding: "1rem",
-                  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-                  borderRadius: "10px",
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                  "&:hover": {
-                    transform: "translateY(-5px)",
-                    boxShadow: "0 6px 10px rgba(0, 0, 0, 0.2)",
-                  },
-                }}
-              >
-                <Slider {...settings}>
-                  {item.images.map((image, imgIndex) => (
-                    <CardMedia
-                      key={imgIndex}
-                      component="img"
-                      image={image}
-                      alt={`Slide ${imgIndex} for ${item.title}`}
-                      sx={{
-                        width: "100%",
-                        maxHeight: "200px",
-                        objectFit: "cover",
-                        borderRadius: "8px",
-                      }}
-                    />
-                  ))}
-                </Slider>
-
-                <CardContent
+      <div>
+        <Typography
+          variant="h5"
+          sx={{
+            marginTop: "1rem",
+            fontWeight: "700",
+            fontSize: { xs: "1.2rem", md: "2rem" },
+            color: "gray",
+            textAlign: "center",
+          }}
+        >
+          PRECAST PRODUCTS
+        </Typography>
+        <Box>
+          <Grid container spacing={3}>
+            {precastItems.map((item, index) => (
+              <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+                <Card
                   sx={{
-                    textAlign: "center",
+                    padding: "1rem",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                    borderRadius: "10px",
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    "&:hover": {
+                      transform: "translateY(-5px)",
+                      boxShadow: "0 6px 10px rgba(0, 0, 0, 0.2)",
+                    },
                   }}
                 >
-                  <Typography
-                    variant="h6"
-                    sx={{ marginBottom: "0.5rem", fontWeight: "700" }}
-                  >
-                    {item.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="textSecondary"
-                    sx={{ marginBottom: "1rem" }}
-                  >
-                    {item.description.substring(0, 120)}...
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    fullWidth
-                    onClick={() => handleOpenModal(item)}
-                    sx={{
-                      backgroundColor: "rgb(21,80,139)",
-                      "&:hover": {
-                        backgroundColor: "rgb(24, 92, 160)", // Optional hover effect
-                      },
-                    }}
-                  >
-                    READ MORE
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-        {selectedItem && (
-          <Modal open={!!selectedItem}>
-            <Box
-              sx={{
-                backgroundColor: "#fff",
-                padding: { xs: "1rem", md: "2rem" },
-                borderRadius: "10px",
-                width: { xs: "90%", md: "60%" },
-                maxHeight: "80vh",
-                overflowY: "auto",
-                margin: "0 auto",
-                textAlign: "center",
-              }}
-            >
-              <Typography
-                variant="h5"
-                sx={{
-                  marginTop: "1rem",
-                  fontWeight: "700",
-                  fontSize: { xs: "1.2rem", md: "1.5rem" },
-                }}
-              >
-                {selectedItem.title}
-              </Typography>
+                  <Slider {...settings}>
+                    {item.images.map((image, imgIndex) => (
+                      <CardMedia
+                        key={imgIndex}
+                        component="img"
+                        image={image}
+                        alt={`Slide ${imgIndex} for ${item.title}`}
+                        sx={{
+                          width: "100%",
+                          maxHeight: "200px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                        }}
+                      />
+                    ))}
+                  </Slider>
 
-              <Grid
-                container
-                spacing={2}
-                sx={{
-                  marginTop: "1rem",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                {selectedItem.images.map((image, index) => (
-                  <Grid
-                    item
-                    xs={12}
-                    sm={6}
-                    md={4}
-                    lg={3}
-                    key={index}
+                  <CardContent
                     sx={{
-                      padding: "0.5rem",
+                      textAlign: "center",
                     }}
                   >
-                    <img
-                      src={image}
-                      alt={`${selectedItem.title} - Slide ${index + 1}`}
-                      style={{
-                        width: "100%",
-                        height: "auto",
-                        borderRadius: "10px",
-                        // boxShadow: "0 4px 6px rgba(0, 0, 0, 0.15)",
-                        transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        marginBottom: "0.5rem",
+                        fontWeight: "700",
+                        textAlign: "left",
                       }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "scale(1.05)";
-                        e.currentTarget.style.boxShadow =
-                          "0 8px 12px rgba(0, 0, 0, 0.2)";
+                    >
+                      {item.title}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      sx={{ marginBottom: "1rem", textAlign: "left" }}
+                    >
+                      {item.description.substring(0, 120)}...
+                    </Typography>
+                    <Button
+                      variant="contained"
+                      fullWidth
+                      onClick={() => handleOpenModal(item)}
+                      sx={{
+                        backgroundColor: "transparent",
+                        borderColor: "blue", // Outline color
+                        color: "rgb(21,80,139)", // Text color                        "&:hover": {
+                        "&:hover": {
+                          backgroundColor: "rgb(24, 92, 160)", // Optional hover effect
+                          borderColor: "rgb(21,80,139)",
+                          color: "white",
+                        },
                       }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = "scale(1)";
-                        e.currentTarget.style.boxShadow =
-                          "0 4px 6px rgba(0, 0, 0, 0.15)";
-                      }}
-                    />
-                  </Grid>
-                ))}
+                    >
+                      READ MORE
+                    </Button>
+                  </CardContent>
+                </Card>
               </Grid>
-
-              <Typography
-                variant="body2"
+            ))}
+          </Grid>
+          {selectedItem && (
+            <Modal open={!!selectedItem}>
+              <Box
                 sx={{
-                  margin: "1rem 0",
-                  lineHeight: "1.5",
-                  letterSpacing: "1px",
-                  fontSize: { xs: "0.9rem", md: "1rem" },
+                  backgroundColor: "#fff",
+                  padding: { xs: "1rem", md: "2rem" },
+                  borderRadius: "10px",
+                  width: { xs: "90%", md: "60%" },
+                  maxHeight: "80vh",
+                  overflowY: "auto",
+                  margin: "0 auto",
+                  textAlign: "center",
                 }}
               >
-                {selectedItem.description}
-              </Typography>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    marginTop: "1rem",
+                    fontWeight: "700",
+                    fontSize: { xs: "1.2rem", md: "1.5rem" },
+                  }}
+                >
+                  {selectedItem.title}
+                </Typography>
 
-              <Button
-                variant="outlined"
-                color="primary"
-                onClick={handleCloseModal}
-                sx={{
-                  marginTop: "1rem",
-                  fontSize: { xs: "0.8rem", md: "1rem" },
-                  backgroundColor: "rgb(21,80,139)",
-                  "&:hover": {
-                    backgroundColor: "darkred", // Optional hover effect
-                  },
-                  color: "white",
-                }}
-              >
-                Close
-              </Button>
-            </Box>
-          </Modal>
-        )}
-      </Box>
+                <Grid
+                  container
+                  spacing={2}
+                  sx={{
+                    marginTop: "1rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  {selectedItem.images.map((image, index) => (
+                    <Grid
+                      item
+                      xs={12}
+                      sm={6}
+                      md={4}
+                      lg={3}
+                      key={index}
+                      sx={{
+                        padding: "0.5rem",
+                      }}
+                    >
+                      <img
+                        src={image}
+                        alt={`${selectedItem.title} - Slide ${index + 1}`}
+                        style={{
+                          width: "100%",
+                          height: "auto",
+                          borderRadius: "10px",
+                          // boxShadow: "0 4px 6px rgba(0, 0, 0, 0.15)",
+                          transition:
+                            "transform 0.3s ease, box-shadow 0.3s ease",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "scale(1.05)";
+                          e.currentTarget.style.boxShadow =
+                            "0 8px 12px rgba(0, 0, 0, 0.2)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "scale(1)";
+                          e.currentTarget.style.boxShadow =
+                            "0 4px 6px rgba(0, 0, 0, 0.15)";
+                        }}
+                      />
+                    </Grid>
+                  ))}
+                </Grid>
+
+                <Typography
+                  variant="body2"
+                  sx={{
+                    margin: "1rem 0",
+                    lineHeight: "1.5",
+                    letterSpacing: "1px",
+                    fontSize: { xs: "0.9rem", md: "1rem" },
+                  }}
+                >
+                  {selectedItem.description}
+                </Typography>
+
+                <Button
+                  variant="outlined"
+                  color="primary"
+                  onClick={handleCloseModal}
+                  sx={{
+                    marginTop: "1rem",
+                    fontSize: { xs: "0.8rem", md: "1rem" },
+                    backgroundColor: "rgb(21,80,139)",
+                    "&:hover": {
+                      backgroundColor: "darkred", // Optional hover effect
+                    },
+                    color: "white",
+                  }}
+                >
+                  Close
+                </Button>
+              </Box>
+            </Modal>
+          )}
+        </Box>
+      </div>
     </>
   );
 };
