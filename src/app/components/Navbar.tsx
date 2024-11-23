@@ -193,16 +193,6 @@ export default function DrawerAppBar(props: Props) {
             <Box
               sx={{ display: { xs: "none", sm: "block", marginTop: "10px" } }}
             >
-              {/* <img
-                src="/images/dmlogo.jpeg"
-                alt="Company Logo"
-                style={{
-                  height: "60px",
-                  width: "60px",
-                  marginRight: "10px",
-                  cursor: "pointer",
-                }}
-              /> */}
               <h2
                 style={{
                   color: "white",

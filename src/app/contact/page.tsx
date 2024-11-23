@@ -60,7 +60,18 @@ export default function Contact() {
       </div>
       <div>
         <ToastContainer />
-        <Container maxWidth="md" sx={{ marginTop: 5 }}>
+        <Container
+          sx={{
+            marginTop: 5,
+            width: {
+              xs: "100%", // Full width for mobile screens
+              sm: "90%", // Slightly narrower for tablets
+              md: "80%", // Medium width for larger screens
+              lg: "1200px", // Fixed width for desktops
+            },
+            overflowX: "hidden",
+          }}
+        >
           <Box textAlign="center" mb={4}>
             <Typography
               variant="h4"
