@@ -19,19 +19,21 @@ const Carouselinfra = () => {
   ];
 
   return (
-    <div className={styles.container}>
-      <div className={styles.heroSection}>
-        <h1>Experience our Complimentary Concierge Service</h1>
-        <h2>From Beginning to Ending</h2>
-      </div>
+    <div className={styles.main}>
+      <div className={styles.container}>
+        <div className={styles.heroSection}>
+          <h1>Experience our Complimentary Concierge Service</h1>
+          <h2>From Beginning to Ending</h2>
+        </div>
 
-      <div className={styles.cardContainer}>
-        {cards.map((card, index) => (
-          <div key={index} className={styles.card}>
-            <div className={styles.cardTitle}>{card.title}</div>
-            <div className={styles.cardContent}>{card.content}</div>
-          </div>
-        ))}
+        <div className={styles.cardContainer}>
+          {cards.map((card, index) => (
+            <div key={index} className={styles.card}>
+              <div className={styles.cardTitle}>{card.title}</div>
+              <div className={styles.cardContent}>{card.content}</div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

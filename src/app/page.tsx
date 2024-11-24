@@ -6,12 +6,12 @@ import RegistrationSection from "./components/RegistrationSection";
 
 import "slick-carousel/slick/slick.css";
 import WhyUs from "./components/WhyUs";
+import Carousel from "./components/Carousel";
 
 const Home = () => {
   return (
     <div style={{ overflowX: "hidden" }}>
       <Hero />
-
       <WelcomeCard />
 
       <Carouselinfra />

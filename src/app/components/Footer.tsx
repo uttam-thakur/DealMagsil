@@ -112,7 +112,10 @@ const Footer = () => {
       </div>
       <div className={styles.footerEnd}>
         <p className={styles.footerTextEnd}>
-          &copy; {new Date().getFullYear()} Deal Magsil. All rights reserved.
+          <span style={{ fontWeight: "700" }}>
+            &copy; {new Date().getFullYear()} Deal Magsil.
+          </span>{" "}
+          All rights reserved.
         </p>
       </div>
     </>

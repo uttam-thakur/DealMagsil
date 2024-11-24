@@ -26,6 +26,53 @@
   text-align: center;
   padding: 1.2rem;
 }
+.contactHeader {
+  padding-top: 20px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+.container {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 123, 255, 0.1); /* Adjust color as needed */
+  transition: top 0.3s ease;
+  z-index: 0;
+}
+
+.card:hover::before {
+  top: 0;
+}
+
+.card h2,
+.card p,
+.card .button {
+  position: relative;
+  z-index: 1;
+}
 
 @media (max-width: 760px) {
   .info {
@@ -61,11 +108,13 @@
 
 .container {
   padding: 20px;
+  padding-bottom: 80px;
 }
 
 .contactHeader {
   text-align: center;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 .grid {
@@ -74,10 +123,10 @@
   gap: 20px;
 }
 .card {
-  background: rgba(186, 176, 176, 0.2); /* Transparent background */
-  padding: 20px;
+  background: rgb(251, 251, 251); /* Transparent background */
+  padding: 40px;
   border-radius: 12px; /* Smooth rounded corners */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow for depth */
   text-align: center;
   backdrop-filter: blur(50px); /* Blurring the background */
   border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for the glass effect */

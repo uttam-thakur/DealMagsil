@@ -18,7 +18,7 @@ const RegistrationSection = () => {
         padding: 4,
         backgroundColor: "black",
         borderTop: "1px solid rgb(212,168,99)",
-        borderBottom: "1px solid rgb(212,168,99)",
+        borderBottom: "2px solid rgb(212,168,99)",
         "@media (max-width: 400px)": {
           borderBottom: "10px solid rgb(212,168,99)",
         },

@@ -1,6 +1,7 @@
 .container {
-  padding: 5rem;
+  padding: 15rem;
   background-color: #ffffff;
+  margin-top: -120px;
 }
 
 .section {
@@ -55,12 +56,16 @@
 }
 
 @media (max-width: 1024px) {
+  .container {
+    padding: 5rem;
+    background-color: #ffffff;
+  }
   .section {
     flex-direction: column;
   }
 
   .image {
-    width: 80%;
+    width: 90%;
   }
 
   .textContainer {
@@ -76,6 +81,7 @@
 @media (max-width: 760px) {
   .container {
     padding: 36px 16px;
+    margin-top: -10px;
   }
   .title {
     font-size: 2rem;
