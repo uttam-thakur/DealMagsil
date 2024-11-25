@@ -1,0 +1,741 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/products/page.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.page_productcontainer__Ll8xx {
+  display: grid;
+
+  margin: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.page_productsection__OpI_m {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.page_normallayout__CY_eP {
+  flex-direction: row;
+}
+
+.page_reverselayout__z6QSx {
+  flex-direction: row-reverse;
+}
+
+.page_imagewrapper__rK0KD {
+  width: 450px;
+  height: 360px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.page_imagewrapper__rK0KD img {
+  width: 450px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.page_carouselitem__761a7 img {
+  border-radius: 8px;
+  height: 320px;
+  width: 400px;
+}
+
+.page_productimage__vaKc_ {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.page_image__TXK3u {
+  height: 360px;
+  width: 450px;
+}
+.page_imagecaption__5jTmx {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.page_productdetails__u_dc6 {
+  flex: 1;
+}
+
+.page_producttitle___CClw {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: rgb(51, 51, 255);
+  font-weight: 700;
+  line-height: 1.9rem;
+  letter-spacing: 1px;
+}
+
+.page_productdescription__nK0tw {
+  font-size: 1.5em;
+  line-height: 1.6;
+  color: #555;
+}
+.page_searchbar__lmflN {
+  /* width: 450px;
+  margin-left: 50%; */
+  /* padding: 2rem; */
+}
+.page_carouselWrapper__jpHKy {
+  width: 450px;
+  height: 360px;
+  overflow: hidden;
+  position: relative;
+}
+
+.page_carouselImage__By7Z0 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+@media (max-width: 1024px) {
+  .page_productdescription__nK0tw {
+    font-size: 1.1rem;
+  }
+  .page_productsection__OpI_m {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+  }
+}
+@media (max-width: 768px) {
+  .page_productsection__OpI_m {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .page_imagewrapper__rK0KD {
+    width: 100%;
+  }
+  .page_image__TXK3u {
+    height: 100%;
+    width: 100%;
+  }
+  .page_productimage__vaKc_ {
+    max-width: 100%;
+  }
+
+  .page_productdetails__u_dc6 {
+    text-align: center;
+  }
+
+  .page_carouselitem__761a7 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .page_producttitle___CClw {
+    font-size: 1em;
+  }
+
+  .page_productdescription__nK0tw {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+  }
+}
+@media (max-width: 480px) {
+  .page_productcontainer__Ll8xx {
+    margin: 0;
+  }
+
+  .page_productsection__OpI_m {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .page_producttitle___CClw {
+    font-size: 1.4rem;
+  }
+  .page_imagewrapper__rK0KD {
+    width: 100%;
+    height: 100%;
+    /* margin: 0 auto; */
+    /* position: relative;
+    overflow-y: hidden; */
+    /* border-radius: 8px; */
+  }
+  .page_imagewrapper__rK0KD img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .page_productdescription__nK0tw {
+    font-size: 1rem;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/UpcomingProducts.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+.UpcomingProducts_main__jcTec {
+  background-color: rgb(238, 236, 233);
+}
+.UpcomingProducts_upcomingproductssection__Qs0r1 {
+  padding: 3rem;
+}
+.UpcomingProducts_customcard__bvQ_7 {
+  margin-bottom: 50px;
+}
+.UpcomingProducts_carouselimage__CZPgW {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.UpcomingProducts_titleCenter__vxjFq {
+  color: gray;
+  text-align: center;
+  font-size: "2rem";
+  font-weight: 700;
+}
+.UpcomingProducts_carouselitem__d_cXo img {
+  max-width: 100%;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .UpcomingProducts_carouselimage__CZPgW,
+  .UpcomingProducts_carouselitem__d_cXo img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .UpcomingProducts_upcomingproductssection__Qs0r1 {
+    padding: 0;
+    margin-top: 30px;
+  }
+  .UpcomingProducts_titleCenter__vxjFq {
+    font-size: 1.5em;
+    font-weight: 600;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: "1px";
+  }
+  .UpcomingProducts_carouselimage__CZPgW,
+  .UpcomingProducts_carouselitem__d_cXo img {
+    height: 200px;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/common-components/Modal/styles.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************/
+.styles_modalContainer__QLGu_ {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 50%);
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/FeatureCard.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+.FeatureCard_featureCard__1NxWD {
+  display: flex;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  padding: 16px;
+  transition: transform 0.3s ease;
+}
+
+.FeatureCard_featureCard__1NxWD:hover {
+  transform: translateY(-10px);
+}
+
+.FeatureCard_featureDiv__0dtba {
+  display: flex;
+  flex-direction: column;
+}
+.FeatureCard_featureImage__sMpCV {
+  margin-right: 15px;
+}
+
+.FeatureCard_title__AxOlV {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.FeatureCard_description__ngXgF {
+  color: #777;
+  font-size: 14px;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.FeatureCard_info__x3Vow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  border: 1px solid rgb(100, 100, 100);
+  background-color: white;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  height: 24px;
+  width: 24px;
+  font-size: 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  cursor: pointer;
+}
+
+.FeatureCard_featureCard__1NxWD:hover .FeatureCard_info__x3Vow {
+  opacity: 0.8;
+}
+
+.FeatureCard_featuresDetails__hBKI_ {
+  position: relative;
+  background-color: white;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 32px 50px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 4;
+}
+
+@media (min-width: 768px) {
+  .FeatureCard_featuresDetails__hBKI_ {
+    max-width: 726px;
+    padding-bottom: 32px;
+    border-radius: 20px;
+    bottom: auto;
+  }
+}
+
+.FeatureCard_featuresTitle__JxA4k {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  margin-bottom: 10px !important;
+}
+
+.FeatureCard_featuresDescription__BO_Sn {
+  font-size: 17px !important;
+}
+
+.FeatureCard_featureModalImage__FCZVl {
+  height: 300px;
+  width: 350px;
+  margin-bottom: 24px;
+}
+
+.FeatureCard_featureClose__mjhT2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+
+  background-color: white;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 4px;
+}
+@media (max-width: 460px) {
+  .FeatureCard_featureModalImage__FCZVl {
+    height: 220px;
+    width: 350px;
+    margin-bottom: 24px;
+  }
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/FeatureGrid.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+.FeatureGrid_featureGrid__aJgbk {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px 0px 24px 0px;
+}
+/* styles.css */
+.FeatureGrid_customTitle__Z1u5F {
+  color: gray;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .FeatureGrid_featureGrid__aJgbk {
+    grid-template-columns: 1fr;
+    padding: 15px;
+  }
+}
+
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/slick-carousel/slick/slick.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./node_modules/slick-carousel/slick/slick-theme.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************/
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url(/_next/static/media/ajax-loader.0b80f665.gif) center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url(/_next/static/media/slick.25572f22.eot);
+    src: url(/_next/static/media/slick.25572f22.eot?#iefix) format('embedded-opentype'), url(/_next/static/media/slick.653a4cbb.woff) format('woff'), url(/_next/static/media/slick.6aa1ee46.ttf) format('truetype'), url(/_next/static/media/slick.f895cfdf.svg#slick) format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 30px;
+}
+
+.slick-dots
+{
+    position: absolute;
+    bottom: -25px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+.slick-dots li
+{
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+.slick-dots li button
+{
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus
+{
+    outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before
+{
+    opacity: 1;
+}
+.slick-dots li button:before
+{
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before
+{
+    opacity: .75;
+    color: black;
+}
+

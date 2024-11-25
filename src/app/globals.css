@@ -1,10 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: white;
+  background-color: rgb(244, 242, 242);
 }
 
 main {
@@ -43,4 +45,13 @@ li a {
     initial
   );
   box-sizing: content-box;
+}
+
+.swiper-pagination-bullet {
+  background-color: transparent !important;
+  border: 1px solid gold;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
 }

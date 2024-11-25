@@ -1,22 +1,26 @@
+import Hero from "./components/Hero";
 import WelcomeCard from "./components/CardItem";
-import Carousel from "./components/Carousel";
 import Carouselinfra from "./components/Carouselinfra";
-import RegistrationSection from "./components/RegistrationSection";
-import "slick-carousel/slick/slick.css";
 import FeedbackSlider from "./components/FeedbackSlider";
-import styles from "./components/styles/Home.module.css";
+import RegistrationSection from "./components/RegistrationSection";
+
+import "slick-carousel/slick/slick.css";
+import WhyUs from "./components/WhyUs";
+import Carousel from "./components/Carousel";
+
 const Home = () => {
   return (
     <div style={{ overflowX: "hidden" }}>
-      <div className={styles.carousel}>
-        <Carousel />
-      </div>
-      <div className={styles.welcomeCard}>
-        <WelcomeCard />
-      </div>{" "}
+      <Hero />
+      <WelcomeCard />
+
       <Carouselinfra />
+
       <FeedbackSlider />
+
       <RegistrationSection />
+
+      {/* <WhyUs /> */}
     </div>
   );
 };

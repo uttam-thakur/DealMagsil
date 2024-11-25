@@ -6,18 +6,19 @@
   height: auto;
   padding-top: 4rem;
   align-items: center;
-  /* padding-right: 1rem; */
 }
 
 .description {
   width: 100%;
   padding: 8px 36px 0px 36px;
+  color: #ffffff;
 }
 /* Profile section and description width consistency */
 .profileSection,
 .mission {
   width: 100%;
   padding: 8px 16px 0px 16px;
+  margin-top: 10px;
 }
 
 .profileSection {
@@ -47,7 +48,6 @@
   font-size: 20px;
   font-family: "Noto Serif", serif;
   font-weight: 400;
-  /* font-weight: bold; Equivalent to font-bold */
 }
 
 .name {

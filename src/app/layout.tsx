@@ -14,7 +14,7 @@ export const metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body style={{ backgroundColor: "white" }}>
+      <body style={{ backgroundColor: " rgb(244, 242, 242)" }}>
         <SEO
           title="Cement Products Manufacturing | Slabs, Tiles, Fencing, Pipes"
           description="Deal Magsil specializes in high-quality cement products including precast slabs, fencing pillars, roofing tiles, RCC pipes, and more for industrial and commercial use."
@@ -34,7 +34,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <Navbar />
         <FABLocation />
         <FABWhatsApp />
-        <Footer />
+        <div style={{ marginTop: "-145px" }}>
+          <Footer />
+        </div>
       </body>
     </html>
   );

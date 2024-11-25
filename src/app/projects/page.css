@@ -1,89 +1,12 @@
-/* body {
-  padding: 3rem;
-} */
 html {
   margin-top: 0;
-  /* padding: 2rem; */
-  margin-top: 20px;
   box-sizing: border-box;
   font-family: "Arial", sans-serif;
   background-color: #f4f4f9;
   color: #333;
 }
 
-h4 {
-  font-size: 2rem;
-  color: #444;
-  text-align: center;
-  margin: 50px 0 30px 0;
-  font-weight: 600;
-}
-
-.mainDiv {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 50px;
-}
-
-.project-heading {
-  font-size: 1.8rem;
-  color: #2a2626;
-  margin-top: 60px;
-  text-align: center;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.carouselWrapper {
-  margin: 40px 0;
-}
-
-/* Carousel Container - More grid-based layout for better spacing */
-.carousel-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-/* Carousel Images */
-.carousel-container img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.carousel-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.caption {
-  text-align: center;
-  font-size: 1rem;
-  color: #666;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-/* Section Separator */
-.section-separator {
-  border-top: 1px solid #ddd;
-  margin: 50px 0;
-}
-
-.projects-swiper {
+.projects-swiper-outer {
   .swiper-button-prev {
     display: none;
   }

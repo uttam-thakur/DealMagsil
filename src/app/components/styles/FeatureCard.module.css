@@ -79,7 +79,12 @@
   bottom: 0;
   z-index: 4;
 }
-
+@media (max-width: 400px) {
+  .featureCard {
+    width: 100%;
+    padding: 10px;
+  }
+}
 @media (min-width: 768px) {
   .featuresDetails {
     max-width: 726px;
@@ -90,18 +95,18 @@
 }
 
 .featuresTitle {
-  font-size: 14px !important;
+  font-size: 20px !important;
   font-weight: bold !important;
   margin-bottom: 10px !important;
 }
 
 .featuresDescription {
-  font-size: 14px !important;
+  font-size: 17px !important;
 }
 
 .featureModalImage {
-  height: 220px;
-  width: 420px;
+  height: 300px;
+  width: 350px;
   margin-bottom: 24px;
 }
 
@@ -118,4 +123,11 @@
   top: 15px;
   right: 20px;
   padding: 4px;
+}
+@media (max-width: 460px) {
+  .featureModalImage {
+    height: 220px;
+    width: 350px;
+    margin-bottom: 24px;
+  }
 }

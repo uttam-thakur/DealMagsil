@@ -1,5 +1,6 @@
 .main {
   background-color: rgb(238, 236, 233);
+  margin-top: 50px;
 }
 .upcomingproductssection {
   padding: 3rem;
@@ -13,9 +14,11 @@
   object-fit: cover;
 }
 .titleCenter {
-  color: rgb(34, 34, 36);
+  color: gray;
   text-align: center;
-  font-size: "35px";
+  font-size: "2rem";
+  font-weight: 700;
+  padding-top: 2rem;
 }
 .carouselitem img {
   max-width: 100%;
@@ -28,6 +31,7 @@
   .carouselimage,
   .carouselitem img {
     height: 300px;
+    width: 100%;
   }
 }
 
@@ -45,5 +49,6 @@
   .carouselimage,
   .carouselitem img {
     height: 200px;
+    width: 100%;
   }
 }

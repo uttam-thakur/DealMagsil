@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useRef } from "react";
-import { Box, TextField, Typography, Button } from "@mui/material";
 import { toast } from "react-toastify";
 import { sendEmail } from "../services/services";
+import styles from "./styles/GetInTouch.module.css";
 
 export default function GetInTouchForm() {
-  const formRef = useRef(null); // Create a ref for the form
+  const formRef = useRef(null);
 
   const [formValues, setFormValues] = useState({
     name: "",
@@ -41,7 +41,6 @@ export default function GetInTouchForm() {
     if (!validateFormInputs()) return;
 
     try {
-      // Pass the form element (or its ref) as the third parameter
       await sendEmail(formRef.current);
       setFormValues({ name: "", email: "", message: "" });
     } catch (err) {
@@ -55,58 +54,69 @@ export default function GetInTouchForm() {
   };
 
   return (
-    <Box
-      component="form"
-      ref={formRef}
-      onSubmit={handleSubmit}
-      sx={{ backgroundColor: "#f8f8f8", padding: 3, borderRadius: 2 }}
-    >
-      <Typography
-        variant="h5"
-        sx={{ fontWeight: "bold", mb: 3, color: "#ff6347" }}
-      >
-        Get In Touch
-      </Typography>
-      <TextField
-        name="name"
-        label="Name"
-        variant="outlined"
-        fullWidth
-        required
-        sx={{ mb: 3 }}
-        value={formValues.name}
-        onChange={handleInputChange}
-      />
-      <TextField
-        name="email"
-        label="Email"
-        type="email"
-        variant="outlined"
-        fullWidth
-        required
-        sx={{ mb: 3 }}
-        value={formValues.email}
-        onChange={handleInputChange}
-      />
-      <TextField
-        name="message"
-        label="Message"
-        variant="outlined"
-        fullWidth
-        required
-        multiline
-        rows={5}
-        sx={{ mb: 3 }}
-        value={formValues.message}
-        onChange={handleInputChange}
-      />
-      <Button
-        type="submit"
-        variant="contained"
-        sx={{ backgroundColor: "#ff6347", color: "white" }}
-      >
-        Send Message
-      </Button>
-    </Box>
+    <div className={styles.getInTouch}>
+      <div className={styles.gridContainer}>
+        {/* Left Section */}
+        <div className={styles.leftSection}>
+          <div className={styles.info}>
+            <h1 className={styles.title}>Get in Touch with Us</h1>
+            <div className={styles.infoWindow}>
+              <h2 className={styles.subTitle}>
+                Quick answers and reliable support are just a message away.
+              </h2>
+              <p className={styles.description}>
+                We believe that good communication builds strong partnerships.
+                Whether you have a quick question, require detailed information,
+                or need help resolving a challenge, we’re just a click or call
+                away. Our dedicated team ensures that every query is met with
+                promptness and expertise, helping you achieve the results you
+                need.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section */}
+        <div className={styles.rightSection}>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className={styles.formBox}
+          >
+            <h2 className={styles.formTitle}>Contact Us</h2>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              className={styles.inputField}
+              value={formValues.name}
+              onChange={handleInputChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              className={styles.inputField}
+              value={formValues.email}
+              onChange={handleInputChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Message"
+              rows={5}
+              className={styles.inputField}
+              value={formValues.message}
+              onChange={handleInputChange}
+              required
+            />
+            <button type="submit" className={styles.submitButton}>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -7,11 +7,14 @@
 }
 /* styles.css */
 .customTitle {
-  color: #4a90e2;
+  color: gray;
   font-size: 2.5rem;
   text-align: center;
+  margin-top: 50px;
 }
-
+.featuregridSliderDiv {
+  margin-top: 50px;
+}
 @media (max-width: 768px) {
   .featureGrid {
     grid-template-columns: 1fr;

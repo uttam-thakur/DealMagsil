@@ -3,8 +3,9 @@ import Modal from "./common-components/Modal";
 import { Typography } from "@mui/material";
 import styles from "../components/styles/FeatureCard.module.css";
 import Image from "next/image";
-import { faInfoCircle, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BsInfo } from "react-icons/bs";
 
 interface FeatureCardProps {
   imageSrc: string;
@@ -31,7 +32,8 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
     <>
       <div className={styles.featureCard}>
         <button className={styles.info} onClick={openDetails}>
-          <FontAwesomeIcon icon={faInfoCircle} size="2x" />
+          {/* <FontAwesomeIcon icon={faInfoCircle} size="2x" /> */}
+          <BsInfo size={20} />
         </button>
         <Image
           height={100}

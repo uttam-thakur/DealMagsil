@@ -39,11 +39,11 @@
 } */
 
 .projectSlider {
-  width: 300px;
-  height: 400px; /* Fixed height for each card */
+  width: 420px;
+  height: 440px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: relative;
   align-items: center;
   overflow: hidden;
@@ -61,34 +61,61 @@
 }
 
 .projectName {
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  height: 40px; /* Fixed height for title */
-  margin: 0;
+  color: black;
 }
+
 .projectTitle {
   font-size: 14px;
-  font-weight: bold;
-  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  color: rgb(68, 68, 68);
+  line-height: 20px;
+  margin-left: 16px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  height: 40px; /* Fixed height for title */
-  margin: 0;
-  padding-top: 0.525rem;
 }
 .projectDetails {
+  margin-top: 16px;
   cursor: pointer;
-  padding: 16px;
+  text-align: left;
   width: 100%;
   padding-top: 0px;
   display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .projectSlider {
+    width: 300px;
+    height: 420px;
+  }
+
+  .projectName {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .projectSlider {
+    width: 270px;
+  }
+}
+
+.projectDetaillsSections {
+  display: flex;
   align-items: center;
-  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.projectDetaillsSectionsIcon {
+  flex-shrink: 0;
+  margin-right: 6px;
 }

@@ -4,6 +4,7 @@ import FeatureCard from "./FeatureCard";
 import { Typography } from "@mui/material";
 
 import styles from "../components/styles/FeatureGrid.module.css";
+import FeatureGridSlider from "./FeatureGridSlider";
 
 const features = [
   {
@@ -92,6 +93,7 @@ const features = [
       "A classic brick shape that offers a rustic, timeless appeal for both indoor and outdoor spaces.",
   },
 ];
+
 interface FeatureGridProps {
   searchTerm: string;
 }
@@ -101,9 +103,9 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
     feature.title.toLowerCase().includes(searchTerm)
   );
   return (
-    <>
+    <div style={{ backgroundColor: "rgb(244, 242, 242)" }}>
       <Typography
-        className={styles.customTitle} // Adjust color and font size using Tailwind CSS
+        className={styles.customTitle}
         variant="h4"
         component="h2"
         gutterBottom
@@ -121,7 +123,10 @@ const FeatureGrid: React.FC<FeatureGridProps> = ({ searchTerm }) => {
           />
         ))}
       </div>
-    </>
+      <div className={styles.featuregridSliderDiv}>
+        {/* <FeatureGridSlider /> */}
+      </div>
+    </div>
   );
 };
 

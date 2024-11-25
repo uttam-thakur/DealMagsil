@@ -1,82 +1,101 @@
-.slider {
-  background: #f0f0f0;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-  height: 100px;
-  margin: auto;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  max-width: 90%;
+.clientsSection {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
 }
-.image {
-  height: 100%;
-  width: 100%;
+.subHeading {
+  color: #4a4a4a;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 10px;
 }
-.slideTrack {
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2a2a2a;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.clientsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Adjust based on the desired width */
+  gap: 15px; /* Add spacing between the cards */
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit the grid width */
+}
+
+.clientCard {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
-  animation: scroll 60s linear infinite;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  height: 100%; /* Match the height for consistency */
 }
 
-.slide {
-  display: inline-block;
-  margin-right: 20px;
-  height: 100px;
-  flex: 0 0 auto;
-  width: 250px;
+.clientCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 768px) {
-  .slide {
-    width: 200px;
+.clientLogo {
+  max-width: 80%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Custom diamond pattern layout */
+.clientsGrid > :nth-child(1) {
+  grid-column: 2; /* Start from the 2nd column */
+  grid-row: 1; /* First row */
+}
+
+.clientsGrid > :nth-child(2) {
+  grid-column: 1; /* First column */
+  grid-row: 2;
+}
+
+.clientsGrid > :nth-child(3) {
+  grid-column: 3; /* Third column */
+  grid-row: 2;
+}
+
+.clientsGrid > :nth-child(4) {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.clientsGrid > :nth-child(5) {
+  grid-column: 4;
+  grid-row: 3;
+}
+
+.clientsGrid > :nth-child(6) {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+@media screen and (max-width: 768px) {
+  .clientsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 8px;
   }
-
-  .slider {
-    height: 80px;
-  }
 }
 
-@media (max-width: 480px) {
-  .slide {
-    width: 150px;
-  }
-  .image {
-    height: 80px;
-  }
-  .slider {
-    height: 80px;
-  }
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-12 * var(--slide-width)));
-  }
-}
-
-.slider::before,
-.slider::after {
-  content: "";
-  height: 100px;
-  position: absolute;
-  width: 200px;
-  z-index: 2;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-}
-
-.slider::after {
-  right: 0;
-  top: 0;
-  transform: rotateZ(180deg);
-}
-
-.slider::before {
-  left: 0;
-  top: 0;
-}
+/* Add more placements as needed for additional items */

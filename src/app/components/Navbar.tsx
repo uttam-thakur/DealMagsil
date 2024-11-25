@@ -57,7 +57,7 @@ export default function DrawerAppBar(props: Props) {
         Deal Magsil
         <br />
         <Typography
-          sx={{ my: 2, fontSize: "15px", color: "red", marginTop: "-5px" }}
+          sx={{ my: 2, fontSize: "15px", color: "gray", marginTop: "-5px" }}
         >
           Since 1991
         </Typography>
@@ -167,8 +167,17 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" sx={{ background: "black", height: "75px" }}>
-        <Toolbar>
+      <AppBar
+        component="nav"
+        sx={{
+          background:
+            "linear-gradient(180deg, hsla(0, 0%, 5%, .85) 33.03%, hsla(0, 0%, 5%, 0) 91.03%)",
+          height: "190px",
+          position: "absolute",
+          boxShadow: "none",
+        }}
+      >
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -180,24 +189,35 @@ export default function DrawerAppBar(props: Props) {
           </IconButton>
 
           {/* Company Logo */}
-          <Link href="/" passHref>
+          <Link href="/" passHref style={{ textDecoration: "none" }}>
             <Box
               sx={{ display: { xs: "none", sm: "block", marginTop: "10px" } }}
             >
-              <img
-                src="/images/dmlogo.jpeg"
-                alt="Company Logo"
+              <h2
                 style={{
-                  height: "60px",
-                  width: "60px",
-                  marginRight: "10px",
-                  cursor: "pointer",
+                  color: "white",
+                  letterSpacing: "4px",
+                  marginTop: "15px",
+                  fontSize: "25px",
                 }}
-              />
+              >
+                DEAL MAGSIL
+              </h2>
             </Box>
           </Link>
-
-          <Box sx={{ flexGrow: 1 }} />
+          {/* DEAL MAGSIL Text for Mobile View */}
+          <Typography
+            variant="h6"
+            component="div"
+            sx={{
+              display: { xs: "block", sm: "none" },
+              marginLeft: "auto",
+              color: "white",
+              letterSpacing: "2px",
+            }}
+          >
+            DEAL MAGSIL
+          </Typography>
 
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
@@ -206,7 +226,8 @@ export default function DrawerAppBar(props: Props) {
                   sx={{
                     color: "#fff",
                     marginLeft: 2,
-                    letterSpacing: "0.25rem",
+                    letterSpacing: "0.15rem",
+                    marginTop: "15px",
                   }}
                 >
                   {item.label}

@@ -14,16 +14,13 @@ const Footer = () => {
       <div className={styles.relative}>
         <footer className={styles.footer}>
           <div className={`${styles.footerBorder}`}>
-            <img
-              src={dealMagsilLogo}
-              alt="Cake Heaven Logo"
-              className={styles.logo}
-            />
-
-            <div className={styles.aboutSection}>
-              <Link href="/aboutus" className={styles.aboutLink}>
-                About Us
-              </Link>
+            <div className={`${styles.logoContainer}`}>
+              <img
+                src={dealMagsilLogo}
+                alt="Deal Magsil Logo"
+                className={styles.logo}
+              />
+              <span className={styles.logoText}>Deal Magsil</span>
             </div>
             {/* Follow Us Section */}
             <div className={styles.followSection}>
@@ -49,6 +46,15 @@ const Footer = () => {
 
           <div className={styles.container}>
             <div className={styles.grid}>
+              {/* Company Section */}
+              <div className={styles.section}>
+                <h3 className={styles.sectionTitle}>Company</h3>
+                <p className={styles.sectionText}>
+                  <Link href="/aboutus" className={styles.aboutLink}>
+                    About Us
+                  </Link>{" "}
+                </p>
+              </div>
               {/* Contact Section */}
               <div className={styles.section}>
                 <h3 className={styles.sectionTitle}>Contact Us</h3>
@@ -100,21 +106,16 @@ const Footer = () => {
                   Visit us for quality products!
                 </p>
               </div>
-
-              {/* Newsletter Section */}
-              <div className={styles.section}>
-                <h3 className={styles.sectionTitle}>Newsletter</h3>
-                <p className={styles.sectionText}>
-                  Subscribe for updates on new items and promotions!
-                </p>
-              </div>
             </div>
           </div>
         </footer>
       </div>
       <div className={styles.footerEnd}>
         <p className={styles.footerTextEnd}>
-          &copy; {new Date().getFullYear()} Deal Magsil. All rights reserved.
+          <span style={{ fontWeight: "700" }}>
+            &copy; {new Date().getFullYear()} Deal Magsil.
+          </span>{" "}
+          All rights reserved.
         </p>
       </div>
     </>

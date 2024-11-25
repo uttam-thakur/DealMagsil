@@ -10,12 +10,12 @@
   border-radius: 50%;
   position: relative;
   z-index: 2;
-  cursor: pointer; /* Make it clear that the profile pic is clickable */
+  cursor: pointer;
 }
 
 .social {
   position: relative;
-  height: 200px; /* Adjust height as needed */
+  height: 200px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -29,9 +29,9 @@
 .icon {
   color: inherit;
   cursor: pointer;
-  position: absolute; /* Allow absolute positioning */
+  position: absolute;
   transition: color 300ms ease, transform 300ms ease;
-  opacity: 0; /* Initially invisible */
+  opacity: 0;
 }
 
 .icon:hover {

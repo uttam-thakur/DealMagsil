@@ -1,0 +1,205 @@
+/*!****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/aboutus/About.module.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************/
+.About_container___K8dZ {
+  display: flex;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  height: auto;
+  padding-top: 4rem;
+  align-items: center;
+}
+
+.About_description__UNDRq {
+  width: 100%;
+  padding: 8px 36px 0px 36px;
+  color: #ffffff;
+}
+/* Profile section and description width consistency */
+.About_profileSection__mTtvY,
+.About_mission__4FQNG {
+  width: 100%;
+  padding: 8px 16px 0px 16px;
+  margin-top: 10px;
+}
+
+.About_profileSection__mTtvY {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.About_image__RPyj7 {
+  border-radius: 8px;
+  margin-right: 2rem;
+}
+
+.About_mission__4FQNG {
+  background-color: #333333;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin-top: 21px;
+}
+
+.About_mission__4FQNG p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
+}
+
+.About_name__nSU1S {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.About_role__lkIck {
+  color: #cccccc;
+  margin-top: 0.2rem;
+  font-size: 1rem;
+}
+
+.About_description__UNDRq {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1rem;
+  line-height: 1.6;
+  font-size: 18px;
+  font-family: "Noto Serif", serif;
+}
+
+.About_description__UNDRq p {
+  margin-bottom: 1rem;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .About_profileSection__mTtvY {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .About_image__RPyj7 {
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+
+  .About_mission__4FQNG {
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .About_description__UNDRq {
+    max-width: 100%;
+    padding-top: 2rem;
+    text-align: center;
+  }
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[7].use[3]!./src/app/components/styles/Album.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.Album_album__7dzqA .Album_responsiveContainerBlock__gOkPt {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: flex-start;
+}
+
+.Album_album__7dzqA .Album_bg__RPJm4 {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.Album_album__7dzqA .Album_imageContainer__YXzBO {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+}
+
+.Album_album__7dzqA .Album_img__mwe_N {
+  width: 100%;
+  margin: 0 0px 20px 0px;
+}
+
+.Album_album__7dzqA .Album_imgBig__1NC6n {
+  height: 50%;
+  margin: 0 0 16px 0;
+}
+
+.Album_album__7dzqA .Album_imgCont__ssVaX {
+  flex-direction: column;
+  max-width: 33.3%;
+  height: 100%;
+}
+
+.Album_album__7dzqA .Album_imgLast__oOeoR {
+  margin: 0 0 5px 0;
+}
+
+@media (max-width: 1024px) {
+  .Album_img__mwe_N {
+    margin: 0 0 18px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .Album_img__mwe_N {
+    max-width: 32.5%;
+    margin: 0;
+  }
+
+  .Album_bg__RPJm4 {
+    flex-direction: column;
+  }
+
+  .Album_imgCont__ssVaX {
+    max-width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .Album_imgBig__1NC6n {
+    max-width: 49%;
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .Album_img__mwe_N {
+    max-width: 100%;
+    margin: 0 0 25px 0;
+    height: 100%;
+  }
+  .Album_album__7dzqA .Album_imgCont__ssVaX {
+    flex-direction: column;
+    max-width: 500px;
+    height: 100%;
+  }
+  .Album_imgCont__ssVaX {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .Album_imgBig__1NC6n {
+    max-width: 94%;
+    margin: 0 0 25px 0;
+  }
+}
+
