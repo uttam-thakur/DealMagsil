@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, Typography, Paper, Grid } from "@mui/material";
 import { CheckCircle } from "@mui/icons-material";
-
+import style from "./styles/RegistrationSection.module.css";
 const RegistrationSection = () => {
   const registrations = [
     "Government of West Bengal registered S.S.I Unit.",
@@ -40,10 +40,16 @@ const RegistrationSection = () => {
         Our Registrations and Certifications
       </Typography>
 
-      <Grid container spacing={2} justifyContent="center">
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        className={style.card}
+      >
         {registrations.map((item, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Paper
+              className={style.section}
               elevation={3}
               sx={{
                 padding: 2,

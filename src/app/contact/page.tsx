@@ -8,6 +8,7 @@ import GetInTouchForm from "../components/GetInTouchForm";
 import { infoData, contactData } from "../common/constant";
 
 import styles from "./contact.module.css";
+import { handleLocationClick } from "../components/fabComponents/FABLocation";
 
 export default function Contact() {
   const [openModal, setOpenModal] = useState(false);
@@ -36,7 +37,9 @@ export default function Contact() {
               <h2>{contact.title}</h2>
               <p>{contact.description}</p>
               {contact.isButton ? (
-                <button className={styles.button}>{contact.contactInfo}</button>
+                <button className={styles.button} onClick={handleLocationClick}>
+                  {contact.contactInfo}
+                </button>
               ) : (
                 <p className={styles.email}>{contact.contactInfo}</p>
               )}
